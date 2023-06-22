@@ -13,8 +13,8 @@ function Nav() {
                 <div>
                     <input type="checkbox" className="checkbox" id="checkbox"/>
                     <label for="checkbox" className="label">
-                        <img className="fa-moon" src="../public/moon purple.png"alt=""/>
-                        <img className="fa-sun" src="../public/sun-solid.png" alt=""/>
+                        <img className="fa-moon" src="/moon purple.png"alt=""/>
+                        <img className="fa-sun" src="/sun-solid.png" alt=""/>
                         <div className="ball"></div> 
                     </label>
                 </div>
