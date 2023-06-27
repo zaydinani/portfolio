@@ -1,93 +1,30 @@
-/* COLORS*/
-
-// light mode colors
-$main-light: #EFEFEF;
-$secondary-color-light: #E4E4E4;
-$headers-light: #1e1e1e;
-$paragraph-font-light: #4f4f4f;
-$project-font-color-light: #737373;
-$font-light: #1e1e1e;
-//fixed colors
-$button-main : #5552FF;
-$button-secondary : #c2c0ff;
-//dark colors
-$main-dark: #101010;
-$secondary-color-dark: #1e1e1e;
-$headers-dark: #f2f2f2;
-$paragraph-font-dark: #898989;
-$project-font-color-dark: #898989;
-
-$borders: #cacaca;
-
-/*FUNCTIONS*/ 
-@mixin reset-list-styles {
-    li {
-        list-style-type: none;
-        a{
-            color: black;
-            text-decoration: none;
-            text-transform: capitalize;
-        }
-    }
-  }
-@mixin flex($justify-content, $align-items, $direction) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items:  $align-items;
-    flex-direction: $direction;
-}
-@mixin btn(){
-    ul{
-        @include flex(space-around, center, row );
-        @include reset-list-styles();
-        .btn {
-            font-size: 20px;
-            padding: 12px 20px;
-            border-radius: 8px;
-        }
-        .main-btn{
-            background-color: $button-main;
-            a{
-                color: #D0D5DD;
-            }
-        }
-        .secondary-btn{
-            background-color: $button-secondary;
-        }
-
-    }
-}
-@mixin section ($width, $height){
-    width: $width;
-    height: $height;
-    margin: 0 auto;
-}
-.section{
-    @include section(100vw, 100vh)
-}
+@import '_variables';
 .hero {
     text-align: center;
     height: 100%;
     background-image: url('/Gradient.png');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
     text-transform: capitalize;
     @include flex(center, center, column );
     div:nth-child(1){
         width: 70%;
-        margin-top: 2.5rem;
+        margin: 2.5rem 0 2.5rem 0;
+
         h1{
             margin-bottom: 1.5rem;
             font-size: 42px;
-            color: $secondary-color-dark;
+            color: $headers-dark;
         }
         p{
             font-size: 20px;
-            color: $paragraph-font-light;
+            color: $paragraph-font-dark;
         }
     }
     div:nth-child(2){
         margin-top: 2rem;
-        width: 25%;
+        width: 20rem;
         @include btn()
     }
 }

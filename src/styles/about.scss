@@ -1,0 +1,36 @@
+@import '_variables';
+
+.about{
+    @include flex(space-between, _, row );
+    padding: 80px 0 ;
+    border: 1px solid blue;
+    .info{
+        width: 45%;
+        @include flex(space-around, _, column );
+        div:nth-child(1){
+            border: 1px solid blue;
+            @include flex(space-around, _, column );
+            height: 75%;
+        }
+        div:nth-child(2){
+            border: 1px solid blue;
+            margin: 2rem 0 2rem 0;
+        }
+        div:nth-child(3){
+            border: 1px solid blue;
+            @include btn();
+            display: flex;
+        }
+    }
+    .imgContainer{
+        border: 1px solid blue;
+        width: fit-content;
+        
+        img{
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

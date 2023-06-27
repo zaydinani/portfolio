@@ -1,23 +1,4 @@
-/* COLORS*/
-
-// light mode colors
-$main-light: #EFEFEF;
-$secondary-color-light: #E4E4E4;
-$headers-light: #1e1e1e;
-$paragraph-font-light: #4f4f4f;
-$project-font-color-light: #737373;
-$font-light: #1e1e1e;
-//fixed colors
-$button-main : #5552FF;
-$button-secondary : #c2c0ff;
-//dark colors
-$main-dark: #101010;
-$secondary-color-dark: #1e1e1e;
-$headers-dark: #f2f2f2;
-$paragraph-font-dark: #898989;
-$project-font-color-dark: #898989;
-
-$borders: #cacaca;
+@import '_variables';
 
 * {
   margin: 0;
@@ -27,7 +8,8 @@ $borders: #cacaca;
   
 body {
   margin: 0;
-  background-color: $main-light;
+  background-color: $main-dark;
+  color: $headers-dark;
   font-family: 'Poppins', sans-serif;
 }
 
