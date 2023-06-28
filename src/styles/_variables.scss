@@ -30,15 +30,16 @@ $borders: #cacaca;
         }
     }
   }
-@mixin flex($justify-content, $align-items, $direction) {
+@mixin flex($justify-content, $align-items, $direction, $gap) {
     display: flex;
     justify-content: $justify-content;
     align-items:  $align-items;
     flex-direction: $direction;
+    gap:  $gap;
 }
 @mixin btn(){
     ul{
-        @include flex(space-around, center, row );
+        @include flex(space-around, center, row,_ );
         @include reset-list-styles();
         .btn {
             font-size: 20px;

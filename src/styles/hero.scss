@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: 80% 100%;
     text-transform: capitalize;
-    @include flex(center, center, column );
+    @include flex(center, center, column,_ );
     div:nth-child(1){
         width: 70%;
         margin: 2.5rem 0 2.5rem 0;
@@ -25,6 +25,6 @@
     div:nth-child(2){
         margin-top: 2rem;
         width: 20rem;
-        @include btn()
+        @include btn();
     }
 }

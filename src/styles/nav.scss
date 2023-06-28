@@ -7,11 +7,12 @@ nav {
     border: 1px solid $borders;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    @include flex(center, _,_ );
+    @include flex(center, _,_,_);
     position: fixed;
-    top: 2rem;
+    top: 1rem;
     left: 50%; 
     transform: translateX(-50%);
+    z-index: 99;
     .selected{
         a{
             color: $button-main;
@@ -19,7 +20,7 @@ nav {
     }
     ul{
         @include reset-list-styles;
-        @include flex(space-around, center, row );
+        @include flex(space-around, center, row,_ );
         width: 100%;
         li{
             a{
@@ -43,7 +44,7 @@ nav {
                 transform: translateX(-24px);
             }
             .label{
-                background-color: var(--body-dark);
+                background-color: $main-dark;
                 display: flex;
                 border-radius: 50px;
                 height: 26px;
@@ -64,8 +65,8 @@ nav {
                     position: absolute;
                     width: 22px;
                     height: 22px;
-                    top: 2px;
-                    right: 2px;
+                    top: 1.5px;
+                    right: 1.5px;
                     border-radius: 50%;
                     transition:  0.2s linear;
                 }
