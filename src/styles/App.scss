@@ -5,12 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   background-color: $main-dark;
   color: $headers-dark;
   font-family: 'Poppins', sans-serif;
+  &[data-theme="light"] {
+    background-color: $main-light;
+  }
 }
 
-  
