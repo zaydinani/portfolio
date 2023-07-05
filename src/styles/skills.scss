@@ -1,0 +1,47 @@
+@import '_variables';
+
+.skills {
+    padding: 2rem ;    
+    background-color: $secondary-color-dark;
+    height: 100%;
+    @include flex(center, _, column, _ );
+
+    .skills-info{
+        text-align: center;
+        padding: 0 4rem 1rem;
+        h1{
+            margin-bottom: 1rem;
+            color: $headers-dark;
+        }
+        p{
+            color: $paragraph-font-dark;
+        }
+    }
+    .skills-container{
+        @include flex(flex-start, _, row, 1rem );
+        flex-wrap: wrap;
+        div{
+            width: 32%;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 0 auto;
+            img{
+                width: 60px;
+                height: 60px;
+                padding: .7rem;
+                border-radius: 8px;
+                background-color: $button-secondary;
+            }
+            h2{
+                margin: .2rem 0;
+                color: $button-main;
+                font-weight: 500;
+                font-size: 29px;
+            }
+            p{
+                color: $paragraph-font-dark;
+                font-size: 16px;
+            }
+        }
+    }
+}
