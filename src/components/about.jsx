@@ -1,10 +1,19 @@
 import "../styles/about.scss"
-
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../themeContext';
 
 function About() {
+    const { theme } = useContext(ThemeContext);
+    const [heroTheme, setTheme] = useState('');
+  
+    useEffect(() => {
+      setTheme(theme === 'dark' ? 'dark' : 'light');
+    }, [theme]);
+  
+    
     return (
         <div className="section">
-            <div className="about container">
+            <div className={`about container ${heroTheme}`}  >
                 <div className="info">
                     <div>
                         <h1>about</h1>

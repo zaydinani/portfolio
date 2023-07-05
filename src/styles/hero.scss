@@ -1,4 +1,5 @@
 @import '_variables';
+
 .hero {
     text-align: center;
     height: 100%;
@@ -8,22 +9,34 @@
     background-size: 80% 100%;
     text-transform: capitalize;
     @include flex(center, center, column,_ );
-    div:nth-child(1){
-        width: 70%;
-        margin: 2.5rem 0 2.5rem 0;
-        h1{
-            margin-bottom: 1.5rem;
-            font-size: 42px;
-            color: $headers-dark;
+  
+    div:nth-child(1) {
+      width: 70%;
+      margin: 2.5rem 0 2.5rem 0;
+  
+      h1 {
+        margin-bottom: 1.5rem;
+        font-size: 42px;
+        color: $headers-dark;
+  
+        .light & {
+          color: $font-light;
         }
-        p{
-            font-size: 20px;
-            color: $paragraph-font-dark;
+      }
+  
+      p {
+        font-size: 20px;
+        color: $font-light;
+  
+        .light & {
+          color: $paragraph-font-light;
         }
+      }
     }
-    div:nth-child(2){
-        margin-top: 2rem;
-        width: 20rem;
-        @include btn();
+  
+    div:nth-child(2) {
+      margin-top: 2rem;
+      width: 20rem;
+      @include btn();
     }
-}
+  }

@@ -11,8 +11,8 @@ body {
   background-color: $main-dark;
   color: $headers-dark;
   font-family: 'Poppins', sans-serif;
-  &[data-theme="light"] {
-    background-color: $main-light;
+  &.light {
+    background-color: $main-light ;
   }
 }
 

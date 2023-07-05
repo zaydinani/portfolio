@@ -26,54 +26,69 @@ nav {
             a{
                 color: $headers-dark;
                 transition: 0.2s ease-in-out;
-
+                
             }
             a:hover{
                 color: $button-main;
             }
         }
         /*!----------------dark mode toggle-----------------------*/
-        div{
-            background-color: $main-dark;
+        div {
             border-radius: 25px;
-            .checkbox{
-                opacity: 0;
+          
+            .checkbox {
+              opacity: 0;
+              position: absolute;
+            }
+          
+            .checkbox:checked + .label .ball {
+              transform: translateX(-24px);
+            }
+          
+            .label {
+              background-color: $main-dark;
+              display: flex;
+              border-radius: 50px;
+              height: 26px;
+              width: 50px;
+              align-items: center;
+              justify-content: space-between;
+              position: relative;
+              padding: 5px;
+          
+              .fa-sun {
+                height: 16px;
+              }
+          
+              .fa-moon {
+                height: 16px;
+              }
+          
+              .ball {
+                background-color: $button-secondary;
                 position: absolute;
+                width: 22px;
+                height: 22px;
+                top: 2px;
+                right: 1.5px;
+                border-radius: 50%;
+                transition: 0.2s linear;
+              }
             }
-            .checkbox:checked + .label .ball{
-                transform: translateX(-24px);
-            }
-            .label{
-                background-color: $main-dark;
-                display: flex;
-                border-radius: 50px;
-                height: 26px;
-                width: 50px;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-                padding: 5px;
-                .fa-sun{
-                    height: 16px;
-                }
-                .fa-moon{
-                    height: 16px;
-                }
-                
-                .ball{
-                    background-color: $button-secondary;
-                    position: absolute;
-                    width: 22px;
-                    height: 22px;
-                    top: 1.5px;
-                    right: 1.5px;
-                    border-radius: 50%;
-                    transition:  0.2s linear;
-                }
-            }
+          
+
+          
+
         }
     }
+
+    &.light {
+        div .label {
+            background-color: $borders ;
+        }
+        ul li a {
+          color: $secondary-color-dark;
+        }
+      }
 }
-
-
 
