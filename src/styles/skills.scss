@@ -5,16 +5,30 @@
     background-color: $secondary-color-dark;
     height: 100%;
     @include flex(center, _, column, _ );
-
+    .light & {
+        background-color: $secondary-color-light; 
+      }
+    .mySwiper{
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: $button-main;
+        }
+    }
     .skills-info{
         text-align: center;
         padding: 0 4rem 1rem;
         h1{
             margin-bottom: 1rem;
             color: $headers-dark;
+            .light & {
+                color: $headers-light;
+            }
         }
         p{
             color: $paragraph-font-dark;
+            .light & {
+                color: $paragraph-font-light;
+            }
         }
     }
     .skills-container{
@@ -41,7 +55,11 @@
             p{
                 color: $paragraph-font-dark;
                 font-size: 16px;
+                .light & {
+                    color: $paragraph-font-light;
+                }
             }
         }
     }
+
 }

@@ -4,6 +4,7 @@ import Nav from './components/nav'
 import Hero from './components/hero'
 import About from './components/about'
 import Skills from './components/skills'
+import Projects from './components/projects'
 import { ThemeProvider } from './themeContext'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Projects />
     </ThemeProvider>
   )
 }
