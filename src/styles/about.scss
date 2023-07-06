@@ -3,7 +3,7 @@
 .about{
     @include flex(space-between, _, row,_ );
     padding: 80px 0;
-    .info{
+    .about-info{
         width: 50%;
         @include flex(flex-start, _, column,_ );
         div:nth-child(1){
@@ -14,7 +14,7 @@
                 text-transform: capitalize;
                 .light & {
                     color: $font-light;
-                  }
+                }
             }
             p{
                 font-size: 22px;

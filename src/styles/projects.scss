@@ -1,5 +1,54 @@
 @import '_variables';
-
-h1{
-    color: red;
+/* take the comment off when i have more than 2 projects in my portfolio
+.section{
+    height: fit-content;
+}
+*/
+.projects-container{
+    padding: 5rem 0 0;
+    .projects{
+        margin-top: 2rem;
+        @include flex(space-evenly, flex-start, row, 40px );
+        flex-wrap: wrap;
+        .project{
+            border: 1px solid $borders;
+            height: 25rem;
+            width: 40%;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: $projects-background-dark;
+            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08); 
+            .light & {
+                background-color: $projects-background-light;
+            }
+            .img{
+                height: 50%;
+                border-radius: 8px;
+                background-image: url('/nav-logo.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 90% 30%;
+                background-color: white;
+            }
+            .project-info{
+                h1{
+                    font-weight: 500;
+                    font-size: 29px;
+                    color: $button-main;
+                    margin-top: .7rem;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $paragraph-font-dark;
+                    .light & {
+                        color: $project-font-color-light;
+                    }
+                }
+                .date{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
 }

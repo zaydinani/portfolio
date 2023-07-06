@@ -11,11 +11,11 @@ function App() {
   
   return (
     <ThemeProvider>
-        <Nav />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
     </ThemeProvider>
   )
 }

@@ -14,23 +14,6 @@
           color: $button-main;
         }
     }
-    .skills-info{
-        text-align: center;
-        padding: 0 4rem 1rem;
-        h1{
-            margin-bottom: 1rem;
-            color: $headers-dark;
-            .light & {
-                color: $headers-light;
-            }
-        }
-        p{
-            color: $paragraph-font-dark;
-            .light & {
-                color: $paragraph-font-light;
-            }
-        }
-    }
     .skills-container{
         @include flex(flex-start, _, row, 1rem );
         flex-wrap: wrap;

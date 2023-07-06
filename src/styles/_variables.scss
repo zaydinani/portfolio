@@ -4,13 +4,14 @@ $main-dark: #101010;
 $secondary-color-dark: #1e1e1e;
 $headers-dark: #f2f2f2;
 $paragraph-font-dark: #898989;
-$project-font-color-dark: #898989;
 // light mode colors
 $main-light: #EFEFEF;
 $secondary-color-light: #E4E4E4;
 $headers-light: #1e1e1e;
 $paragraph-font-light: #4f4f4f;
 $project-font-color-light: #737373;
+$projects-background-dark: #1c1c1c;
+$projects-background-light:#F9F9F9;
 $font-light: #1e1e1e;
 //fixed colors
 $button-main : #5552FF;
@@ -70,4 +71,22 @@ $borders: #cacaca;
     height: 100%;
     margin: 0 auto;
     border: 1px solid green;
+    
+}
+.info{
+    text-align: center;
+    padding: 0 4rem 1rem;
+    h1{
+        margin-bottom: 1rem;
+        color: $headers-dark;
+        .light & {
+            color: $headers-light;
+        }
+    }
+    p{
+        color: $paragraph-font-dark;
+        .light & {
+            color: $paragraph-font-light;
+        }
+    }
 }

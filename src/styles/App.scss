@@ -11,6 +11,7 @@ body {
   background-color: $main-dark;
   color: $headers-dark;
   font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
   &.light {
     background-color: $main-light ;
   }
