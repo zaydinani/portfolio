@@ -1,0 +1,66 @@
+@import '_variables';
+
+.contact {
+    width: 700px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 5rem 2.5rem;
+    background-color: $main-dark;
+    
+    .light & {
+      background-color: $main-light;
+    }
+    
+    .features {
+      padding: 0 1rem;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        input {
+            border: none;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: $button-secondary;
+            &::placeholder {
+            color: #929292;
+            }
+            .light & {
+                background-color: #D0D5DD;
+            }
+        }
+        textarea {
+            border: none;
+            margin: 5px 0 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: $button-secondary;
+            height: 240px;
+            resize: none;
+            &::placeholder {
+            color: #929292;
+            }
+            .light & {
+                background-color: #D0D5DD;
+            }
+            
+        }
+        button{
+            padding: 8px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-radius: 8px;
+            background-color: $button-main;
+            color: $headers-dark;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+            border: none;
+        }
+    }
+  }
+  

@@ -7,7 +7,7 @@
 .projects-container{
     padding: 5rem 0 0;
     .projects{
-        margin-top: 2rem;
+        margin-top: .5rem;
         @include flex(space-evenly, flex-start, row, 40px );
         flex-wrap: wrap;
         .project{
@@ -27,7 +27,7 @@
                 background-image: url('/nav-logo.png');
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 90% 30%;
+                background-size: 300px 40px;
                 background-color: white;
             }
             .project-info{

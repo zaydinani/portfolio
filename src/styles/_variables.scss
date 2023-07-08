@@ -79,14 +79,26 @@ $borders: #cacaca;
     h1{
         margin-bottom: 1rem;
         color: $headers-dark;
+        font-size: 42px;
+        font-weight: 600;
         .light & {
             color: $headers-light;
         }
     }
     p{
         color: $paragraph-font-dark;
+        font-size: 16px;
+        font-weight: 400;
         .light & {
             color: $paragraph-font-light;
         }
+    }
+}
+.features{
+    padding: 5rem  2.5rem;
+    height: 100%;
+    background-color: $secondary-color-dark;
+    .light & {
+        background-color: $main-light;
     }
 }

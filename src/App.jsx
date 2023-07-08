@@ -5,6 +5,10 @@ import Hero from './components/hero'
 import About from './components/about'
 import Skills from './components/skills'
 import Projects from './components/projects'
+import Features from './components/features'
+import Contact from './components/contact'
+import Footer from './components/footer'
+
 import { ThemeProvider } from './themeContext'
 
 function App() {
@@ -16,6 +20,9 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Features />
+      <Contact />
+      <Footer />
     </ThemeProvider>
   )
 }
