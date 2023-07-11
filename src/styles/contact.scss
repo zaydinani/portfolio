@@ -60,6 +60,11 @@
             font-weight: 400;
             cursor: pointer;
             border: none;
+            transition: 0.5s ease-in-out;
+            letter-spacing: 3px;
+        }
+        button:hover{
+            letter-spacing: 7px;
         }
     }
   }

@@ -24,28 +24,6 @@
                 }
             }
         }
-        div:nth-child(2){
-            height: 3rem;
-            margin: 2rem 0 2rem 0;
-            width: 50%;
-            @include flex(flex-start, center, row, 20px );
-            .socialIcons{
-                width: 2.5rem;
-                height: 2.5rem;
-                border: 1px solid $borders;
-                padding: 0.5rem;
-                border-radius: 8px;
-                .light & {
-                    background-color: #F9F9F9;
-                }
-                .Vector, .Vector_2, .Vector_3, .Vector_4{
-                    stroke: $headers-dark;
-                    .light & {
-                        stroke: $secondary-color-dark;
-                    }
-                }
-            }
-        }
         div:nth-child(3){
             @include btn();
             display: flex;
