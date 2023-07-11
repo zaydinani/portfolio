@@ -66,6 +66,13 @@ $borders: #cacaca;
 
     }
 }
+@mixin btn-320 () {
+    ul{
+        .btn {
+            font-size: 15px;
+        }
+    }
+}
 @mixin section ($width, $height){
     width: $width;
     height: $height;
@@ -74,7 +81,11 @@ $borders: #cacaca;
 .section{
     @include section(100%, 100vh);
     border: 1px solid red;
+    @media screen and (max-width: 425px) {
+        height: fit-content;  // Change the height to fit-content for screens <= 425px
+      }
 }
+
 .container{
     width: 80%;
     height: 100%;
@@ -82,6 +93,7 @@ $borders: #cacaca;
     border: 1px solid green;
     
 }
+
 .info{
     text-align: center;
     padding: 0 4rem 1rem;

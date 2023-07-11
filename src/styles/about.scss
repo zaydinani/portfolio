@@ -2,7 +2,7 @@
 
 .about{
     @include flex(space-between, _, row,_ );
-    padding: 80px 0;
+    padding: 95px 0;
     .about-info{
         width: 50%;
         @include flex(flex-start, _, column,_ );
@@ -45,3 +45,35 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .about{
+        padding: 80px 0;
+        .about-info{
+            div:nth-child(1){
+                h1{
+                    font-size: 32px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }  
+        .imgContainer{
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+}
+@media screen and (max-width: 425px) {  
+    .about{
+        padding: 80px 0 50px 0;
+        @include flex(space-evenly, _, column-reverse,_ );
+        .about-info{
+            width: 100%;
+        }
+    }
+}
+
+  

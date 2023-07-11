@@ -16,13 +16,15 @@ function App() {
   return (
     <ThemeProvider>
       <Nav />
-      <Hero />
       <About />
+      {/*
+      <Hero />
       <Skills />
       <Projects />
       <Features />
       <Contact />
       <Footer />
+      */}
     </ThemeProvider>
   )
 }
