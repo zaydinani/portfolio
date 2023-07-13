@@ -16,11 +16,11 @@ function App() {
   return (
     <ThemeProvider>
       <Nav />
-      <About />
+      <Projects />
       {/*
       <Hero />
+      <About />
       <Skills />
-      <Projects />
       <Features />
       <Contact />
       <Footer />

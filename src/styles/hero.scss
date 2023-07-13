@@ -53,9 +53,10 @@
 }
 @media screen and (max-width: 425px) {
   .hero {
-    background-size: 100% 80%;    
+    background-size: 100% 100%;    
     div:nth-child(1) {
       width: 90%;  
+      margin-top: 5rem;
       h1 {
         font-size: 28px;
 
@@ -64,15 +65,13 @@
         font-size: 18px;
       }
     }
-  }
-}
-@media screen and (max-width: 425px) {
-  .hero {
     div:nth-child(2) {
       margin-top: 1rem;
       width: 15rem;
-      @include btn-320();
     }
   }
 }
+
+
+
 

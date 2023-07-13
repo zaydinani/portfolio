@@ -1,13 +1,18 @@
 @import '_variables';
 
 .skills {
-    padding: 2rem ;    
+    padding: 6rem  2rem 2rem 2rem;    
     background-color: $secondary-color-dark;
     height: 100%;
     @include flex(center, _, column, _ );
     .light & {
         background-color: $secondary-color-light; 
-      }
+    }
+    .info {
+        h1{
+            margin-bottom: 0;
+        }
+    }
     .mySwiper{
         .swiper-button-next,
         .swiper-button-prev {
@@ -19,6 +24,7 @@
         flex-wrap: wrap;
         div{
             width: 32%;
+            height: fit-content;
             text-align: center;
             padding: 1rem 0;
             margin: 0 auto;
@@ -33,11 +39,11 @@
                 margin: .2rem 0;
                 color: $button-main;
                 font-weight: 500;
-                font-size: 29px;
+                font-size: 20px;
             }
             p{
                 color: $paragraph-font-dark;
-                font-size: 16px;
+                font-size: 14px;
                 .light & {
                     color: $paragraph-font-light;
                 }
@@ -46,3 +52,39 @@
     }
 
 }
+@media screen and (max-width: 1440px) {
+    .skills {
+        padding: 0rem  2rem 2rem 2rem;  
+    }
+}
+@media screen and (max-width: 1024px) {
+    .skills {
+        padding: 5.5rem  2rem 2rem 2rem;   
+        .skills-container{
+            flex-wrap: wrap;
+            div{
+                width: 45%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .skills {
+        padding: 4.5rem  0;   
+        .skills-container{
+            div{
+                width: 80%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .skills {
+        .skills-container{
+            div{
+                width: 90%;
+            }
+        }
+    }
+}
+

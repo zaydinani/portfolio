@@ -6,7 +6,7 @@ import "../styles/hero.scss";
 function Hero() {
     return (
       <div className="section">
-        <div className="hero">
+        <div className="hero container">
           <div>
             <h1>hi, my name is zayd inani, i'm a developer from morocco</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis deserunt fuga, consectetur dignissimos vitae laborum repellat ea alias quos</p>

@@ -65,14 +65,22 @@ $borders: #cacaca;
         }
 
     }
-}
-@mixin btn-320 () {
-    ul{
-        .btn {
-            font-size: 15px;
+    @media screen and (max-width: 425px) {
+        ul{
+            .btn {
+                font-size: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 320px) {
+        ul{
+            .btn {
+                font-size: 13px;
+            }
         }
     }
 }
+
 @mixin section ($width, $height){
     width: $width;
     height: $height;
@@ -82,8 +90,15 @@ $borders: #cacaca;
     @include section(100%, 100vh);
     border: 1px solid red;
     @media screen and (max-width: 425px) {
-        height: fit-content;  // Change the height to fit-content for screens <= 425px
-      }
+        height: fit-content;  
+    }
+}
+.skills-section{
+    @include section(100%, 100vh);
+    border: 1px solid red;
+    @media screen and (max-width: 1024px) {
+        height: fit-content;  
+    }
 }
 
 .container{
@@ -91,6 +106,9 @@ $borders: #cacaca;
     height: 100%;
     margin: 0 auto;
     border: 1px solid green;
+    @media screen and (max-width: 320px) {
+        width: 90%;
+    }
     
 }
 
@@ -114,6 +132,18 @@ $borders: #cacaca;
             color: $paragraph-font-light;
         }
     }
+    @media screen and (max-width: 1440px) {
+        h1{
+            margin-bottom: 1rem;
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        padding: 0 0.5rem 1rem;
+    }
+
 }
 .features{
     padding: 5rem  2.5rem;
