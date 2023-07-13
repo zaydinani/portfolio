@@ -35,3 +35,42 @@
         }
     }
 }
+@media screen and (max-width: 1024px) {
+    .features{
+        .features-icons{
+            gap: 15px;
+            margin: 0;
+        }
+        .feature{
+            img{
+                width: 62px;
+                height: 62px;
+            }
+            h1{
+                font-size: 25px;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .features{
+        .features-icons{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 3rem;
+        }
+        .feature{
+            width: 45%;
+            margin: 0 auto;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .features{
+        .feature{
+            width: 100%;
+        }
+    }
+}

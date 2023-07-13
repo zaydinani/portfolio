@@ -4,7 +4,7 @@ import "../styles/features.scss";
 
 function features() {
     return (
-        <div className="section">
+        <div className="skills-section">
             <div className="container">
                 <div className="features">
                     <div className="info">

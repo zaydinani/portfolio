@@ -1,9 +1,6 @@
 @import '_variables';
-/* take the comment off when i have more than 2 projects in my portfolio
-.section{
-    height: fit-content;
-}
-*/
+
+
 .projects-container{
     padding: 5rem 0 0;
     .projects{
@@ -12,7 +9,7 @@
         flex-wrap: wrap;
         .project{
             border: 1px solid $borders;
-            height: 25rem;
+            height: 23rem;
             width: 40%;
             padding: 1rem;
             border-radius: 8px;
@@ -29,6 +26,7 @@
                 background-repeat: no-repeat;
                 background-size: 300px 40px;
                 background-color: white;
+                object-fit: contain;
             }
             .project-info{
                 h1{
@@ -48,6 +46,78 @@
                 }
                 .date{
                     margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .projects-container{
+        .projects{
+            .project{
+                height: 23rem;
+                width: 47%;
+                .project-info{
+                    h1{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                    .date{
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .projects-container{
+        .projects{
+            .project{
+                width: 80%;
+                .project-info{
+                    h1{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                    .date{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .projects-container{
+        .projects{
+            .project{
+                width: 100%;
+                .project-info{
+                    h1{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                    .date{
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .projects-container{
+        .projects{
+            .project{
+                .img{
+                    background-size: 250px 30px;
                 }
             }
         }

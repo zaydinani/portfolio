@@ -152,4 +152,7 @@ $borders: #cacaca;
     .light & {
         background-color: $main-light;
     }
+    @media screen and (max-width: 425px) {
+        padding: 5rem 1rem;
+    }
 }
