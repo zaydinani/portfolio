@@ -14,3 +14,9 @@ footer{
         }
     }
 }
+@media screen and (max-width: 425px) {
+    footer{
+        padding: 1rem;
+        @include flex(space-around, center, column, _ );
+    }
+}
