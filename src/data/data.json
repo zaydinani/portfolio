@@ -1,0 +1,159 @@
+{
+    "zayd-data": {
+        "hero":{
+            "title": "Hi, My Name Is Zayd Inani, I'm A Developer From Morocco",
+            "text": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Perferendis Deserunt Fuga, Consectetur Dignissimos Vitae Laborum Repellat Ea Alias Quos"
+        },
+        "about": {
+            "title":"About",
+            "text": "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Necessitatibus Dicta Ex Autem Voluptate Fugiat Fugit Enim. Dicta Saepe Asperiores Quod Totam Ratione Doloribus Sint Placeat Officia, Iure Nihil Soluta Inventore! Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.",
+            "socials": [
+                {
+                    "platform":"facebook",
+                    "linkUrl":"https://www.facebook.com/zayd.inani/"
+
+                },
+                {
+                    "platform":"instagram",
+                    "linkUrl":"https://www.instagram.com/zayd_inani"
+                },
+                {
+                    "platform":"linkedin",
+                    "linkUrl":"https://www.linkedin.com/in/zayd-inani-a23161248/"
+                },
+                {
+                    "platform":"github",
+                    "linkUrl":"https://github.com/zaydinani"
+                }
+            ]
+        },
+        "skills": [
+            {
+                "title":"Skills",
+                "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore"
+            },
+            {
+                "title":"HTMl",
+                "icon":"/icon _file type html_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"CSS",
+                "icon":"/icon _file type css_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"JavaScript",
+                "icon":"/icon _file type js official_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"React",
+                "icon":"/icon _file type reactjs_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"NodeJs",
+                "icon":"/icon _file type node_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"ExpressJS",
+                "icon":"/icons8-express-js.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"GitHub",
+                "icon":"/iconmonstr-github-1.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"GIT",
+                "icon":"/icon _file type git_.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"BootStrap",
+                "icon":"/bootstrap-4.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"SASS",
+                "icon":"/icons8-sass-avatar.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"MySQL",
+                "icon":"/mysql.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            },
+            {
+                "title":"PHP",
+                "icon":"/php-icon.svg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+            }
+        ],
+        "projects":[
+            {
+                "title":"Projects",
+                "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore"
+            },
+            {
+                "projectImage":"/nav-logo.png",
+                "projectTitle":"hahaha",
+                "projectDate":"12 jan 2023",
+                "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
+            },
+            {
+                "projectImage":"/nav-logo.png",
+                "projectTitle":"hahaha",
+                "projectDate":"12 jan 2023",
+                "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
+            },
+            {
+                "projectImage":"/nav-logo.png",
+                "projectTitle":"hahaha",
+                "projectDate":"12 jan 2023",
+                "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
+            },
+            {
+                "projectImage":"/nav-logo.png",
+                "projectTitle":"hahaha",
+                "projectDate":"12 jan 2023",
+                "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
+            }
+        ],
+        "features": [
+            {
+                "title":"Features",
+                "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore"
+            },
+            {
+                "image":"/clock.svg",
+                "title":"fast",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+            },
+            {
+                "image":"/eye.svg",
+                "title":"Intuitive",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+            },
+            {
+                "image":"/layout.svg",
+                "title":"Responsive",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+            }
+            ,
+            {
+                "image":"/activity.svg",
+                "title":"Dynamic",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+            }
+        ],
+        "contact": {
+            "title":"Contact Me",
+            "text":"Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure"
+        }
+
+    }
+}

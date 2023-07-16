@@ -161,6 +161,7 @@
             .img{
                 height: 50%;
                 border-radius: 8px;
+                margin-bottom: 0.4rem;
                 background-color: white;
                 @include flex(center, center,_,_ );
                 img{

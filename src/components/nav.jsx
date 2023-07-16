@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 //my styles
 import "../styles/nav.scss";
 //theme context for dark mode
-import { ThemeContext } from '../themeContext';
+import { ThemeContext } from '../util/themeContext';
 //react scroll
 import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 

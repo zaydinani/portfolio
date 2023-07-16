@@ -1,12 +1,12 @@
 import "../styles/main.scss";
 
 function projects(props) {
-    const { title, date, description } = props;
+    const { image, title, date, description } = props;
 
     return (
         <div className="project">
         <div className="img">
-            <img src="/nav-logo.png" alt="" />
+            <img src={image} alt="" />
         </div>
         <div className="project-info">
             <a>{title}</a>

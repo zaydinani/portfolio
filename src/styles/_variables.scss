@@ -93,14 +93,14 @@ $borders: #cacaca;
 }
 .section{
     @include section(100%, 100vh);
-    border: 1px solid red;
+    //border: 1px solid red;
     @media screen and (max-width: 425px) {
         height: fit-content;  
     }
 }
 .skills-section{
     @include section(100%, 100vh);
-    border: 1px solid red;
+    //border: 1px solid red;
     @media screen and (max-width: 1024px) {
         height: fit-content;  
     }
@@ -110,7 +110,7 @@ $borders: #cacaca;
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    border: 1px solid green;
+    //border: 1px solid green;
     @media screen and (max-width: 320px) {
         width: 90%;
     }

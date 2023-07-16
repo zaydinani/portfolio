@@ -4,7 +4,7 @@ import Nav from './components/nav'
 import Main from './pages/main'
 import Footer from './components/footer'
 
-import { ThemeProvider } from './themeContext'
+import { ThemeProvider } from './util/themeContext'
 
 function App() {
   

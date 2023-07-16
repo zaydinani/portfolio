@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -14,6 +15,11 @@ import Projects from "../components/projects";
 import Features from "../components/features";
 
 function main() {
+    const [activeSection, setActiveSection] = useState('');
+
+    const handleSetActiveSection = (section) => {
+      setActiveSection(section);
+    };
     return (
         <>
             {/* HERO */}
@@ -167,21 +173,25 @@ function main() {
                         </div>
                         <div className="projects">
                             <Projects 
+                                image="/nav-logo.png"
                                 title='project title'
                                 date='12 jan 2023'
                                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
                             />
                             <Projects 
+                                image="/nav-logo.png"
                                 title='project title'
                                 date='12 jan 2023'
                                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
                             />
                             <Projects 
+                                image="/nav-logo.png"
                                 title='project title'
                                 date='12 jan 2023'
                                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
                             />
                             <Projects 
+                                image="/nav-logo.png"
                                 title='project title'
                                 date='12 jan 2023'
                                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
