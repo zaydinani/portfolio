@@ -1,95 +1,84 @@
 @import '_variables';
 
 nav {
-    width: 470px;
-    height: 65px;
-    border-radius: 90px;
-    border: 1px solid $borders;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    @include flex(center, _,_,_);
-    position: fixed;
-    top: 1rem;
-    left: 50%; 
-    transform: translateX(-50%);
-    z-index: 99;
-    .selected{
-        a{
-            color: $button-main;
-        }
+  width: 470px;
+  height: 65px;
+  border-radius: 90px;
+  border: 1px solid $borders;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  @include flex(center, _,_,_);
+  position: fixed;
+  top: 1rem;
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 99;
+  .selected{
+    color: $button-main;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  ul{
+    @include reset-list-styles;
+    @include flex(space-around, center, row,_ );
+    width: 100%;
+    .navLink{
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      &:hover{
+        color: $button-main;
+      }
     }
-    ul{
-        @include reset-list-styles;
-        @include flex(space-around, center, row,_ );
-        width: 100%;
-        li{
-            a{
-                color: $headers-dark;
-                transition: 0.2s ease-in-out;
-                
-            }
-            a:hover{
-                color: $button-main;
-            }
+    /*!----------------dark mode toggle-----------------------*/
+    div {
+      border-radius: 25px;  
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+      } 
+      .checkbox:checked + .label .ball {
+        transform: translateX(-24px);
+      }
+      .label {
+        background-color: $main-dark;
+        display: flex;
+        border-radius: 50px;
+        height: 26px;
+        width: 50px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 5px;
+        .fa-sun {
+          height: 16px;
         }
-        /*!----------------dark mode toggle-----------------------*/
-        div {
-            border-radius: 25px;
-          
-            .checkbox {
-              opacity: 0;
-              position: absolute;
-            }
-          
-            .checkbox:checked + .label .ball {
-              transform: translateX(-24px);
-            }
-          
-            .label {
-              background-color: $main-dark;
-              display: flex;
-              border-radius: 50px;
-              height: 26px;
-              width: 50px;
-              align-items: center;
-              justify-content: space-between;
-              position: relative;
-              padding: 5px;
-          
-              .fa-sun {
-                height: 16px;
-              }
-          
-              .fa-moon {
-                height: 16px;
-              }
-          
-              .ball {
-                background-color: $button-secondary;
-                position: absolute;
-                width: 22px;
-                height: 22px;
-                top: 2px;
-                right: 1.5px;
-                border-radius: 50%;
-                transition: 0.2s linear;
-              }
-            }
-          
-
-          
-
+        .fa-moon {
+          height: 16px;
         }
-    }
-
-    &.light {
-        div .label {
-            background-color: $borders ;
-        }
-        ul li a {
-          color: $secondary-color-dark;
+        .ball {
+          background-color: $button-secondary;
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          top: 2px;
+          right: 1.5px;
+          border-radius: 50%;
+          transition: 0.2s linear;
         }
       }
+    }
+  }
+  &.light {
+    div .label {
+      background-color: $borders ;
+    }
+    .navLink{
+      color: $secondary-color-dark;
+    }
+    .selected{
+      color: $button-main;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

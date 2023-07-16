@@ -161,20 +161,24 @@
             .img{
                 height: 50%;
                 border-radius: 8px;
-                background-image: url('/nav-logo.png');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 300px 40px;
                 background-color: white;
-                object-fit: contain;
+                @include flex(center, center,_,_ );
+                img{
+                    width: 90%;
+                    object-fit: contain;
+                }
             }
             .project-info{
-                h1{
+                a{
                     font-weight: 500;
                     font-size: 29px;
                     color: $button-main;
                     margin-top: .7rem;
                     cursor: pointer;
+                    transition: 0.5s ease-in-out;
+                    &:hover{
+                        color: red;
+                    }
                 }
                 p{
                     font-weight: 400;
@@ -293,6 +297,10 @@
             border: none;
             transition: 0.5s ease-in-out;
             letter-spacing: 3px;
+            &:hover{
+                scale: 1.01;
+                background-color: red;
+            }
         }
     }
 }

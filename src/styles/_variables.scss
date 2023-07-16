@@ -44,21 +44,26 @@ $borders: #cacaca;
             font-size: 20px;
             padding: 12px 20px;
             border-radius: 8px;
+            cursor: pointer;
+        }
+        li{
+            a{
+                color: white;
+            }
         }
         .main-btn{
             background-color: $button-main;
             transition: 0.5s ease-in-out;
-            a{
-                color: #D0D5DD;
+            color: #D0D5DD;
+            &:hover{
+                scale: 1.05;
+                background-color: red;
             }
-        }
-        .main-btn:hover{
-            scale: 1.05;
-            background-color: red;
         }
         .secondary-btn{
             background-color: $button-secondary;
             transition: 0.5s ease-in-out;
+            color: black;
         }
         .secondary-btn:hover{
             scale: 1.05;

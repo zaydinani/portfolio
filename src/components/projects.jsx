@@ -5,9 +5,11 @@ function projects(props) {
 
     return (
         <div className="project">
-        <div className="img"></div>
+        <div className="img">
+            <img src="/nav-logo.png" alt="" />
+        </div>
         <div className="project-info">
-            <h1>{title}</h1>
+            <a>{title}</a>
             <p className="date">{date}</p>
             <p>{description}</p>
         </div>
