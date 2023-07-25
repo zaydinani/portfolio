@@ -36,18 +36,6 @@ function Nav() {
         <Link
           className='navLink'
           activeClass="selected"
-          to="hero"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('hero')}
-        >
-          hero
-        </Link>
-        <Link
-          className='navLink'
-          activeClass="selected"
           to="about"
           spy={true}
           smooth={true}

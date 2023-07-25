@@ -1,4 +1,37 @@
 @import '_variables';
+//SCROLL UP ICON 
+.scroll {
+    position: fixed;
+    bottom: 10px;
+    left: 90%;
+    @include flex(center, center, _, _);
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 99;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $button-secondary;
+    transition: 0.5s ease-in-out;
+    opacity: 0.2;
+    svg {
+        width: 24px; 
+        height: 24px;
+        fill: $main-dark;
+        transition: 0.5s ease-in-out;
+        margin: .5rem 0 0 .5rem;
+    }
+    .light & {
+        opacity: 0.6;
+    }
+    &:hover{
+        height: 2.6rem;
+        width: 2.6rem;
+        opacity: 1;
+        svg {
+            transform: translateY(-6px);
+        }
+    }
+}
 //HERO
 .hero {
     text-align: center;
@@ -12,14 +45,12 @@
     div:nth-child(1) {
         width: 70%;
         margin: 2.5rem 0 2.5rem 0;
-    
         h1 {
             margin-bottom: 1.5rem;
             font-size: 42px;
             color: $headers-dark;
-        
             .light & {
-            color: $font-light;
+                color: $font-light;
             }
         }
     
@@ -70,7 +101,7 @@
         }
     }
     .imgContainer{
-        width: fit-content;
+        width: 40%;
         margin-top: 1rem;
         img{
             border-radius: 10px;
@@ -80,7 +111,7 @@
             width: 100%;
             filter: grayscale(1);
             transition: 1s ease-in-out;
-            object-fit: contain;
+            object-fit: cover;
         }
         img:hover{
             filter: grayscale(0);
@@ -142,7 +173,7 @@
 }
 //PROJECTS
 .projects-container{
-    padding: 5rem 0 0;
+    padding: 5rem 0 3rem;
     .projects{
         margin-top: .5rem;
         @include flex(space-evenly, flex-start, row, 40px );
@@ -284,7 +315,7 @@
             }
             
         }
-        button{
+        .submit{
             padding: 8px 20px;
             justify-content: center;
             align-items: center;
@@ -330,7 +361,7 @@
             }
         }  
         .imgContainer{
-            width: 70%;
+            width: 50%;
             height: fit-content;
         }
     }
@@ -437,11 +468,28 @@
     }
 }
 @media screen and (max-width: 425px) {
+    .scroll {
+        transform: translateX(-50%);
+        height: 2rem;
+        width: 2rem;
+
+
+        svg {
+            width: 24px; 
+            height: 24px;
+
+        }
+        &:hover{
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+    }
     .hero {
-        background-size: 100% 100%;    
+        background-size: 100% 100%; 
         div:nth-child(1) {
             width: 90%;  
             margin-top: 5rem;
+            
             h1 {
                 font-size: 28px;
             }   

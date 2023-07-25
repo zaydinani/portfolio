@@ -90,31 +90,27 @@ nav {
 @media screen and (max-width: 425px) {
   nav {
     width: 350px;
-    ul{
-      li{
-          a{
-              transition: 0.2s ease-in-out;
-              font-size: 14px;
-          }
-      }
-      /*!----------------dark mode toggle-----------------------*/
-      div {
-          .label {
-            .fa-sun {
-              height: 14px;
-            }
+    .navLink{
+      transition: 0.2s ease-in-out;
+      font-size: 14px;
+    }
+    /*!----------------dark mode toggle-----------------------*/
+    div {
+      .label {
+        .fa-sun {
+          height: 14px;
+        }
         
-            .fa-moon {
-              height: 14px;
-            }
+        .fa-moon {
+          height: 14px;
+        }
         
-            .ball {
-              width: 20px;
-              height: 20px;
-            }
-          }
+        .ball {
+          width: 20px;
+          height: 20px;
+        }
       }
-  }
+    }
   }
 }
 @media screen and (max-width: 425px) {

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+// sending emails through email.js
+import emailjs from '@emailjs/browser';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -13,22 +15,83 @@ import Socials from "../components/socialIcons";
 import Skills from "../components/skills";
 import Projects from "../components/projects";
 import Features from "../components/features";
+import data from "../data/data.json"
 
 function main() {
+    //! group skills into sets of 6
+    const chunkSkills = (skills, size) => {
+        return skills.reduce((acc, _, index) => {
+        if (index % size === 0) {
+            acc.push(skills.slice(index, index + size));
+        }
+        return acc;
+        }, []);
+    };
+    const skillsData = data["zayd-data"].skills;
+    const skillSets = chunkSkills(skillsData.skillSlide, 6);
+    //! scroll to top arrow 
+    useEffect(() => {
+        const scrollIcon = document.querySelector('.scroll');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 500) {
+            scrollIcon.style.display = "block";
+          } else {
+            scrollIcon.style.display = "none";
+          }
+        });
+      }, []);
+    //! setting active section in nav bar
     const [activeSection, setActiveSection] = useState('');
-
     const handleSetActiveSection = (section) => {
       setActiveSection(section);
     };
+    //! contact me form 
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+  
+        emailjs
+        .sendForm(
+            'service_9znrmsa', 
+            'template_5ntcwsg', 
+            form.current, 
+            'e-FOTgYBMZ0Xwli1U'
+        )
+        .then((result) => {
+            console.log("emailjs sent successfully");
+            e.target.reset()
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+  
+
     return (
         <>
             {/* HERO */}
+            <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+            >
+                <div className="scroll"  style={{ display: 'none' }}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fillRule="evenodd" 
+                        clipRule="evenodd"
+                    >
+                        <path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z"/>
+                    </svg>
+                </div>
+            </Link>
             <Element name="hero">
                 <div className="section" id='hero'>
                     <div className="hero container">
                         <div>
-                            <h1>hi, my name is zayd inani, i'm a developer from morocco</h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis deserunt fuga, consectetur dignissimos vitae laborum repellat ea alias quos</p>
+                            <h1>{data['zayd-data'].hero.title}</h1>
+                            <p>{data['zayd-data'].hero.text}</p>
                         </div>
                         <div>
                             <ul>
@@ -60,13 +123,13 @@ function main() {
                 </div>
             </Element>
             {/* ABOUT */}
-            <Element name="about">
+            <Element name="about" id="about">
                 <div className="about container" id='about'>
                     <div className="about-info">
                         <div>
-                            <h1>about</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dicta ex autem voluptate fugiat fugit enim. Dicta saepe asperiores quod totam ratione doloribus sint placeat officia, iure nihil soluta inventore!</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h1>{data['zayd-data'].about.title}</h1>
+                            <p>{data['zayd-data'].about.text}</p>
+                            <p>{data['zayd-data'].about.secondaryText}</p>
                         </div>
                         <Socials />
                         <div>
@@ -76,7 +139,7 @@ function main() {
                         </div>
                     </div>
                     <div className="imgContainer">
-                        <img src="/zayd.jpg" alt="" />
+                        <img src={data['zayd-data'].about.image} alt="" />
                     </div>
                 </div>
             </Element>
@@ -85,79 +148,25 @@ function main() {
                 <div className="skills-section" id='skills'>
                     <div className=" skills container">
                         <div className="info">
-                            <h1>skills</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, exercitationem vitae! In iure reiciendis eligendi repellat perferendis et magnam repudiandae nemo, non voluptatum, esse, officia ex inventore</p>
+                            <h1>{data['zayd-data'].skills.title}</h1>
+                            <p>{data['zayd-data'].skills.text}</p>
                         </div>
                         <div>
                             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                                <SwiperSlide>
-                                    <div className="skills-container">
-                                        < Skills
-                                            icon="/icon _file type html_.svg"
-                                            title='HTMl'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />
-                                        < Skills
-                                            icon="/icon _file type css_.svg"
-                                            title='CSS'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />
-                                        < Skills
-                                            icon="/icon _file type js official_.svg"
-                                            title='JavaScript'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />
-                                        < Skills
-                                            icon="/icon _file type reactjs_.svg"
-                                            title='React'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />
-                                        < Skills
-                                            icon="/icon _file type node_.svg"
-                                            title='NodeJs'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />                                    
-                                        < Skills
-                                            icon="/icons8-express-js.svg"
-                                            title='ExpressJS'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />  
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="skills-container">
-                                        < Skills
-                                            icon="/iconmonstr-github-1.svg"
-                                            title='GitHub'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />                                  
-                                        < Skills
-                                            icon="/icon _file type git_.svg"
-                                            title='GIT'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />   
-                                        < Skills
-                                            icon="/bootstrap-4.svg"
-                                            title='BootStrap'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />  
-                                        < Skills
-                                            icon="/icons8-sass-avatar.svg"
-                                            title='SASS'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />     
-                                        < Skills
-                                            icon="/mysql.svg"
-                                            title='MySQL'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        />                                  
-                                        < Skills
-                                            icon="/php-icon.svg"
-                                            title='PHP'
-                                            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis '
-                                        /> 
-                                    </div>
-                                </SwiperSlide>
+                                {skillSets.map((skillSet, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="skills-container">
+                                            {skillSet.map((skill, subIndex) => (
+                                                <Skills
+                                                    key={subIndex}
+                                                    icon={skill.icon}
+                                                    title={skill.title}
+                                                    description={skill.description}
+                                                />
+                                            ))}
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                             </Swiper>
                         </div>
                     </div>
@@ -168,34 +177,19 @@ function main() {
                 <div className="container" id='projects'>
                     <div className="projects-container">
                         <div className="info">
-                            <h1>projects</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, exercitationem vitae! In iure reiciendis eligendi repellat perferendis et magnam repudiandae nemo, non voluptatum, esse, officia ex inventore</p>
+                            <h1>{data['zayd-data'].projects.title}</h1>
+                            <p>{data['zayd-data'].projects.text}</p>
                         </div>
                         <div className="projects">
-                            <Projects 
-                                image="/nav-logo.png"
-                                title='project title'
-                                date='12 jan 2023'
-                                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
-                            />
-                            <Projects 
-                                image="/nav-logo.png"
-                                title='project title'
-                                date='12 jan 2023'
-                                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
-                            />
-                            <Projects 
-                                image="/nav-logo.png"
-                                title='project title'
-                                date='12 jan 2023'
-                                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
-                            />
-                            <Projects 
-                                image="/nav-logo.png"
-                                title='project title'
-                                date='12 jan 2023'
-                                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nihil molestiae, ullam optio corrupti doloribus adipisci tenetur ex atque'
-                            />
+                            {data['zayd-data'].projects.project.map((project, index) => (
+                                <Projects 
+                                    key={index}
+                                    image={project.projectImage}
+                                    title={project.projectTitle}
+                                    date={project.projectDate}
+                                    description={project.projectDescription}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -204,30 +198,18 @@ function main() {
             <div className="container">
                 <div className="features">
                     <div className="info">
-                        <h1>features</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, exercitationem vitae! In iure reiciendis eligendi repellat perferendis et magnam repudiandae nemo, non voluptatum, esse, officia ex inventore</p>
+                        <h1>{data['zayd-data'].features.title}</h1>
+                        <p>{data['zayd-data'].features.text}</p>
                     </div>
                     <div className="features-icons">
-                        <Features 
-                            image="/clock.svg"
-                            title="fast"
-                            description="Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
-                        />
-                        <Features 
-                            image="/eye.svg"
-                            title="Intuitive"
-                            description="Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
-                        />
-                        <Features 
-                            image="/layout.svg"
-                            title="Responsive"
-                            description="Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
-                        />
-                        <Features 
-                            image="/activity.svg"
-                            title="Dynamic"
-                            description="Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
-                        />
+                        {data['zayd-data'].features.feature.map((feature, index) => (
+                            <Features 
+                                key={index} 
+                                image={feature.image} 
+                                title={feature.title} 
+                                description={feature.description} 
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
@@ -236,14 +218,14 @@ function main() {
                 <div className="container" id='contact'>
                     <div className="contact">
                         <div className="info">
-                            <h1>contact me</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, exercitationem vitae! In iure </p>
+                            <h1>{data['zayd-data'].contact.title}</h1>
+                            <p>{data['zayd-data'].contact.text}</p>
                         </div>
-                        <form action="">
-                            <input type="text" placeholder="Enter your text" />
-                            <input type="text" placeholder="Enter your text" />
-                            <textarea placeholder="Enter your message"></textarea>
-                            <button>submit</button>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <input name="user_name" type="text" placeholder="Enter your name" />
+                            <input name="user_email" type="text" placeholder="Enter your email" />
+                            <textarea  name="message" placeholder="Enter your message"></textarea>
+                            <input className='submit' type="submit" value="Send" />
                         </form>
                     </div>
                 </div>
