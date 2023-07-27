@@ -1,7 +1,7 @@
 @import '_variables';
 
 nav {
-  width: 470px;
+  width: 490px;
   height: 65px;
   border-radius: 90px;
   border: 1px solid $borders;
@@ -13,6 +13,7 @@ nav {
   left: 50%; 
   transform: translateX(-50%);
   z-index: 99;
+  padding: 0 0.5rem;
   .selected{
     color: $button-main;
     transition: 0.2s ease-in-out;
@@ -83,16 +84,18 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    width: 430px;
-    height: 50px;
+    width: 450px;
+    height: 60px;
   }
 }
 @media screen and (max-width: 425px) {
   nav {
     width: 350px;
+    height: 50px;
+
     .navLink{
       transition: 0.2s ease-in-out;
-      font-size: 14px;
+      font-size: 12px;
     }
     /*!----------------dark mode toggle-----------------------*/
     div {
@@ -113,15 +116,13 @@ nav {
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) {
   nav {
-    width: 300px;
-    ul{
-      li{
-          a{
-              font-size: 12px;
-          }
-      }
-  }
+    width: 95%;
+    .navLink{
+      font-size: 11px;
+    }
   }
 }
+
+

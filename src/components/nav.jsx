@@ -11,9 +11,10 @@ function Nav() {
   const [activeSection, setActiveSection] = useState('');
 
   const toggleBodyClass = (newTheme) => {
-    document.body.classList.remove(theme);
-    document.body.classList.add(newTheme);
+    document.body.classList.remove(theme === 'dark' ? 'dark' : 'light');
+    document.body.classList.add(newTheme === 'dark' ? 'dark' : 'light');
   };
+  
 
   const handleToggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -68,6 +69,18 @@ function Nav() {
           onSetActive={() => handleSetActiveSection('projects')}
         >
           projects
+        </Link>
+        <Link
+          className='navLink'
+          activeClass="selected"
+          to="features"
+          spy={true}
+          smooth={true}
+          duration={1000}
+          offset={0}
+          onSetActive={() => handleSetActiveSection('contact')}
+        >
+          features
         </Link>
         <Link
           className='navLink'

@@ -13,12 +13,11 @@
     background-color: $button-secondary;
     transition: 0.5s ease-in-out;
     opacity: 0.2;
-    svg {
+    img {
         width: 24px; 
         height: 24px;
-        fill: $main-dark;
         transition: 0.5s ease-in-out;
-        margin: .5rem 0 0 .5rem;
+        margin: 0.5rem 0 0 0.5rem;
     }
     .light & {
         opacity: 0.6;
@@ -27,7 +26,7 @@
         height: 2.6rem;
         width: 2.6rem;
         opacity: 1;
-        svg {
+        img {
             transform: translateY(-6px);
         }
     }
@@ -88,7 +87,7 @@
                 }
             }
             p{
-                font-size: 22px;
+                font-size: 20px;
                 color: $paragraph-font-dark;
                 .light & {
                     color: $paragraph-font-light;
@@ -119,57 +118,63 @@
     }
 }
 //SKILLS
-.skills {
-    padding: 6rem  2rem 2rem 2rem;    
-    background-color: $secondary-color-dark;
-    height: 100%;
+.skills--container{
+    height: 100vh;
+    width: 100%;
     @include flex(center, _, column, _ );
-    .light & {
-        background-color: $secondary-color-light; 
-    }
-    .info {
-        h1{
-            margin-bottom: 0;
+    .skills {
+        background-color: $secondary-color-dark;
+        @include flex(center, _, column, _ );
+        width: 80vw;
+        height: 80vh;
+        margin: 0 auto;
+        .light & {
+            background-color: $secondary-color-light; 
         }
-    }
-    .mySwiper{
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: $button-main;
+        .info {
+            margin-bottom: 1.5rem;
+            h1{
+                margin-bottom: 0;
+            }
         }
-    }
-    .skills-container{
-        @include flex(flex-start, _, row, 1rem );
-        flex-wrap: wrap;
-        div{
-            width: 32%;
-            height: fit-content;
-            text-align: center;
-            padding: 1rem 0;
-            margin: 0 auto;
-            img{
-                width: 60px;
-                height: 60px;
-                padding: .7rem;
-                border-radius: 8px;
-                background-color: $button-secondary;
+        .mySwiper{
+            .swiper-button-next,
+            .swiper-button-prev {
+              color: $button-main;
             }
-            h2{
-                margin: .2rem 0;
-                color: $button-main;
-                font-weight: 500;
-                font-size: 20px;
-            }
-            p{
-                color: $paragraph-font-dark;
-                font-size: 14px;
-                .light & {
-                    color: $paragraph-font-light;
+        }
+        .skills-container{
+            @include flex(flex-start, _, row, 1rem );
+            flex-wrap: wrap;
+            .skill{
+                width: 31%;
+                height: fit-content;
+                text-align: center;
+                padding: 1rem 0;
+                margin: 0 auto;
+                img{
+                    width: 60px;
+                    height: 60px;
+                    padding: .7rem;
+                    border-radius: 8px;
+                    background-color: $button-secondary;
+                }
+                h2{
+                    margin: .2rem 0;
+                    color: $button-main;
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+                p{
+                    color: $paragraph-font-dark;
+                    font-size: 14px;
+                    .light & {
+                        color: $paragraph-font-light;
+                    }
                 }
             }
-        }
+        }   
     }
-
 }
 //PROJECTS
 .projects-container{
@@ -264,20 +269,18 @@
     }
 }
 //CONTACT
+
 .contact {
     max-width: 700px;
     margin: 0 auto;
     height: 100%;
     padding: 5rem 2.5rem;
+    margin-top: 5rem;
     background-color: $main-dark;
-    
     .light & {
       background-color: $main-light;
     }
-    
-    .features {
-      padding: 0 1rem;
-    }
+
     
     form {
         display: flex;
@@ -329,6 +332,9 @@
             border: none;
             transition: 0.5s ease-in-out;
             letter-spacing: 3px;
+            .light & {
+                background-color: $button-main;
+            }
             &:hover{
                 scale: 1.01;
                 background-color: red;
@@ -343,8 +349,10 @@
             height: 60vh;
         }
     }
-    .skills {
-        padding: 0rem  2rem 2rem 2rem;  
+    .skills--container{
+        .skills {
+            padding: 0rem  2rem 2rem 2rem;  
+        }
     }
 }
 @media screen and (max-width: 1024px) {
@@ -365,12 +373,11 @@
             height: fit-content;
         }
     }
-    .skills {
-        padding: 5.5rem  2rem 2rem 2rem;   
-        .skills-container{
-            flex-wrap: wrap;
-            div{
-                width: 45%;
+    .skills--container{
+        .skills {
+            padding: 5rem 2rem;   
+            .skills-container{
+                flex-wrap: wrap;
             }
         }
     }
@@ -436,6 +443,15 @@
             height: fit-content;
         }
     }
+    .skills--container{
+        .skills {
+            height: 90%;
+            width: 90%;
+            .info {
+                margin: 2rem 0 0rem;
+            }
+        }
+    }
     .projects-container{
         .projects{
             .project{
@@ -472,12 +488,8 @@
         transform: translateX(-50%);
         height: 2rem;
         width: 2rem;
-
-
-        svg {
-            width: 24px; 
-            height: 24px;
-
+        img {
+            margin: 0.4rem 0 0 0.3rem;
         }
         &:hover{
             height: 2.3rem;
@@ -514,11 +526,14 @@
             height: fit-content;
         }
     }
-    .skills {
-        padding: 4.5rem  0;   
-        .skills-container{
-            div{
-                width: 80%;
+    .skills--container{
+        height: fit-content;   
+        .skills {
+            padding: 2rem  0;
+            .skills-container{
+                .skill{
+                    width: 80%;
+                }
             }
         }
     }
@@ -551,10 +566,12 @@
     }
 }
 @media screen and (max-width: 375px) {
-    .skills {
-        .skills-container{
-            div{
-                width: 90%;
+    .skills--container{
+        .skills {
+            .skills-container{
+                div{
+                    width: 90%;
+                }
             }
         }
     }

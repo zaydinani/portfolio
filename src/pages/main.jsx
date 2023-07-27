@@ -28,7 +28,7 @@ function main() {
         }, []);
     };
     const skillsData = data["zayd-data"].skills;
-    const skillSets = chunkSkills(skillsData.skillSlide, 6);
+    const skillSets = chunkSkills(skillsData.skillSlide, 3);
     //! scroll to top arrow 
     useEffect(() => {
         const scrollIcon = document.querySelector('.scroll');
@@ -68,7 +68,7 @@ function main() {
 
     return (
         <>
-            {/* HERO */}
+            {/* scroll up */}
             <Link
                 to="hero"
                 spy={true}
@@ -77,13 +77,7 @@ function main() {
                 offset={0}
             >
                 <div className="scroll"  style={{ display: 'none' }}>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg" 
-                        fillRule="evenodd" 
-                        clipRule="evenodd"
-                    >
-                        <path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z"/>
-                    </svg>
+                    <img src="/chevron-up-solid.svg" alt="" />
                 </div>
             </Link>
             <Element name="hero">
@@ -134,7 +128,7 @@ function main() {
                         <Socials />
                         <div>
                             <ul>
-                                <li className=" btn main-btn"><a href="">download cv</a></li>
+                                <li className=" btn main-btn"><a href="/Orientalism by Edward Said.pdf" download>download cv</a></li>
                             </ul>
                         </div>
                     </div>
@@ -145,8 +139,8 @@ function main() {
             </Element>
             {/* SKILLS */}
             <Element name="skills">
-                <div className="skills-section" id='skills'>
-                    <div className=" skills container">
+                <div className='skills--container'>
+                    <div className=" skills">
                         <div className="info">
                             <h1>{data['zayd-data'].skills.title}</h1>
                             <p>{data['zayd-data'].skills.text}</p>
@@ -195,24 +189,26 @@ function main() {
                 </div>
             </Element>
             {/*FEATURES*/}
-            <div className="container">
-                <div className="features">
-                    <div className="info">
-                        <h1>{data['zayd-data'].features.title}</h1>
-                        <p>{data['zayd-data'].features.text}</p>
-                    </div>
-                    <div className="features-icons">
-                        {data['zayd-data'].features.feature.map((feature, index) => (
-                            <Features 
-                                key={index} 
-                                image={feature.image} 
-                                title={feature.title} 
-                                description={feature.description} 
-                            />
-                        ))}
+            <Element name="features">
+                <div className="container">
+                    <div className="features">
+                        <div className="info">
+                            <h1>{data['zayd-data'].features.title}</h1>
+                            <p>{data['zayd-data'].features.text}</p>
+                        </div>
+                        <div className="features-icons">
+                            {data['zayd-data'].features.feature.map((feature, index) => (
+                                <Features 
+                                    key={index} 
+                                    image={feature.image} 
+                                    title={feature.title} 
+                                    description={feature.description} 
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Element>
             {/*CONTACT*/}
             <Element name="contact">
                 <div className="container" id='contact'>

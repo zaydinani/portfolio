@@ -4,7 +4,7 @@ function skills(props) {
     const { icon, title, description } = props;
 
     return (
-        <div>
+        <div className="skill">
             <img src={icon} alt="" />
             <h2>{title}</h2>
             <p>{description}</p>
