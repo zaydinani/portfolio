@@ -3,7 +3,7 @@ import './styles/app.scss'
 import Nav from './components/nav'
 import Main from './pages/main'
 import Footer from './components/footer'
-
+import Projects from './pages/projects'
 import { ThemeProvider } from './util/themeContext'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider>
       <Nav />
-      <Main />
+      <Projects />
       <Footer />
     </ThemeProvider>
   )
