@@ -1,7 +1,7 @@
 @import '_variables';
 
 .project--container {
-    padding: 6rem 1rem 2rem;
+    padding: 6rem 6rem 2rem;
     .title {
         text-align: center;
         margin-bottom: 1.5rem;
@@ -73,7 +73,12 @@
             }
             div{
                 @include btn();
-                display: flex;
+                @include flex(_, _, _,_ );
+                ul {
+                    .secondary-btn{
+                        margin: 0 1rem ;
+                    }
+                }
             }
         }
         .project--tools{
@@ -110,10 +115,11 @@
                 }
                 .languages{
                     @include flex(_, _, _,10px );
-                    height: 5rem;
+                    flex-wrap: wrap;
                     div{
                         height: 100%;
                         width: 5rem;
+                        height: 5rem;
                         img{
                             object-fit: contain;
                             height: 100%;
@@ -125,3 +131,78 @@
         }
     }
 }
+@media screen and (max-width: 768px) {
+    .project--container {
+        .project--info{
+            .project--description{
+                div{
+                    ul {
+                        @include flex(flex-start, _, column,_ );
+                        .main-btn{
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .secondary-btn{
+                            margin: 1rem 0rem;
+                        }
+                    }
+                }
+            }
+            .project--tools{
+                .projects--languages{
+                    .languages{
+                        div{
+                            height: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+@media screen and (max-width: 425px) {
+    .project--container {
+        padding: 4.5rem 2rem 2rem;
+        .image--container {
+            height: fit-content;
+            @include flex(_, center, column,10px );
+            margin-bottom: 1.5rem;
+            .main--img{
+                width: 90%;
+            }
+            .sec-images{
+                width: 90%;
+            }
+        }
+        .project--info{
+            @include flex(_, _, column,1rem );
+            .project--description{
+                width: 90%;
+            }
+            .project--tools{
+                width: 100%;
+                margin-left: 0rem;
+                .projects--languages{
+                    .languages{
+                        @include flex(center, _, _,5px );
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .project--container {
+        padding: 4.5rem 1.5rem 2rem;
+        .image--container {
+            .main--img{
+                width: 100%;
+            }
+            .sec-images{
+                width: 100%;
+            }
+        }
+    }
+}
+  

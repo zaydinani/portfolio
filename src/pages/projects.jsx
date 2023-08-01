@@ -26,10 +26,11 @@ function Project() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam sunt, quasi numquam error facere necessitatibus nihil suscipit pariatur dolorum similique beatae, hic in nemo nulla vel debitis? Delectus, quae?</p>
 
                     <div>
-                        <ul>
-                            <li className=" btn main-btn"><a href="">open in github</a></li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li className='btn main-btn'> visit website </li>
+                                <li className='btn secondary-btn'>open on github</li>
+                            </ul>
+                        </div>
                 </div>
                 <div className="project--tools">
                     <div className='project--type'>
@@ -50,7 +51,7 @@ function Project() {
                             </div>
                             <div>
                                 <img src="/icons8-sass-avatar.svg" alt="" />
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
