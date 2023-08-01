@@ -1,16 +1,58 @@
-import React, { useState } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/projects.scss'
+
 function Project() {
     const [showGallery, setShowGallery] = useState(false);
+    const [clickedImageUrl, setClickedImageUrl] = useState('');
+  
+    // Ref for the gallery container
+    const galleryRef = useRef(null);
+  
     // Function to toggle the visibility of the gallery
     const toggleGallery = () => {
-        setShowGallery(!showGallery);
+      setShowGallery(!showGallery);
     };
+  
     // Function to close the gallery
     const closeGallery = () => {
-        setShowGallery(false);
+      setShowGallery(false);
     };
+  
+    // Function to handle image click and display the gallery
+    const handleImageClick = (imageUrl, event) => {
+        // Stop the event propagation to prevent closing the gallery
+        event.stopPropagation();
+        setClickedImageUrl(imageUrl);
+        setShowGallery(true);
+    };
+      
+    // Function to close the enlarged image when clicking outside of it
+    const handleClickOutsideImage = (event) => {
+        if (
+          galleryRef.current &&
+          !galleryRef.current.contains(event.target) &&
+          !event.target.classList.contains('enlarged-image')
+        ) {
+          // Check if clicked element is not part of the enlarged-image div
+          // and clickedImageUrl is empty, then close the gallery
+          setClickedImageUrl('');
+        }
+      };
+
+    // Function to close the enlarged image when clicking on it
+    const handleCloseEnlargedImage = (event) => {
+        event.stopPropagation();
+        setClickedImageUrl('');
+      };
+    // Attach the click event listener when the component mounts
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsideImage);
+        return () => {
+        document.removeEventListener('click', handleClickOutsideImage);
+        };
+    }, []);
+    
+  
 
     return(
         <div className="project--container">
@@ -67,37 +109,50 @@ function Project() {
                     </div>
                 </div>
             </div>
-            <div className={`gallery--container ${showGallery ? "show" : ""}`} onClick={closeGallery}>
+            <div 
+                className={`gallery--container ${showGallery ? 'show' : ''}`} 
+                ref={galleryRef} 
+                onClick={closeGallery}
+            >
                 <h1>all screen shots</h1>
                 <div className="gallery">
-                    <div>
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
                     </div> 
-                    <div>
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
                     </div> 
-                    <div>
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
                     </div> 
-                    <div>
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>   
-                    <div>
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>  
-                    <div>
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>  
-                    <div>
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>  
-                    <div>
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>  
-                    <div>
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
                         <img src="/zayd.jpg" alt="" />
-                    </div>  
+                    </div> 
+                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
+                        <img src="/zayd.jpg" alt="" />
+                    </div> 
                 </div>
+                {clickedImageUrl && (
+                    <div className="enlarged-image" onClick={handleCloseEnlargedImage}>
+                        {/* Image with onClick event to close the enlarged image */}
+                        <img src={clickedImageUrl} alt="" />
+                    </div>
+                )}
             </div>
         </div>
     )
