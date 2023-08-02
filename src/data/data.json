@@ -64,6 +64,11 @@
                     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
                 },
                 {
+                    "title":"EJS",
+                    "icon": "/ejs-svgrepo-com.svg",
+                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                },
+                {
                     "title":"GitHub",
                     "icon":"/iconmonstr-github-1.svg",
                     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "

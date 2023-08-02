@@ -62,14 +62,14 @@ function Project() {
             </div>
             <div className="image--container" onClick={toggleGallery}>
                 <div className='main--img'>
-                    <img src="/zayd.jpg" alt="" />
+                    <img src="screentest.jpg" alt="" />
                 </div>
                 <div className='sec-images'>
                     <div>
-                        <img src="/zayd.jpg" alt="" />
+                        <img src="screentest.jpg" alt="" />
                     </div>
                     <div>
-                        <img src="/zayd.jpg" alt="" />
+                        <img src="screentest.jpg" alt="" />
                     </div>   
                 </div>
             </div>
@@ -116,35 +116,35 @@ function Project() {
             >
                 <h1>all screen shots</h1>
                 <div className="gallery">
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
-                    <div onClick={(event) => handleImageClick("/zayd.jpg", event)}>
-                        <img src="/zayd.jpg" alt="" />
+                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
+                        <img src="screentest.jpg" alt="" />
                     </div> 
                 </div>
                 {clickedImageUrl && (

@@ -1,0 +1,39 @@
+{
+    "grovemade clone": { 
+        "name" : "GroveMade", 
+        "url": "https://grovemade-clone.onrender.com",
+        "githubUrl": "https://github.com/zaydinani/E-commerce",
+        "date": "27 june 2023",
+        "type": "Ecommerce website",
+        "description": {
+            "main-description": " an e-commerce platform that offers a seamless shopping experience. Whether you're a customer looking to purchase products or an admin managing the platform, our website provides a user-friendly interface to meet your needs. You can explore a wide range of products, add them to your cart, and easily manage your purchases. As an admin, you have access to additional features for product and order management, allowing you to efficiently handle the platform's operations.",
+            "secondary-features": " this website is a clone website inspired by the elegant design of https://grovemade.com/. I was captivated by their design, and I embarked on the challenge of replicating it for my own website. It's important to note that this project is solely for personal development and skill enhancement, and I do not generate any revenue from it. "
+        },
+        "languages": {
+            "ejs": "/ejs-svgrepo-com.svg",
+            "css": "/icon _file type css_.svg",
+            "nodejs": "/icon _file type node_.svg",
+            "mongodb": "/mongodb-icon.svg",
+            "expressjs": "/icons8-express-js.svg"
+        },
+        "screenShots": {
+            "main-screenshots":[
+                "/chrome_01TahBUMFc.png",
+                "/chrome_01TahBUMFc.png",
+                "/chrome_01TahBUMFc.png"
+            ],
+            "secondary-screenshots": [
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg",
+                "/screentest.jpg"
+            ]
+        }
+    }
+}

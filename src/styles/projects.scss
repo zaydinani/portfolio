@@ -119,8 +119,8 @@
                     flex-wrap: wrap;
                     div{
                         height: 100%;
-                        width: 5rem;
-                        height: 5rem;
+                        width: 3rem;
+                        height: 3rem;
                         img{
                             object-fit: contain;
                             height: 100%;
@@ -140,7 +140,6 @@
         z-index: 99;
         backdrop-filter: blur(12px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);        
-        border: 1px solid red;
         padding: 2rem 3rem;
         display: none;
         &.show {
@@ -153,19 +152,19 @@
             margin-bottom: 1.5rem;
         }
         .gallery{
-            border: 1px solid green;
             @include flex(center, _, _,10px );
             flex-wrap: wrap;
             overflow-y: scroll;
             height: 90%;
             div{
-                height: 15rem;
+                height: fit-content;
                 width: 25rem;
-                border: 1px solid purple;
                 img{
                     object-fit: contain;
                     height: 100%;
                     width: 100%;
+                    border-radius: 10px;
+
                 }
             }
 
@@ -178,17 +177,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
+            width: 85%;
+            height: 90%;
             overflow: hidden;
-            border: 1px solid yellow;
-            
-            img {
-                width: 80%;
-                height: 80%;
-                object-fit: contain;
-                border: 1px solid green;
+            border-radius: 10px;
 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 10px;
             }
         }
           
@@ -207,15 +205,6 @@
                         }
                         .secondary-btn{
                             margin: 1rem 0rem;
-                        }
-                    }
-                }
-            }
-            .project--tools{
-                .projects--languages{
-                    .languages{
-                        div{
-                            height: 4rem;
                         }
                     }
                 }
@@ -248,7 +237,7 @@
                 margin-left: 0rem;
                 .projects--languages{
                     .languages{
-                        @include flex(center, _, _,5px );
+                        @include flex(flex-start, _, _,5px );
                     }
                 }
             }
