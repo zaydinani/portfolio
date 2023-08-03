@@ -104,13 +104,18 @@
         margin-top: 1rem;
         img{
             border-radius: 10px;
-            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             height: 100%;
             width: 100%;
             filter: grayscale(1);
             transition: 1s ease-in-out;
             object-fit: cover;
+            .light & {
+                color: $paragraph-font-light;
+                box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+
+            }
         }
         img:hover{
             filter: grayscale(0);

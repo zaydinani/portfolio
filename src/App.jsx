@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider>
       <Nav />
-      <Projects />
+      <Main />
       <Footer />
     </ThemeProvider>
   )
