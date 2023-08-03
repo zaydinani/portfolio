@@ -64,6 +64,10 @@ $borders: #cacaca;
             background-color: $button-secondary;
             transition: 0.5s ease-in-out;
             color: black;
+            a{
+                color: black;
+
+            }
         }
         .secondary-btn:hover{
             scale: 1.05;

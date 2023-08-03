@@ -1,7 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../styles/projects.scss'
+import projectsData from '../data/projects.json'
+import { useParams } from 'react-router-dom';
+import '../styles/projectsPage.scss'
 
 function Project() {
+    const projectArray = Object.values(projectsData);
+
+    const { index } = useParams();
+    const projectData = projectArray[index];
+    console.log(projectData);
+    console.log(index);
+
     const [showGallery, setShowGallery] = useState(false);
     const [clickedImageUrl, setClickedImageUrl] = useState('');
   
@@ -57,54 +66,47 @@ function Project() {
     return(
         <div className="project--container">
             <div className="title">
-                <h1>ecommerce website</h1>
-                <p>12 jan 2023</p>
+                <h1>{projectData.name}</h1>
+                <p>{projectData.date}</p>
             </div>
             <div className="image--container" onClick={toggleGallery}>
                 <div className='main--img'>
-                    <img src="screentest.jpg" alt="" />
+                    <img src={projectData.screenShots[0]} alt="" />
                 </div>
                 <div className='sec-images'>
                     <div>
-                        <img src="screentest.jpg" alt="" />
+                        <img src={projectData.screenShots[1]} alt="" />
                     </div>
                     <div>
-                        <img src="screentest.jpg" alt="" />
+                        <img src={projectData.screenShots[2]} alt="" />
                     </div>   
                 </div>
             </div>
             <div className="project--info">
                 <div className="project--description">
                     <h1>about project</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam sunt, quasi numquam error facere necessitatibus nihil suscipit pariatur dolorum similique beatae, hic in nemo nulla vel debitis? Delectus, quae?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam sunt, quasi numquam error facere necessitatibus nihil suscipit pariatur dolorum similique beatae, hic in nemo nulla vel debitis? Delectus, quae?</p>
+                    <p>{projectData.description.mainDescription}</p>
+                    <p>{projectData.description.secondaryDescription}</p>
                     <div>
                         <ul>
-                            <li className='btn main-btn'> visit website </li>
-                            <li className='btn secondary-btn'>open on github</li>
+                            <li className='btn main-btn'><a href={projectData.url} target="_blank"> visit website </a></li>
+                            <li className='btn secondary-btn'><a href={projectData.githubUrl} target="_blank">open on github</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="project--tools">
                     <div className='project--type'>
                         <h1>type</h1>
-                        <p>store</p>
+                        <p>{projectData.type}</p>
                     </div>
                     <div className='projects--languages'>
                         <h1>languages/frameworks</h1>
                         <div className='languages'>
-                            <div>
-                                <img src="/icon _file type node_.svg" alt="" />
-                            </div>
-                            <div>
-                                <img src="/mongodb-icon.svg" alt="" />
-                            </div>
-                            <div>
-                                <img src="/icon _file type reactjs_.svg" alt="" />
-                            </div>
-                            <div>
-                                <img src="/icons8-sass-avatar.svg" alt="" />
-                            </div> 
+                            {Object.keys(projectData.languages).map((languageKey) => (
+                                <div key={languageKey}>
+                                <img src={projectData.languages[languageKey]} alt={languageKey} />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -116,36 +118,11 @@ function Project() {
             >
                 <h1>all screen shots</h1>
                 <div className="gallery">
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
-                    <div onClick={(event) => handleImageClick("screentest.jpg", event)}>
-                        <img src="screentest.jpg" alt="" />
-                    </div> 
+                    {projectData.screenShots.map((image, index) => (
+                        <div key={index} onClick={(event) => handleImageClick(image, event)}>
+                        <img src={image} alt={`Screenshot ${index + 1}`} />
+                        </div>
+                    ))}
                 </div>
                 {clickedImageUrl && (
                     <div className="enlarged-image" onClick={handleCloseEnlargedImage}>

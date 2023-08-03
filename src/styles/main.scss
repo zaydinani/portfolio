@@ -229,6 +229,13 @@
                     .light & {
                         color: $project-font-color-light;
                     }
+                    &.description {
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3; // Number of lines to display before ellipsis
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
                 }
                 .date{
                     margin-bottom: 1rem;

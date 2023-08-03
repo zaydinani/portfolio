@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 // sending emails through email.js
 import emailjs from '@emailjs/browser';
 // Import Swiper React components
@@ -16,8 +18,11 @@ import Skills from "../components/skills";
 import Projects from "../components/projects";
 import Features from "../components/features";
 import data from "../data/data.json"
+import projectsData from "../data/projects.json"
 
 function main() {
+    const projects = Object.values(projectsData);
+
     //! group skills into sets of 6
     const chunkSkills = (skills, size) => {
         return skills.reduce((acc, _, index) => {
@@ -175,13 +180,14 @@ function main() {
                             <p>{data['zayd-data'].projects.text}</p>
                         </div>
                         <div className="projects">
-                            {data['zayd-data'].projects.project.map((project, index) => (
-                                <Projects 
+                            {projects.map((project, index) => (
+                                <Projects
                                     key={index}
-                                    image={project.projectImage}
-                                    title={project.projectTitle}
-                                    date={project.projectDate}
-                                    description={project.projectDescription}
+                                    index={index}
+                                    image={project.projectLogo}
+                                    title={project.name}
+                                    date={project.date}
+                                    description={project.description.mainDescription}
                                 />
                             ))}
                         </div>

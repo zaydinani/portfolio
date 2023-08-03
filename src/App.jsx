@@ -1,18 +1,24 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './styles/app.scss'
 import Nav from './components/nav'
 import Main from './pages/main'
 import Footer from './components/footer'
-import Projects from './pages/projects'
+import Projects from './pages/projectsPage'
 import { ThemeProvider } from './util/themeContext'
 
 function App() {
   
   return (
     <ThemeProvider>
-      <Nav />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/project/:index" element={<Projects />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

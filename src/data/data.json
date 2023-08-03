@@ -102,33 +102,7 @@
         },
         "projects":{
             "title":"Projects",
-            "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore",
-            "project":[
-                {
-                    "projectImage":"/nav-logo.png",
-                    "projectTitle":"woow",
-                    "projectDate":"12 jan 2023",
-                    "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
-                },
-                {
-                    "projectImage":"/nav-logo.png",
-                    "projectTitle":"yeaa",
-                    "projectDate":"18 march 2003",
-                    "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
-                },
-                {
-                    "projectImage":"/nav-logo.png",
-                    "projectTitle":"hahaha",
-                    "projectDate":"12 jan 2023",
-                    "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
-                },
-                {
-                    "projectImage":"/nav-logo.png",
-                    "projectTitle":"hahaha",
-                    "projectDate":"12 jan 2023",
-                    "projectDescription": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quasi Nihil Molestiae, Ullam Optio Corrupti Doloribus Adipisci Tenetur Ex Atque"
-                }
-            ]
+            "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore"
         },
         "features": {
                 "title":"Features",
