@@ -1,13 +1,13 @@
 {
     "zayd-data": {
         "hero":{
-            "title": "Hi, My Name Is Zayd Inani, I'm A Developer From Morocco",
-            "text": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Perferendis Deserunt Fuga, Consectetur Dignissimos Vitae Laborum Repellat Ea Alias Quos"
+            "title": "Hi, I'm Zayd Inani, a Passionate Developer from Beautiful Morocco",
+            "text": "Passionately committed to turning ideas into reality using the language of code, while adding a touch of elegant design to create experiences that captivate."
         },
         "about": {
-            "title":"About",
-            "text": "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Necessitatibus Dicta Ex Autem Voluptate Fugiat Fugit Enim. Dicta Saepe Asperiores Quod Totam Ratione Doloribus Sint Placeat Officia, Iure Nihil Soluta Inventore! Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.",
-            "secondaryText": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "title":"About Me",
+            "text": "I am Zayd Inani, a self-taught full stack developer and an English Literature graduate from the University of Abdelmalek Essaadi. Hailing from Morocco, I have always nurtured a profound curiosity for technology. The allure of crafting imaginative solutions as a developer, coupled with the ever-present challenges, has been a passion of mine.",
+            "secondaryText": " Continuously seeking growth, I strive to refine my skills not only as a developer but also as an individual. I welcome you to connect with me through my social media channels or email. Your ideas are an inspiration, and I'm eager to collaborate in bringing them to vibrant life.",
             "image":"/zayd.jpg",
             "socials": [
                 {
@@ -31,7 +31,7 @@
         },
         "skills": {
             "title":"Skills",
-            "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore",
+            "text": "My skill set is a culmination of various tools and technologies that enable me to craft digital experiences. I'm well-versed in both front-end and back-end development. My focus lies in creating elegant and efficient solutions that seamlessly blend functionality with aesthetics. I am dedicated to constantly broadening my technological horizons, actively seeking new opportunities to learn and incorporate emerging trends into my work.",
             "skillSlide": [
                 {
                     "title":"HTMl",
@@ -102,38 +102,38 @@
         },
         "projects":{
             "title":"Projects",
-            "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore"
+            "text": "Step into my world of creations in the Projects section. Here, I present the results of my imaginative thinking and technical expertise. This collection showcases the solutions I've built and the experiences I've designed. Each project demonstrates my dedication to excellence, blending the latest technology with creative design. Take a tour to see how I turn ideas into reality through coding."
         },
         "features": {
-                "title":"Features",
-                "text": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure Reiciendis Eligendi Repellat Perferendis Et Magnam Repudiandae Nemo, Non Voluptatum, Esse, Officia Ex Inventore",
+                "title":"Enhancing Your Experience",
+                "text": "In this dynamic world of development, I strive to provide a seamless experience that encapsulates speed, intuition, responsiveness, and dynamism. These features are at the heart of my approach, ensuring that your projects are brought to life with the highest level of expertise.",
             "feature": [
                 {
                     "image":"/clock.svg",
                     "title":"fast",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+                    "description":"With efficiency as my guide, I ensure your concepts materialize promptly without compromising quality. Timely delivery and excellence go hand in hand."
                 },
                 {
                     "image":"/eye.svg",
                     "title":"Intuitive",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+                    "description":"Your unique needs are my focus. By deeply comprehending your objectives, I craft solutions that seamlessly align with your goals, creating outcomes that truly resonate."
                 },
                 {
                     "image":"/layout.svg",
                     "title":"Responsive",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+                    "description":"In an era of diverse devices, your projects will seamlessly adjust to various screens. From desktops to mobiles, your audience will enjoy a consistent and user-friendly experience."
                 }
                 ,
                 {
                     "image":"/activity.svg",
                     "title":"Dynamic",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit."
+                    "description":"The digital landscape evolves, and so do my creations. By integrating dynamic elements, I build projects ready to embrace emerging technologies, ensuring your solutions remain relevant."
                 }
             ]
         },
         "contact": {
             "title":"Contact Me",
-            "text":"Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Quia, Exercitationem Vitae! In Iure"
+            "text":"Your thoughts, questions, and ideas matter to me. I'm here to listen and collaborate. Whether you're looking to start a new project, discuss potential collaborations, or simply want to say hello, I'm just an email or a message away. Reach out, and let's begin an exciting conversation that could lead to something remarkable. Your vision is important, and I'm eager to help bring it to life."
         }
 
     }

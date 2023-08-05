@@ -6,7 +6,7 @@ function socials() {
     return (
         <div className="socials-container">
             {/*facebook*/}
-            <a href={data['zayd-data'].about.socials[0].linkUrl}>
+            <a href={data['zayd-data'].about.socials[0].linkUrl} target="_blank">
                 <svg className="socialIcons" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="&#240;&#159;&#166;&#134; icon &#34;facebook squared&#34;">
                         <path className="Vector" d="M26 8.44444V19.5556C26 23.3908 22.8908 26.5 19.0556 26.5H7.94444C4.10914 26.5 1 23.3908 1 19.5556V8.44444C1 4.60914 4.10914 1.5 7.94444 1.5H19.0556C22.8908 1.5 26 4.60914 26 8.44444Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -16,7 +16,7 @@ function socials() {
                 </svg>
             </a>
             {/*instagram*/}
-            <a href={data['zayd-data'].about.socials[1].linkUrl}>
+            <a href={data['zayd-data'].about.socials[1].linkUrl} target="_blank">
                 <svg className="socialIcons" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="&#240;&#159;&#166;&#134; icon &#34;instagram&#34;">
                         <path className="Vector" d="M13.5 19.5556C16.5682 19.5556 19.0556 17.0682 19.0556 14C19.0556 10.9318 16.5682 8.44446 13.5 8.44446C10.4318 8.44446 7.94446 10.9318 7.94446 14C7.94446 17.0682 10.4318 19.5556 13.5 19.5556Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -26,7 +26,7 @@ function socials() {
                 </svg>
             </a>
             {/*linked in*/}
-            <a href={data['zayd-data'].about.socials[2].linkUrl}>
+            <a href={data['zayd-data'].about.socials[2].linkUrl} target="_blank">
                 <svg className="socialIcons" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="&#240;&#159;&#166;&#134; icon &#34;linkedin&#34;">
                         <path className="Vector" d="M26 8.44444V19.5556C26 23.3908 22.8908 26.5 19.0556 26.5H7.94444C4.10914 26.5 1 23.3908 1 19.5556V8.44444C1 4.60914 4.10914 1.5 7.94444 1.5H19.0556C22.8908 1.5 26 4.60914 26 8.44444Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -37,7 +37,7 @@ function socials() {
                 </svg>
             </a>
             {/*github*/}
-            <a href={data['zayd-data'].about.socials[3].linkUrl}>
+            <a href={data['zayd-data'].about.socials[3].linkUrl} target="_blank">
                 <svg className="socialIcons" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="&#240;&#159;&#166;&#134; icon &#34;github outline&#34;">
                         <path className="Vector" d="M13.5 26.5C6.5965 26.5 1 20.9035 1 14C1 7.09644 6.5965 1.5 13.5 1.5C20.4036 1.5 26 7.09644 26 14C26 20.9035 20.4036 26.5 13.5 26.5Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

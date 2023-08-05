@@ -89,7 +89,11 @@ function Project() {
                     <p>{projectData.description.secondaryDescription}</p>
                     <div>
                         <ul>
-                            <li className='btn main-btn'><a href={projectData.url} target="_blank"> visit website </a></li>
+                            {projectData.url && (
+                                <li className='btn main-btn'>
+                                    <a href={projectData.url} target="_blank">Visit Website</a>
+                                </li>
+                            )}
                             <li className='btn secondary-btn'><a href={projectData.githubUrl} target="_blank">open on github</a></li>
                         </ul>
                     </div>
