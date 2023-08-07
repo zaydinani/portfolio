@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './styles/app.scss'
+import './styles/App.scss'
 import Nav from './components/nav'
 import Main from './pages/main'
 import Footer from './components/footer'
