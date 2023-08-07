@@ -115,16 +115,18 @@
                     }
                 }
                 .languages{
-                    @include flex(_, _, _,10px );
+                    @include flex(_, _, _,25px );
                     flex-wrap: wrap;
                     div{
                         height: 100%;
                         width: 3rem;
                         height: 3rem;
                         img{
-                            object-fit: contain;
-                            height: 100%;
-                            width: 100%;
+                            width: 60px;
+                            height: 60px;
+                            padding: .7rem;
+                            border-radius: 8px;
+                            background-color: $button-secondary;
                         }
                     }
                 }

@@ -108,7 +108,7 @@ function Project() {
                         <div className='languages'>
                             {Object.keys(projectData.languages).map((languageKey) => (
                                 <div key={languageKey}>
-                                <img src={projectData.languages[languageKey]} alt={languageKey} />
+                                    <img src={projectData.languages[languageKey]} alt={languageKey} />
                                 </div>
                             ))}
                         </div>

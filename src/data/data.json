@@ -31,101 +31,106 @@
         },
         "skills": {
             "title":"Skills",
-            "text": "My skill set is a culmination of various tools and technologies that enable me to craft digital experiences. I'm well-versed in both front-end and back-end development. My focus lies in creating elegant and efficient solutions that seamlessly blend functionality with aesthetics. I am dedicated to constantly broadening my technological horizons, actively seeking new opportunities to learn and incorporate emerging trends into my work.",
+            "text": "My skill set is a culmination of various tools and technologies that enable me to craft digital experiences. I'm well-versed in both front-end and back-end development. My focus lies in creating elegant and efficient solutions that seamlessly blend functionality with aesthetics.",
             "skillSlide": [
                 {
                     "title":"HTMl",
-                    "icon":"/icon _file type html_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type html_.svg",
+                    "description":"  Forms the basis of web pages, delivering vital structure and layout to arrange content, allowing information to be displayed in a user-friendly manner."
                 },
                 {
                     "title":"CSS",
-                    "icon":"/icon _file type css_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type css_.svg",
+                    "description":"Enhances web content design, managing visual aesthetics and layout to ensure a cohesive appearance."
                 },
                 {
                     "title":"JavaScript",
-                    "icon":"/icon _file type js official_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type js official_.svg",
+                    "description":"Drives interactivity and dynamic behavior on websites, enabling responsive user experiences through real-time content modifications."
                 },
                 {
                     "title":"React",
-                    "icon":"/icon _file type reactjs_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type reactjs_.svg",
+                    "description":"widely-used JavaScript library for building user interfaces that are dynamic and responsive."
                 },
                 {
                     "title":"NodeJs",
-                    "icon":"/icon _file type node_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type node_.svg",
+                    "description":"Executes JavaScript server-side, enabling scalable web applications with non-blocking I/O capabilities."
                 },
                 {
                     "title":"ExpressJS",
-                    "icon":"/icons8-express-js.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icons8-express-js.svg",
+                    "description":"Streamlines Node.js development with a flexible and efficient web application framework."
                 },
                 {
                     "title":"EJS",
-                    "icon": "/ejs-svgrepo-com.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon": "/skills/ejs-svgrepo-com.svg",
+                    "description":"Facilitates dynamic HTML template creation through embedded JavaScript."
                 },
                 {
                     "title":"GitHub",
-                    "icon":"/iconmonstr-github-1.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/iconmonstr-github-1.svg",
+                    "description":"Offers version control, collaboration, and code management functionalities for developers."
                 },
                 {
                     "title":"GIT",
-                    "icon":"/icon _file type git_.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icon _file type git_.svg",
+                    "description":"Distributed version control system aiding code tracking and collaborative project management."
                 },
                 {
                     "title":"BootStrap",
-                    "icon":"/bootstrap-4.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/bootstrap-4.svg",
+                    "description":" Front-end framework simplifying responsive web design with pre-designed components."
                 },
                 {
                     "title":"SASS",
-                    "icon":"/icons8-sass-avatar.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/icons8-sass-avatar.svg",
+                    "description":"Extends CSS with features like variables and nesting, enhancing styling efficiency."
                 },
                 {
                     "title":"MySQL",
-                    "icon":"/mysql.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/mysql.svg",
+                    "description":"Popular relational database system for storing and managing data."
+                },
+                {
+                    "title":"MongoDB",
+                    "icon":"/skills/mongodb-icon.svg",
+                    "description":"NoSQL database system that stores data in a flexible, JSON-like format, making it ideal for handling large volumes of data "
                 },
                 {
                     "title":"PHP",
-                    "icon":"/php-icon.svg",
-                    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque, illum tenetur perspiciatis voluptas reiciendis "
+                    "icon":"/skills/php-icon.svg",
+                    "description":" Server-side scripting language for creating dynamic web pages."
                 }
             ]
         },
         "projects":{
             "title":"Projects",
-            "text": "Step into my world of creations in the Projects section. Here, I present the results of my imaginative thinking and technical expertise. This collection showcases the solutions I've built and the experiences I've designed. Each project demonstrates my dedication to excellence, blending the latest technology with creative design. Take a tour to see how I turn ideas into reality through coding."
+            "text": "I present the results of my imaginative thinking and technical expertise. This collection showcases the solutions I've built and the experiences I've designed. Each project demonstrates my dedication to excellence, blending the latest technology with creative design."
         },
         "features": {
                 "title":"Enhancing Your Experience",
                 "text": "In this dynamic world of development, I strive to provide a seamless experience that encapsulates speed, intuition, responsiveness, and dynamism. These features are at the heart of my approach, ensuring that your projects are brought to life with the highest level of expertise.",
             "feature": [
                 {
-                    "image":"/clock.svg",
+                    "image":"/features/clock.svg",
                     "title":"fast",
                     "description":"With efficiency as my guide, I ensure your concepts materialize promptly without compromising quality. Timely delivery and excellence go hand in hand."
                 },
                 {
-                    "image":"/eye.svg",
+                    "image":"/features/eye.svg",
                     "title":"Intuitive",
                     "description":"Your unique needs are my focus. By deeply comprehending your objectives, I craft solutions that seamlessly align with your goals, creating outcomes that truly resonate."
                 },
                 {
-                    "image":"/layout.svg",
+                    "image":"/features/layout.svg",
                     "title":"Responsive",
                     "description":"In an era of diverse devices, your projects will seamlessly adjust to various screens. From desktops to mobiles, your audience will enjoy a consistent and user-friendly experience."
                 }
                 ,
                 {
-                    "image":"/activity.svg",
+                    "image":"/features/activity.svg",
                     "title":"Dynamic",
                     "description":"The digital landscape evolves, and so do my creations. By integrating dynamic elements, I build projects ready to embrace emerging technologies, ensuring your solutions remain relevant."
                 }
@@ -133,7 +138,7 @@
         },
         "contact": {
             "title":"Contact Me",
-            "text":"Your thoughts, questions, and ideas matter to me. I'm here to listen and collaborate. Whether you're looking to start a new project, discuss potential collaborations, or simply want to say hello, I'm just an email or a message away. Reach out, and let's begin an exciting conversation that could lead to something remarkable. Your vision is important, and I'm eager to help bring it to life."
+            "text":"Your thoughts, questions, and ideas matter to me. I'm here to listen and collaborate. Whether you're looking to start a new project, discuss potential collaborations, or simply want to say hello, Reach out, and let's begin an exciting conversation that could lead to something remarkable. Your vision is important, and I'm eager to help bring it to life."
         }
 
     }
