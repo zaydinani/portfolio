@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react';
-//my styles
-import "../styles/nav.scss";
+//react scroll
+import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 //theme context for dark mode
 import { ThemeContext } from '../util/themeContext';
-//react scroll
-import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+//my styles
+import "../styles/nav.scss";
 
 function Nav() {
+  const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [activeSection, setActiveSection] = useState('');
 
@@ -34,66 +36,74 @@ function Nav() {
   return (
     <nav className={theme === 'dark' ? 'dark' : 'light'}>
       <ul>
-        <Link
-          className='navLink'
-          activeClass="selected"
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('about')}
-        >
-          about
-        </Link>
-        <Link
-          className='navLink'
-          activeClass="selected"
-          to="skills"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('skills')}
-        >
-          skills
-        </Link>
-        <Link
-          className='navLink'
-          activeClass="selected"
-          to="projects"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('projects')}
-        >
-          projects
-        </Link>
-        <Link
-          className='navLink'
-          activeClass="selected"
-          to="features"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('contact')}
-        >
-          features
-        </Link>
-        <Link
-          className='navLink'
-          activeClass="selected"
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={1000}
-          offset={0}
-          onSetActive={() => handleSetActiveSection('contact')}
-        >
-          contact
-        </Link>
+        {location.pathname.startsWith('/project/') ? (
+          <RouterLink  className='goHome navLink' to="/">
+            Go Back Home
+          </RouterLink >
+        ) : (
+          <>
+            <Link
+              className='navLink'
+              activeClass="selected"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+              onSetActive={() => handleSetActiveSection('about')}
+            >
+              about
+            </Link>
+            <Link
+              className='navLink'
+              activeClass="selected"
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+              onSetActive={() => handleSetActiveSection('skills')}
+            >
+              skills
+            </Link>
+            <Link
+              className='navLink'
+              activeClass="selected"
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+              onSetActive={() => handleSetActiveSection('projects')}
+            >
+              projects
+            </Link>
+            <Link
+              className='navLink'
+              activeClass="selected"
+              to="features"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+              onSetActive={() => handleSetActiveSection('contact')}
+            >
+              features
+            </Link>
+            <Link
+              className='navLink'
+              activeClass="selected"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+              onSetActive={() => handleSetActiveSection('contact')}
+            >
+              contact
+            </Link>
+          </>
+        )}
         <div>
           <input
             type="checkbox"

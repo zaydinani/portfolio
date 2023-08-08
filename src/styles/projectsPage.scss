@@ -179,16 +179,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 85%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
             border-radius: 10px;
-
+            backdrop-filter: blur(5px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%); 
             img {
-                width: 100%;
-                height: 100%;
+                width: 85%;
+                height: fit-content;
                 object-fit: contain;
                 border-radius: 10px;
+                border: 1px solid $borders;
             }
         }
           
@@ -237,11 +239,6 @@
             .project--tools{
                 width: 100%;
                 margin-left: 0rem;
-                .projects--languages{
-                    .languages{
-                        @include flex(flex-start, _, _,5px );
-                    }
-                }
             }
         }
     }

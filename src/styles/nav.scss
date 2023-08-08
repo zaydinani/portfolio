@@ -23,6 +23,11 @@ nav {
     @include reset-list-styles;
     @include flex(space-around, center, row,_ );
     width: 100%;
+    .goHome{
+      text-decoration: none;      
+      color: white;
+      font-size: 16px;
+    }
     .navLink{
       cursor: pointer;
       transition: 0.2s ease-in-out;
