@@ -372,6 +372,9 @@
     }
 }
 @media screen and (max-width: 1024px) {
+    .hero{
+        background-size: 100% 100%;
+    }
     .about{
         padding: 80px 0;
         .about-info{
@@ -434,7 +437,7 @@
     }
 } 
 @media screen and (max-width: 768px) {
-    .hero {
+    .hero {        
         div:nth-child(1) {
             h1 {
             font-size: 32px;
@@ -513,7 +516,7 @@
         }
     }
     .hero {
-        background-size: 100% 100%; 
+        background-size: 150% 100%; 
         div:nth-child(1) {
             width: 90%;  
             margin-top: 5rem;
