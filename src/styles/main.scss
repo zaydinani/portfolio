@@ -1,4 +1,52 @@
 @import '_variables';
+
+//ALERT MSGS
+.alert {
+  width: 100%;
+  padding: 16px;
+  margin-top: 1rem;
+}
+
+.alert-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.alert-content {
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color: #555555;
+}
+//SUCCESS MSG 
+@mixin alert-2($color) {
+    border-left: 4px solid $color;
+    background-color: rgba($color, 0.05);
+    
+    .alert-title {
+      color: $color;
+    }
+  }
+  
+  .alert-2-success {
+    @include alert-2($success-color);
+  }
+  
+//ERROR MSG 
+@mixin alert-3($color) {
+    border: 1px solid lighten($color, 25%);
+    border-radius: 8px;
+    background-color: rgba($color, 0.05);
+    .alert-title {
+      color: $color;
+    }
+}
+.alert-3-danger {
+    @include alert-3($danger-color);
+}
+  
 //SCROLL UP ICON 
 .scroll {
     position: fixed;
@@ -223,7 +271,7 @@
                     cursor: pointer;
                     transition: 0.5s ease-in-out;
                     &:hover{
-                        color: red;
+                        color: $hover;
                     }
                 }
                 p{
@@ -353,7 +401,8 @@
             }
             &:hover{
                 scale: 1.01;
-                background-color: red;
+                background-color: $hover;
+                color: black;
             }
         }
     }

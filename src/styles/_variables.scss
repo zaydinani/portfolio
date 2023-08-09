@@ -17,6 +17,11 @@ $font-light: #1e1e1e;
 $button-main : #5552FF;
 $button-secondary : #c2c0ff;
 $borders: #cacaca;
+// alert colors 
+$danger-color: #ff3838;
+$success-color: #2ec946;
+//hover
+$hover: #41b468;
 
 /*FUNCTIONS*/ 
 @mixin reset-list-styles {
@@ -57,7 +62,15 @@ $borders: #cacaca;
             color: #D0D5DD;
             &:hover{
                 scale: 1.05;
-                background-color: red;
+                background-color: $hover;
+                color: black;
+            }
+            a{
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    color: black;
+                }
+
             }
         }
         .secondary-btn{

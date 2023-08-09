@@ -4,6 +4,11 @@ footer{
     border-top: 1px solid $borders;
     @include flex(space-around, center, row, _ );
     .copyright{
+        @include flex(space-between, center, row, _ );
+        img{
+            height: 4rem;
+            margin-right: 0.5rem;
+        }
         p{
             color: $headers-dark;
             font-size: 20px;

@@ -21,6 +21,8 @@ import data from "../data/data.json"
 import projectsData from "../data/projects.json"
 
 function main() {
+    const [emailStatus, setEmailStatus] = useState(null);
+
     const projects = Object.values(projectsData);
 
     //! group skills into sets of 6
@@ -64,12 +66,14 @@ function main() {
         )
         .then((result) => {
             console.log("emailjs sent successfully");
+            setEmailStatus("success");
             e.target.reset()
-        }, (error) => {
-            console.log(error.text);
-        });
-    };
-  
+        })
+        .catch((error) => {
+            console.log(error.text)
+            setEmailStatus("error"); 
+        })
+    }
 
     return (
         <>
@@ -224,12 +228,26 @@ function main() {
                             <p>{data['zayd-data'].contact.text}</p>
                         </div>
                         <form ref={form} onSubmit={sendEmail}>
+                            {/* Form inputs here */}
                             <input name="user_name" type="text" placeholder="Enter your name" />
                             <input name="user_email" type="text" placeholder="Enter your email" />
                             <textarea  name="message" placeholder="Enter your message"></textarea>
                             <input className='submit' type="submit" value="Send" />
                         </form>
+                        {emailStatus === "success" && (
+                            <div class="alert alert-2-success">
+                                <h3 class="alert-title">success</h3>
+                                    <p class="alert-content">your email have been sent successfully</p>
+                            </div>
+                        )}
+                        {emailStatus === "error" && (
+                            <div class="alert alert-3-danger">
+                                <h3 class="alert-title">error</h3>
+                                <p class="alert-content">an error has occurred please try again later</p>
+                            </div>
+                        )}
                     </div>
+
                 </div>
             </Element>
         </>
