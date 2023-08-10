@@ -11,7 +11,7 @@ function projects(props) {
     return (
         <div className="project">
             <div className="img">
-                <img src={image} alt="" />
+                <img src={image} alt="project logo" />
             </div>
             <div className="project-info">
                 <a onClick={() => handleProjectClick(props.index)}>{title}</a>

@@ -86,7 +86,7 @@ function main() {
                 offset={0}
             >
                 <div className="scroll"  style={{ display: 'none' }}>
-                    <img src="/chevron-up-solid.svg" alt="" />
+                    <img src="/chevron-up-solid.svg" alt="go up icon" />
                 </div>
             </Link>
             <Element name="hero">
@@ -137,12 +137,12 @@ function main() {
                         <Socials />
                         <div>
                             <ul>
-                                <li className=" btn main-btn"><a href="/Orientalism by Edward Said.pdf" download>download cv</a></li>
+                                <li className=" btn main-btn"><a href="/zayd inani cv.pdf" download>download cv</a></li>
                             </ul>
                         </div>
                     </div>
                     <div className="imgContainer">
-                        <img src={data['zayd-data'].about.image} alt="" />
+                        <img src={data['zayd-data'].about.image} alt="Zayd Inani personal image" />
                     </div>
                 </div>
             </Element>

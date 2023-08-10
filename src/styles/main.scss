@@ -248,8 +248,18 @@
             border-radius: 8px;
             background-color: $projects-background-dark;
             box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08); 
+            transition: .5s ease-in-out;
+            &:hover{
+                background-color: #000;
+
+            }
             .light & {
                 background-color: $projects-background-light;
+                &:hover{
+                    background-color: #fff;
+                    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2); 
+
+                }
             }
             .img{
                 height: 50%;
