@@ -61,7 +61,8 @@ function Project() {
         };
     }, []);
     
-  
+    // Set the initial scroll position to the top
+    document.documentElement.scrollTop = 0;
 
     return(
         <div className="project--container">
