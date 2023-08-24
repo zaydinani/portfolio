@@ -11,11 +11,11 @@
             "secondaryDescription": " this website is a clone website inspired by the elegant design of grovemade.com. I was captivated by their design, and I embarked on the challenge of replicating it for my own website. It's important to note that this project is solely for personal development and skill enhancement, and I do not generate any revenue from it. "
         },
         "languages": {
-            "expressjs": "/skills/icons8-express-js.svg",
-            "nodejs": "/skills/icon _file type node_.svg",
-            "ejs": "/skills/ejs-svgrepo-com.svg",
-            "css": "/skills/icon _file type css_.svg",
-            "mongodb": "/skills/mongodb-icon.svg"
+            "expressjs": "/skills/express js.svg",
+            "nodejs": "/skills/node.svg",
+            "ejs": "/skills/ejs.svg",
+            "css": "/skills/css.svg",
+            "mongodb": "/skills/mongodb.svg"
         },
         "screenShots":[
             "/projects/grovemade/1.png",
@@ -52,10 +52,10 @@
             "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."
         },
         "languages": {
-            "expressjs": "/skills/icons8-express-js.svg",
-            "nodejs": "/skills/icon _file type node_.svg",
-            "ejs": "/skills/ejs-svgrepo-com.svg",
-            "css": "/skills/icon _file type css_.svg",
+            "expressjs": "/skills/express js.svg",
+            "nodejs": "/skills/node.svg",
+            "ejs": "/skills/ejs.svg",
+            "css": "/skills/css.svg",
             "mongodb": "/skills/mysql.svg"
         },
         "screenShots":[
@@ -86,8 +86,8 @@
             "secondaryDescription": " What sets 'Game Track' apart is its intelligent feature that lets users meticulously organize their game collection. With options to categorize games as owned, finished, or on the wishlist, users can effortlessly track and manage their gaming journey. Our design approach exudes elegance, enhancing the user interface and guaranteeing an intuitive and visually pleasing experience. Through 'Game Track,' I aimed to bridge my passion for gaming and technical prowess, resulting in a dynamic and stylish platform for fellow gamers to relish."
         },
         "languages": {
-            "react": "/skills/icon _file type reactjs_.svg",
-            "sass": "/skills/icons8-sass-avatar.svg"
+            "react": "/skills/reactjs.svg",
+            "sass": "/skills/sass.svg"
         },
         "screenShots":[
             "/projects/gametrack/1.png",
@@ -107,6 +107,35 @@
             "/projects/gametrack/15.png",
             "/projects/gametrack/16.png",
             "/projects/gametrack/17.png"
+        ]
+    },
+    "laragigs": { 
+        "name" : "laragigs", 
+        "url": "",
+        "githubUrl": "https://github.com/zaydinani/laragigs",
+        "date": "25 aug 2023",
+        "type": "job listing",
+        "projectLogo" : "/projects/laragigs/logo.png",
+        "description": {
+            "mainDescription": "Embark on a dynamic job-seeking journey within a meticulously crafted website driven by Laravel and MySQL. Seamlessly traverse the realm of employment possibilities through an intuitive interface that offers swift sign-up and login functionalities. Personalize your job search with pagination-driven browsing, effortlessly sifting through an array of job listings curated to match your aspirations.",
+            "secondaryDescription": "Complementing the job seeker's experience, companies can seamlessly join the platform, leveraging a user-friendly sign-up process. Empowered with a dedicated dashboard, employers can effortlessly list job vacancies, ensuring a streamlined connection with potential talents. This platform, forged with precision, also prioritizes error handling, promising a glitch-free experience for all users. As an embodiment of my dedication to mastering Laravel and MySQL, this website not only encapsulates a functional job portal but also signifies my commitment to continuous learning in the world of web development."
+        },
+        "languages": {
+            "html": "/skills/html.svg",
+            "laravel": "/skills/laravel.svg",
+            "mysql": "/skills/mysql.svg",
+            "tailwind": "/skills/tailwind.svg"
+        },
+        "screenShots":[
+            "/projects/laragigs/1.png",
+            "/projects/laragigs/2.png",
+            "/projects/laragigs/3.png",
+            "/projects/laragigs/4.png",
+            "/projects/laragigs/5.png",
+            "/projects/laragigs/6.png",
+            "/projects/laragigs/7.png",
+            "/projects/laragigs/8.png",
+            "/projects/laragigs/9.png"
         ]
     }
 }

@@ -35,57 +35,67 @@
             "skillSlide": [
                 {
                     "title":"HTMl",
-                    "icon":"/skills/icon _file type html_.svg",
+                    "icon":"/skills/html.svg",
                     "description":"  Forms the basis of web pages, delivering vital structure and layout to arrange content, allowing information to be displayed in a user-friendly manner."
                 },
                 {
                     "title":"CSS",
-                    "icon":"/skills/icon _file type css_.svg",
+                    "icon":"/skills/css.svg",
                     "description":"Enhances web content design, managing visual aesthetics and layout to ensure a cohesive appearance."
                 },
                 {
                     "title":"JavaScript",
-                    "icon":"/skills/icon _file type js official_.svg",
+                    "icon":"/skills/javascript.svg",
                     "description":"Drives interactivity and dynamic behavior on websites, enabling responsive user experiences through real-time content modifications."
                 },
                 {
+                    "title":"WordPress",
+                    "icon":"/skills/wordpress.svg",
+                    "description":"open-source platform for creating and managing websites, known for its user-friendly interface and customizable features through themes and plugins."
+                },
+                {
                     "title":"React",
-                    "icon":"/skills/icon _file type reactjs_.svg",
+                    "icon":"/skills/reactjs.svg",
                     "description":"widely-used JavaScript library for building user interfaces that are dynamic and responsive."
                 },
                 {
                     "title":"NodeJs",
-                    "icon":"/skills/icon _file type node_.svg",
+                    "icon":"/skills/node.svg",
                     "description":"Executes JavaScript server-side, enabling scalable web applications with non-blocking I/O capabilities."
                 },
                 {
                     "title":"ExpressJS",
-                    "icon":"/skills/icons8-express-js.svg",
+                    "icon":"/skills/express js.svg",
                     "description":"Streamlines Node.js development with a flexible and efficient web application framework."
                 },
                 {
-                    "title":"EJS",
-                    "icon": "/skills/ejs-svgrepo-com.svg",
-                    "description":"Facilitates dynamic HTML template creation through embedded JavaScript."
+                    "title":"Vue",
+                    "icon":"/skills/vue.svg",
+                    "description":"A progressive JavaScript framework celebrated for its simplicity and flexibility, enabling developers to build interactive and dynamic user interfaces with ease."
+                },
+                {
+                    "title":"Laravel",
+                    "icon": "/skills/laravel.svg",
+                    "description":"A dynamic web development framework in PHP, characterized by its elegant syntax and integrated features that enhance efficiency and code quality."
                 },
                 {
                     "title":"GitHub",
-                    "icon":"/skills/iconmonstr-github-1.svg",
+                    "icon":"/skills/github.svg",
                     "description":"Offers version control, collaboration, and code management functionalities for developers."
                 },
                 {
                     "title":"GIT",
-                    "icon":"/skills/icon _file type git_.svg",
+                    "icon":"/skills/git.svg",
                     "description":"Distributed version control system aiding code tracking and collaborative project management."
                 },
                 {
                     "title":"BootStrap",
-                    "icon":"/skills/bootstrap-4.svg",
+                    "icon":"/skills/bootstrap.svg",
                     "description":" Front-end framework simplifying responsive web design with pre-designed components."
                 },
                 {
                     "title":"SASS",
-                    "icon":"/skills/icons8-sass-avatar.svg",
+                    "icon":"/skills/sass.svg",
                     "description":"Extends CSS with features like variables and nesting, enhancing styling efficiency."
                 },
                 {
@@ -95,12 +105,12 @@
                 },
                 {
                     "title":"MongoDB",
-                    "icon":"/skills/mongodb-icon.svg",
+                    "icon":"/skills/mongodb.svg",
                     "description":"NoSQL database system that stores data in a flexible, JSON-like format, making it ideal for handling large volumes of data "
                 },
                 {
                     "title":"PHP",
-                    "icon":"/skills/php-icon.svg",
+                    "icon":"/skills/php.svg",
                     "description":" Server-side scripting language for creating dynamic web pages."
                 }
             ]
