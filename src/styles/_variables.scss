@@ -33,7 +33,7 @@ $hover: #41b468;
             text-transform: capitalize;
         }
     }
-  }
+}
 @mixin flex($justify-content, $align-items, $direction, $gap) {
     display: flex;
     justify-content: $justify-content;

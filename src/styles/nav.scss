@@ -1,8 +1,12 @@
 @import '_variables';
-
+.nav.is-active {
+  height: 70%;
+}
 nav {
   width: 490px;
   height: 65px;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
   border-radius: 90px;
   border: 1px solid $borders;
   backdrop-filter: blur(16px) saturate(180%);
@@ -14,11 +18,19 @@ nav {
   transform: translateX(-50%);
   z-index: 99;
   padding: 0 0.5rem;
-  .selected{
-    color: $button-main;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  .logo {
+    width: fit-content;
+    height: 55px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
+  
+
   ul{
     @include reset-list-styles;
     @include flex(space-around, center, row,_ );
@@ -85,14 +97,168 @@ nav {
       color: $button-main;
     }
   }
-}
-
-@media screen and (max-width: 768px) {
-  nav {
-    width: 450px;
-    height: 60px;
+  .mobileNavContainer{
+    width: 100%;
+    height: fit-content;
+    border-radius: 0;
+    @include flex(_, _,column,1.5rem);
+    padding: 1rem 2rem;
+    .mobileNavLink {
+      position: relative;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: .5s ease-in-out;
+      width: fit-content;
+      text-decoration: none;
+      padding: 0 0 5px 0;
+      .light & {
+        color: $secondary-color-dark;
+      }
+      &::before {
+        content: ''; 
+        position: absolute;
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 2px; 
+        background-color: $button-main; 
+        transform: scaleX(0); 
+        transform-origin: left center; 
+        transition: transform 0.3s ease; 
+      }
+    
+      &:hover {
+        color: $button-main;
+    
+        &::before {
+          transform: scaleX(1); 
+        }
+      }
+    }
+    .selected {
+      color: $button-main; 
+      border-bottom: 2px solid $button-main;
+      transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out; 
+    }
+  }
+  .selected{
+    color: $button-main;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .mobileNavLinkHome{
+    position: relative;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    width: fit-content;
+    text-decoration: none;
+    padding: 0 0 5px 0;
+    .light & {
+      color: $secondary-color-dark;
+    }
+      &::before {
+        content: ''; 
+        position: absolute;
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 2px; 
+        background-color: $button-main; 
+        transform: scaleX(0); 
+        transform-origin: left center; 
+        transition: transform 0.3s ease; 
+      }
+    
+      &:hover {
+        color: $button-main;
+    
+        &::before {
+          transform: scaleX(1); 
+        }
+      }
   }
 }
+/*!--------------------------hamburger menu--------------------*/
+.hamburger {
+  display: block;
+  margin: 15px;
+  width: 25px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 5px;
+  z-index: 100;
+
+  .bar,
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $button-main;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  &.is-active::before {
+    transform: rotate(-45deg) translate(-2px, 3px);
+  }
+
+  &.is-active .bar {
+    opacity: 0;
+  }
+
+  &.is-active::after {
+    transform: rotate(45deg) translate(-9px, -9px);
+  }
+}
+
+
+
+
+/*? media queries*/
+/*?1st one just for hamburger menu*/
+@media screen and (min-width: 800px) {
+  .hamburger{
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  
+
+}
+@media screen and (max-width: 800px) {
+  nav {
+    width: 100%;
+    height: 65px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $button-secondary;
+    top: 0;
+    @include flex(space-between, _,_,_);
+    .navLink{
+      display: none;
+    }
+    div{
+      ul{
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+
+
+}
+/*
 @media screen and (max-width: 425px) {
   nav {
     width: 350px;
@@ -103,6 +269,7 @@ nav {
       font-size: 12px;
     }
     /*!----------------dark mode toggle-----------------------*/
+    /*
     div {
       .label {
         .fa-sun {
@@ -129,5 +296,6 @@ nav {
     }
   }
 }
+*/
 
 

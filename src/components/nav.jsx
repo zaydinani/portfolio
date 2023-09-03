@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 //react scroll
 import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+
 //theme context for dark mode
 import { ThemeContext } from '../util/themeContext';
 //my styles
@@ -32,9 +33,26 @@ function Nav() {
     setActiveSection(section);
   };
 
+  //-----------------
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+  };
+  const closeMenu = () => {
+    setIsMenuActive(false);
+  };
+
 
   return (
-    <nav className={theme === 'dark' ? 'dark' : 'light'}>
+    
+    <nav className={`nav ${isMenuActive ? 'is-active' : ''} ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <button className={`hamburger ${isMenuActive ? 'is-active' : ''}`} onClick={toggleMenu}>
+        <div className="bar"></div>
+      </button>
+      <div className="logo">
+        <img src="/logo.png" alt="" />
+      </div>
       <ul>
         {location.pathname.startsWith('/project/') ? (
           <RouterLink  className='goHome navLink' to="/">
@@ -104,7 +122,7 @@ function Nav() {
             </Link>
           </>
         )}
-        <div>
+        <div className='navLink'>
           <input
             type="checkbox"
             className="checkbox"
@@ -118,6 +136,107 @@ function Nav() {
             <div className="ball"></div>
           </label>
         </div>
+        {isMenuActive ? (
+          location.pathname.startsWith('/project/') ? (
+            <RouterLink 
+              className='mobileNavLinkHome'
+              to="/"
+              onClick={() => {
+                closeMenu();
+                setActiveSection(''); // Clear active section
+              }}
+            >
+              Go Back Home
+            </RouterLink>
+          ) : (
+            <div className='mobileNavContainer'>
+              <Link
+                className={`mobileNavLink ${
+                  activeSection === 'about' ? 'selected' : ''
+                }`}
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+                onSetActive={() => handleSetActiveSection('about')}
+                onClick={closeMenu}
+              >
+                about
+              </Link>
+              <Link
+                className={`mobileNavLink ${
+                  activeSection === 'skills' ? 'selected' : ''
+                }`}            
+                to="skills"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+                onSetActive={() => handleSetActiveSection('skills')}
+                onClick={closeMenu}
+              >
+                skills
+              </Link>
+              <Link
+                className={`mobileNavLink ${
+                  activeSection === 'projects' ? 'selected' : ''
+                }`}            
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+                onSetActive={() => handleSetActiveSection('projects')}
+                onClick={closeMenu}
+              >
+                projects
+              </Link>
+              <Link
+                className={`mobileNavLink ${
+                  activeSection === 'features' ? 'selected' : ''
+                }`}            
+                to="features"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+                onSetActive={() => handleSetActiveSection('features')}
+                onClick={closeMenu}
+              >
+                features
+              </Link>
+              <Link
+                className={`mobileNavLink ${
+                  activeSection === 'contact' ? 'selected' : ''
+                }`}            
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={0}
+                onSetActive={() => handleSetActiveSection('contact')}
+                onClick={closeMenu}
+              >
+                contact
+              </Link>
+              <div>
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  id="checkbox"
+                  checked={theme === 'dark'}
+                  onChange={handleToggleTheme}
+                />
+                <label htmlFor="checkbox" className="label">
+                  <img className="fa-sun" src="/sun-solid.png" alt="" />
+                  <img className="fa-moon" src="/moon purple.png" alt="" />
+                  <div className="ball"></div>
+                </label>
+              </div>
+            </div>
+          )
+        ) : null}
       </ul>
     </nav>
   );
