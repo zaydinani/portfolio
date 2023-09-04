@@ -83,9 +83,9 @@
 #hero{
     height: 100vh;
     background-image: url('/Gradient.png');
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 80% 100%;
+    background-size: cover;
 }
 .hero {
     text-align: center;
