@@ -15,7 +15,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/project/:index" element={<Projects />} />
+          <Route path="/project/:name" element={<Projects />} />
         </Routes>
         <Footer />
       </BrowserRouter>

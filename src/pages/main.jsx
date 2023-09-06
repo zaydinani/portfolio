@@ -187,6 +187,7 @@ function main() {
                             {projects.map((project, index) => (
                                 <Projects
                                     key={index}
+                                    name={project.name}
                                     index={index}
                                     image={project.projectLogo}
                                     title={project.name}
@@ -229,9 +230,9 @@ function main() {
                         </div>
                         <form ref={form} onSubmit={sendEmail}>
                             {/* Form inputs here */}
-                            <input name="user_name" type="text" placeholder="Enter your name" />
-                            <input name="user_email" type="text" placeholder="Enter your email" />
-                            <textarea  name="message" placeholder="Enter your message"></textarea>
+                            <input name="user_name" type="text" placeholder="Enter your name"  required/>
+                            <input name="user_email" type="email" placeholder="Enter your email" required/>
+                            <textarea name="message" placeholder="Enter your message" required></textarea>
                             <input className='submit' type="submit" value="Send" />
                         </form>
                         {emailStatus === "success" && (

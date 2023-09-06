@@ -1,5 +1,5 @@
 {
-    "grovemade clone": { 
+    "GroveMade": { 
         "name" : "GroveMade", 
         "url": "https://grovemade-clone.onrender.com",
         "githubUrl": "https://github.com/zaydinani/E-commerce",
@@ -40,8 +40,8 @@
             "/projects/grovemade/20.png"
         ]
     },
-    "techjoy": { 
-        "name" : "techjoy", 
+    "TechJoy": { 
+        "name" : "TechJoy", 
         "url": "",
         "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
         "date": "27 january 2023",
@@ -74,8 +74,8 @@
             "/projects/techjoy/13.png"
         ]
     },
-    "gametrack": { 
-        "name" : "gametrack", 
+    "GameTrack": { 
+        "name" : "GameTrack", 
         "url": "https://game-track-o3qa.onrender.com/",
         "githubUrl": "https://github.com/zaydinani/game-track",
         "date": "6 jul 2023",
@@ -109,8 +109,8 @@
             "/projects/gametrack/17.png"
         ]
     },
-    "laragigs": { 
-        "name" : "laragigs", 
+    "LaraGigs": { 
+        "name" : "LaraGigs", 
         "url": "",
         "githubUrl": "https://github.com/zaydinani/laragigs",
         "date": "25 aug 2023",

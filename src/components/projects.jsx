@@ -4,9 +4,8 @@ import "../styles/main.scss";
 function projects(props) {
     const { image, title, date, description } = props;
     const navigate = useNavigate();
-    const handleProjectClick = (index) => {
-        navigate(`/project/${index}`);
-        console.log(`clicked on project ${index}`)
+    const handleProjectClick = (name) => {
+        navigate(`/project/${name}`);
       }
     return (
         <div className="project">
@@ -14,7 +13,7 @@ function projects(props) {
                 <img src={image} alt="project logo" />
             </div>
             <div className="project-info">
-                <a onClick={() => handleProjectClick(props.index)}>{title}</a>
+                <a onClick={() => handleProjectClick(props.name)}>{title}</a>
                 <p className="date">{date}</p>
                 <p className="description">{description}</p>
             </div>

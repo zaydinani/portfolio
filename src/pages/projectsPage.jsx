@@ -6,10 +6,8 @@ import '../styles/projectsPage.scss'
 function Project() {
     const projectArray = Object.values(projectsData);
 
-    const { index } = useParams();
-    const projectData = projectArray[index];
-    console.log(projectData);
-    console.log(index);
+    const { name } = useParams();
+    const projectData = projectArray.find(project => project.name === name);
 
     const [showGallery, setShowGallery] = useState(false);
     const [clickedImageUrl, setClickedImageUrl] = useState('');
