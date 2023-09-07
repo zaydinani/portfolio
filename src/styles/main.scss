@@ -129,7 +129,7 @@
         @include flex(flex-start, _, column,_ );
         div:nth-child(1){
             @include flex(flex-start, _, column, 1rem );
-            h1{
+            h2{
                 font-size: 42px;
                 font-weight: 600;
                 text-transform: capitalize;
@@ -189,8 +189,10 @@
         }
         .info {
             margin-bottom: 1.5rem;
-            h1{
+            h2{
                 margin-bottom: 0;
+                font-size: 42px;
+
             }
         }
         .mySwiper{
@@ -216,7 +218,7 @@
                     border-radius: 8px;
                     background-color: $button-secondary;
                 }
-                h2{
+                h3{
                     margin: .2rem 0;
                     color: $button-main;
                     font-weight: 500;

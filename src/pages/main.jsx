@@ -130,7 +130,7 @@ function main() {
                 <div className="about container" id='about'>
                     <div className="about-info">
                         <div>
-                            <h1>{data['zayd-data'].about.title}</h1>
+                            <h2>{data['zayd-data'].about.title}</h2>
                             <p>{data['zayd-data'].about.text}</p>
                             <p>{data['zayd-data'].about.secondaryText}</p>
                         </div>
@@ -151,7 +151,7 @@ function main() {
                 <div className='skills--container'>
                     <div className=" skills">
                         <div className="info">
-                            <h1>{data['zayd-data'].skills.title}</h1>
+                            <h2>{data['zayd-data'].skills.title}</h2>
                             <p>{data['zayd-data'].skills.text}</p>
                         </div>
                         <div>
@@ -180,7 +180,7 @@ function main() {
                 <div className="container" id='projects'>
                     <div className="projects-container">
                         <div className="info">
-                            <h1>{data['zayd-data'].projects.title}</h1>
+                            <h2>{data['zayd-data'].projects.title}</h2>
                             <p>{data['zayd-data'].projects.text}</p>
                         </div>
                         <div className="projects">
@@ -204,7 +204,7 @@ function main() {
                 <div className="container">
                     <div className="features">
                         <div className="info">
-                            <h1>{data['zayd-data'].features.title}</h1>
+                            <h2>{data['zayd-data'].features.title}</h2>
                             <p>{data['zayd-data'].features.text}</p>
                         </div>
                         <div className="features-icons">
@@ -225,7 +225,7 @@ function main() {
                 <div className="container" id='contact'>
                     <div className="contact">
                         <div className="info">
-                            <h1>{data['zayd-data'].contact.title}</h1>
+                            <h2>{data['zayd-data'].contact.title}</h2>
                             <p>{data['zayd-data'].contact.text}</p>
                         </div>
                         <form ref={form} onSubmit={sendEmail}>
