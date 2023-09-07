@@ -17,4 +17,4 @@ Disallow:
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://zaydinani.onrender.com/sitemap.xml
+Sitemap: https://zaydinani.onrender.com/sitemap.xml 
