@@ -92,10 +92,10 @@ function main() {
             <Element name="hero">
                 <div className="section" id='hero'>
                     <div className="hero container">
-                        <div>
+                        <header>
                             <h1>{data['zayd-data'].hero.title}</h1>
                             <p>{data['zayd-data'].hero.text}</p>
-                        </div>
+                        </header>
                         <div>
                             <ul>
                                 <Link
@@ -127,7 +127,7 @@ function main() {
             </Element>
             {/* ABOUT */}
             <Element name="about" id="about">
-                <div className="about container" id='about'>
+                <section className="about container" id='about'>
                     <div className="about-info">
                         <div>
                             <h2>{data['zayd-data'].about.title}</h2>
@@ -144,11 +144,11 @@ function main() {
                     <div className="imgContainer">
                         <img src={data['zayd-data'].about.image} alt="Zayd Inani personal image" />
                     </div>
-                </div>
+                </section>
             </Element>
             {/* SKILLS */}
             <Element name="skills">
-                <div className='skills--container'>
+                <section className='skills--container'>
                     <div className=" skills">
                         <div className="info">
                             <h2>{data['zayd-data'].skills.title}</h2>
@@ -173,11 +173,11 @@ function main() {
                             </Swiper>
                         </div>
                     </div>
-                </div>
+                </section>
             </Element>
             {/*PROJECTS*/}
             <Element name="projects">
-                <div className="container" id='projects'>
+                <section className="container" id='projects'>
                     <div className="projects-container">
                         <div className="info">
                             <h2>{data['zayd-data'].projects.title}</h2>
@@ -197,11 +197,11 @@ function main() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </section>
             </Element>
             {/*FEATURES*/}
             <Element name="features">
-                <div className="container">
+                <section className="container">
                     <div className="features">
                         <div className="info">
                             <h2>{data['zayd-data'].features.title}</h2>
@@ -218,11 +218,11 @@ function main() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </section>
             </Element>
             {/*CONTACT*/}
             <Element name="contact">
-                <div className="container" id='contact'>
+                <section className="container" id='contact'>
                     <div className="contact">
                         <div className="info">
                             <h2>{data['zayd-data'].contact.title}</h2>
@@ -248,8 +248,7 @@ function main() {
                             </div>
                         )}
                     </div>
-
-                </div>
+                </section>
             </Element>
         </>
     );
