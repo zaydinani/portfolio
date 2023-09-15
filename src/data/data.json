@@ -13,12 +13,6 @@
                 {
                     "platform":"facebook",
                     "linkUrl":"https://www.facebook.com/zayd.inani/"
-
-                },
-                {
-                    "platform":"twitter",
-                    "linkUrl":"https://twitter.com/ZaydInani"
-
                 },
                 {
                     "platform":"instagram",
@@ -31,6 +25,11 @@
                 {
                     "platform":"github",
                     "linkUrl":"https://github.com/zaydinani"
+                },
+                {
+                    "platform":"twitter",
+                    "linkUrl":"https://twitter.com/ZaydInani"
+
                 }
             ]
         },
