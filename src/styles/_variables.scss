@@ -108,6 +108,29 @@ $hover: #41b468;
     height: $height;
     margin: 0 auto;
 }
+//SUCCESS MSG 
+@mixin alert-2($color) {
+    border-left: 4px solid $color;
+    background-color: rgba($color, 0.05);
+    
+    .alert-title {
+      color: $color;
+    }
+  }
+  
+  .alert-2-success {
+    @include alert-2($success-color);
+  }
+  
+//ERROR MSG 
+@mixin alert-3($color) {
+    border: 1px solid lighten($color, 25%);
+    border-radius: 8px;
+    background-color: rgba($color, 0.05);
+    .alert-title {
+      color: $color;
+    }
+}
 .section{
     @include section(100%, 100vh);
     //border: 1px solid red;

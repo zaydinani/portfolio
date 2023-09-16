@@ -238,7 +238,7 @@ function main() {
                         {emailStatus === "success" && (
                             <div class="alert alert-2-success">
                                 <h3 class="alert-title">success</h3>
-                                    <p class="alert-content">your email have been sent successfully</p>
+                                <p class="alert-content">your email have been sent successfully</p>
                             </div>
                         )}
                         {emailStatus === "error" && (

@@ -5,48 +5,22 @@
   width: 100%;
   padding: 16px;
   margin-top: 1rem;
-}
-
-.alert-title {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.alert-content {
-  margin: 0;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  color: #555555;
-}
-//SUCCESS MSG 
-@mixin alert-2($color) {
-    border-left: 4px solid $color;
-    background-color: rgba($color, 0.05);
-    
-    .alert-title {
-      color: $color;
-    }
+  .alert-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
   }
-  
-  .alert-2-success {
-    @include alert-2($success-color);
+  .alert-content {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555555;
   }
-  
-//ERROR MSG 
-@mixin alert-3($color) {
-    border: 1px solid lighten($color, 25%);
-    border-radius: 8px;
-    background-color: rgba($color, 0.05);
-    .alert-title {
-      color: $color;
-    }
 }
 .alert-3-danger {
     @include alert-3($danger-color);
 }
-  
 //SCROLL UP ICON 
 .scroll {
     position: fixed;
@@ -85,7 +59,7 @@
     background-image: url('/Gradient.png');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .hero {
     text-align: center;
@@ -175,14 +149,14 @@
 }
 //SKILLS
 .skills--container{
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     @include flex(center, _, column, _ );
     .skills {
         background-color: $secondary-color-dark;
         @include flex(center, _, column, _ );
+        padding: 3rem 0;
         width: 80vw;
-        height: 80vh;
         margin: 0 auto;
         .light & {
             background-color: $secondary-color-light; 
@@ -202,6 +176,7 @@
             }
         }
         .skills-container{
+            
             @include flex(flex-start, _, row,_ );
             flex-wrap: wrap;
             padding: 0 1.5rem;
@@ -429,13 +404,13 @@
     }
     .skills--container{
         .skills {
-            padding: 0rem  2rem 2rem 2rem;  
+            padding: 3rem 0;
         }
     }
 }
 @media screen and (max-width: 1024px) {
     #hero{
-        background-size: 100% 100%;
+        background-size: cover;
     }
     .about{
         padding: 80px 0;
@@ -499,6 +474,7 @@
     }
 } 
 @media screen and (max-width: 768px) {
+
     .hero {        
         div:nth-child(1) {
             h1 {
@@ -526,11 +502,8 @@
     }
     .skills--container{
         .skills {
-            height: 90%;
             width: 90%;
-            .info {
-                margin: 2rem 0 0rem;
-            }
+
         }
     }
     .projects-container{
@@ -577,19 +550,16 @@
             width: 2.3rem;
         }
     }
-    #hero{
-        background-size: 150% 80%; 
-    }
+
     .hero {
-        div:nth-child(1) {
+        header {
             width: 90%;  
             margin-top: 5rem;
-            
             h1 {
                 font-size: 28px;
             }   
             p {
-            font-size: 18px;
+                font-size: 18px;
             }
         }
         div:nth-child(2) {
@@ -612,7 +582,6 @@
     .skills--container{
         height: fit-content;   
         .skills {
-            padding: 2rem  0;
             .skills-container{
                 .skill{
                     width: 80%;
@@ -652,6 +621,8 @@
     .skills--container{
         .skills {
             .skills-container{
+                padding: 0;
+
                 div{
                     width: 90%;
                 }
