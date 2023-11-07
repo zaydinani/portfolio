@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 //react scroll
 import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+import data from "../data/data.json"
 
 //theme context for dark mode
 import { ThemeContext } from '../util/themeContext';
@@ -51,7 +52,7 @@ function Nav() {
         <div className="bar"></div>
       </button>
       <div className="logo">
-        <img src="/logo.png" alt="" />
+        <img src={data['zayd-data'].about.logo} alt="" />
       </div>
       <ul>
         {location.pathname.startsWith('/project/') ? (
