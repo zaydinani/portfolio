@@ -132,8 +132,8 @@ function Nav() {
             onChange={handleToggleTheme}
           />
           <label htmlFor="checkbox" className="label">
-            <img className="fa-sun" src="/sun-solid.png" alt="" />
-            <img className="fa-moon" src="/moon purple.png" alt="" />
+            <img className="fa-sun" src="/icons/sun-solid.png" alt="" />
+            <img className="fa-moon" src="/icons/moon purple.png" alt="" />
             <div className="ball"></div>
           </label>
         </div>
@@ -230,8 +230,8 @@ function Nav() {
                   onChange={handleToggleTheme}
                 />
                 <label htmlFor="checkbox" className="label">
-                  <img className="fa-sun" src="/sun-solid.png" alt="" />
-                  <img className="fa-moon" src="/moon purple.png" alt="" />
+                  <img className="fa-sun" src="/icons/sun-solid.png" alt="" />
+                  <img className="fa-moon" src="/icons/moon purple.png" alt="" />
                   <div className="ball"></div>
                 </label>
               </div>

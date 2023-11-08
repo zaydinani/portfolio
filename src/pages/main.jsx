@@ -86,7 +86,7 @@ function main() {
                 offset={0}
             >
                 <div className="scroll"  style={{ display: 'none' }}>
-                    <img src="/chevron-up-solid.svg" alt="go up icon" />
+                    <img src="/icons/chevron-up-solid.svg" alt="go up icon" />
                 </div>
             </Link>
             <Element name="hero">
@@ -137,7 +137,7 @@ function main() {
                         <Socials />
                         <div>
                             <ul>
-                                <li className=" btn main-btn"><a href="/zayd inani cv.pdf" download>download cv</a></li>
+                                <li className=" btn main-btn"><a href="/resume/zayd inani cv.pdf" download>download cv</a></li>
                             </ul>
                         </div>
                     </div>

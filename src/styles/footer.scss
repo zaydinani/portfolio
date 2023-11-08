@@ -6,7 +6,7 @@ footer{
     .copyright{
         @include flex(space-between, center, row, _ );
         img{
-            height: 4rem;
+            height: 3rem;
             margin-right: 0.5rem;
         }
         p{

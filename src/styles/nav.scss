@@ -20,13 +20,13 @@ nav {
   padding: 0 0.5rem;
   .logo {
     width: 45px;
-    height: 55px;
+    height: 45px;
     position: absolute;
     right: 10px;
-    top: 4px;
+    top: 9px;
     img {
       width: 45px;
-      height: 55px;
+      height: 45px;
     }
   }
   
@@ -192,9 +192,8 @@ nav {
   outline: none;
   border: none;
   position: absolute;
-  top: 5px;
+  top: 2px;
   z-index: 100;
-
   .bar,
   &::after,
   &::before {
