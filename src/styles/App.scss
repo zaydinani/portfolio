@@ -22,13 +22,14 @@ body::-webkit-scrollbar {
   width: $scrollBarSize; 
 }
 
-body::-webkit-scrollbar-track {
-  background: $button-secondary;
-  border-radius: 10px;
-}
-
 body::-webkit-scrollbar-thumb {
   background: $button-main;
   border-radius: 10px;
 }
 
+/*
+body::-webkit-scrollbar-track {
+  background: $button-secondary;
+  border-radius: 10px;
+}
+*/

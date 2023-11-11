@@ -92,11 +92,11 @@ function main() {
             <Element name="hero">
                 <div className="section" id='hero'>
                     <div className="hero container">
-                        <header>
+                        <header className='square xyz-in' xyz="fade">
                             <h1>{data['zayd-data'].hero.title}</h1>
                             <p>{data['zayd-data'].hero.text}</p>
                         </header>
-                        <div>
+                        <div className='square xyz-in' xyz="fade">
                             <ul>
                                 <Link
                                     className='btn main-btn'
@@ -141,7 +141,7 @@ function main() {
                             </ul>
                         </div>
                     </div>
-                    <div className="imgContainer">
+                    <div className="imgContainer"  xyz="fade right">
                         <img src={data['zayd-data'].about.image} alt="Zayd Inani personal image" />
                     </div>
                 </section>

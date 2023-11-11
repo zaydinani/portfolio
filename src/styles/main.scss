@@ -67,6 +67,7 @@
     text-transform: capitalize;
     @include flex(center, center, column,_ );
     header{
+        --xyz-in-duration: 1.5s;
         width: 70%;
         margin: 2.5rem 0 2.5rem 0;
         h1 {
@@ -92,6 +93,9 @@
       margin-top: 2rem;
       width: 20rem;
       @include btn();
+      --xyz-in-duration: 2s;
+      --xyz-in-delay: 1s;
+
     }
 }
 //ABOUT
@@ -139,7 +143,6 @@
             .light & {
                 color: $paragraph-font-light;
                 box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
-
             }
         }
         img:hover{
@@ -640,3 +643,5 @@
     }
 }
   
+
+
