@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import projectsData from '../data/projects.json'
 import { useParams } from 'react-router-dom';
 import '../styles/projectsPage.scss'
@@ -64,6 +65,9 @@ function Project() {
 
     return(
         <div className="project--container">
+            <Helmet>
+                <title>{projectData.name}</title>
+            </Helmet>
             <div className="title">
                 <h1>{projectData.name}</h1>
                 <p>{projectData.date}</p>
