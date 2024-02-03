@@ -36,6 +36,58 @@ $scrollBarSize: 8px;
         }
     }
 }
+/*ANIMATIONS FUNCTIONS*/
+@mixin fade-in($time) {
+    opacity: 0;
+    animation: fade-in $time ease forwards; 
+    @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+    }
+}
+@mixin scale-animations($down, $up) {
+    scale: .5; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view($down $up);
+    @keyframes fade-in {
+        to {scale: 1; opacity: 1;}
+    }
+}
+@mixin slide-in{
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-timeline: view(80% 10%);
+    @keyframes slide-in {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+    }
+}
+@mixin expand-middle-form{
+    opacity: 0;
+    animation: expand-form 1s ease forwards;
+    animation-timeline: view(50% 10%);
+    @keyframes expand-form {
+        0% {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+    }
+}
 @mixin flex($justify-content, $align-items, $direction, $gap) {
     display: flex;
     justify-content: $justify-content;

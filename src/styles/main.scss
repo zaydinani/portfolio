@@ -67,9 +67,9 @@
     text-transform: capitalize;
     @include flex(center, center, column,_ );
     header{
-        --xyz-in-duration: 1.5s;
         width: 70%;
         margin: 2.5rem 0 2.5rem 0;
+        @include fade-in(1.5s);
         h1 {
             margin-bottom: 1.5rem;
             font-size: 42px;
@@ -88,14 +88,12 @@
             }
         }
     }
-    
     div:nth-child(2) {
       margin-top: 2rem;
       width: 20rem;
       @include btn();
-      --xyz-in-duration: 2s;
-      --xyz-in-delay: 1s;
-
+      @include fade-in(2s);
+      animation-delay: 1s;
     }
 }
 //ABOUT
@@ -105,6 +103,8 @@
     .about-info{
         width: 50%;
         @include flex(flex-start, _, column,_ );
+        @include slide-in;
+
         div:nth-child(1){
             @include flex(flex-start, _, column, 1rem );
             h2{
@@ -130,7 +130,8 @@
     }
     .imgContainer{
         width: 40%;
-        margin-top: 1rem;
+        margin: 1rem 0 0 1rem;
+        @include scale-animations(90%, 10%);
         img{
             border-radius: 10px;
             box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
@@ -195,6 +196,7 @@
                     padding: .7rem;
                     border-radius: 8px;
                     background-color: $button-secondary;
+                    @include scale-animations(50%, 10%);
                 }
                 h3{
                     margin: .2rem 0;
@@ -229,6 +231,7 @@
             background-color: $projects-background-dark;
             box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08); 
             transition: .5s ease-in-out;
+            @include scale-animations(70%, 10%);
             &:hover{
                 background-color: #000;
 
@@ -297,12 +300,14 @@
         height: 70%;
         gap: 35px;
         margin: 1.5rem 0;
+        
     }
     .feature{
         height: 100%;
         text-align: center;
         @include flex(center, center, column, 1rem );
         img{
+            @include scale-animations(50%, 10%);
             padding: 9px 15px;
             width: 72px;
             height: 72px;
@@ -335,12 +340,15 @@
     .light & {
       background-color: $main-light;
     }
-
+    .info{
+        @include scale-animations(70%, 10%);
+    }
     
     form {
         display: flex;
         flex-direction: column;
         max-width: 100%;
+        @include expand-middle-form;
         input {
             border: none;
             margin: 5px 0;
@@ -398,6 +406,7 @@
         }
     }
 }
+
 //MEDIA QUERY 
 @media screen and (max-width: 1440px) {
     .about{
@@ -577,7 +586,7 @@
             width: 100%;
         }
         .imgContainer{
-            margin-top: 1rem;
+            margin: 1rem 0 0 0;
             width: 100%;
             height: fit-content;
         }

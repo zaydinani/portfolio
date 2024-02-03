@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 // sending emails through email.js
 import emailjs from '@emailjs/browser';
@@ -92,11 +91,11 @@ function main() {
             <Element name="hero">
                 <div className="section" id='hero'>
                     <div className="hero container">
-                        <header className='square xyz-in' xyz="fade">
+                        <header>
                             <h1>{data['zayd-data'].hero.title}</h1>
                             <p>{data['zayd-data'].hero.text}</p>
                         </header>
-                        <div className='square xyz-in' xyz="fade">
+                        <div>
                             <ul>
                                 <Link
                                     className='btn main-btn'
