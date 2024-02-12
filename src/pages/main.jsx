@@ -19,7 +19,7 @@ import Features from "../components/features";
 import data from "../data/data.json"
 import projectsData from "../data/projects.json"
 
-function main() {
+function Main() {
     const [emailStatus, setEmailStatus] = useState(null);
 
     const projects = Object.values(projectsData);
@@ -252,4 +252,4 @@ function main() {
         </>
     );
 }
-export default main;
+export default Main;
