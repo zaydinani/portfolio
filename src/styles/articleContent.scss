@@ -1,0 +1,92 @@
+@import '_variables';
+main {
+    @include flex(center, center, column,_ );
+    .article_container{
+        padding: 6rem 0 2rem;
+        width: 70vw;
+        .article_img{
+            height: 60vh;
+            width: 100%;
+            border-radius: 8px;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+    
+            }
+        }
+        .title{
+            margin: 3rem 0;
+            h1{
+                color: $headers-dark;
+                font-weight: 400;
+                font-size: 38px;
+                .light & {
+                    color: $headers-light;
+                }
+            }
+            .metadata{
+                @include flex(_, _, row,1rem );
+                color: $paragraph-font-dark;
+                font-size: 24px;
+    
+                p:not(:last-child){
+                    border-right: 2px solid $button-main;
+                    padding-right: 1rem;
+                }
+            }
+        }
+        article{
+            h2{
+                margin: 1.5rem 0;
+                color:$headers-dark;
+                font-weight: 400;
+                font-size: 32px;
+                .light & {
+                    color: $headers-light;
+                }
+            }
+            p{
+                margin: 1rem 0;
+                color: $paragraph-font-dark;
+                font-size: 22px;
+                .light & {
+                    color: $paragraph-font-light;
+                }
+    
+            }
+            blockquote{
+                padding: 0rem 1rem;
+                border-left: 2px solid $button-main;
+                cite{
+                    color:$headers-dark;
+                    .light & {
+                        color: $headers-light;
+                    }
+                }
+            }
+            ul, ol{
+                padding: 0 2rem;
+                color: $paragraph-font-dark;
+                .light & {
+                    color: $paragraph-font-light;
+                }
+                li{
+                    padding: 0.2rem;
+                }
+                li::marker {
+                    color: $button-main;
+                }
+            }
+            img{
+                object-fit: cover;
+                height: 60vh;
+                width: 100%;
+                border-radius: 8px;
+                margin: 1rem 0;
+            }
+        }
+    }
+
+}
