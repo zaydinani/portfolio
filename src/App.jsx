@@ -8,6 +8,7 @@ import Projects from './pages/projectsPage'
 import { ThemeProvider } from './util/themeContext'
 import Article from './pages/new/articleContent.jsx'
 import Blog from './pages/new/blogPage.jsx'
+import Auth from './pages/new/auth.jsx'
 
 function App() {
   

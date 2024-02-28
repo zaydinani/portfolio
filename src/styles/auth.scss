@@ -1,0 +1,73 @@
+@import '_variables';
+
+main {
+    height: 100vh;
+    .auth_container{
+        height: 25rem;
+        width: 20rem;
+        @include flex(space-evenly, center, column,_ );
+
+        img{
+            height: 5rem;
+            width: 5rem;
+        }
+        form{
+            height: 60%;
+            width: 90%;
+            padding: 15px;
+            background-color: $secondary-color-dark;
+            .light & {
+                background-color: $secondary-color-light;
+            }
+            border-radius: 8px;
+            @include flex(space-evenly, flex-start, column, .7rem );
+            .input{
+                height: 2rem;
+                width: 100%;
+                border-radius: 8px;
+                background-color: $button-secondary;
+                outline: none;
+                padding: 10px;
+                border: none;
+                &::placeholder{
+                    color: $paragraph-font-dark;
+                }
+
+            }
+            label{
+                color: $paragraph-font-dark;
+                @include flex(space-evenly, center, row, 1rem );
+                cursor: pointer;
+                input {
+                    height: 1rem;
+                    width: 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                .light & {
+                    color: $paragraph-font-light;
+                }
+            }
+            button{
+                height: 2rem;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: $button-main;
+                color: $headers-dark;
+                font-size: 16px;
+                font-weight: 400;
+                cursor: pointer;
+                border: none;
+                transition: 0.5s ease-in-out;
+                letter-spacing: 3px;
+                &:hover{
+                    scale: 1.01;
+                    background-color: $hover;
+                    color: black;
+                }
+            }
+        }
+    }
+}
