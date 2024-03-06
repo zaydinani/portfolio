@@ -1,5 +1,5 @@
 //my styles
-import "../../styles/Auth.scss";
+import "../../styles/auth.scss";
 import data from "../../data/data.json"
 
 
