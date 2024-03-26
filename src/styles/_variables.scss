@@ -22,9 +22,14 @@ $danger-color: #ff3838;
 $success-color: #41b468;
 //hover
 $hover: #41b468;
+//dash
+$sidebar-color-dark: #191919;
+$sidebar-color-light: #c8c8c8;
+
+$sidebar-border-color: #3C3C3C; 
 //scroll bar width
 $scrollBarSize: 8px;
-
+$borderRadius: 8px;
 /*FUNCTIONS*/ 
 @mixin reset-list-styles {
     li {
@@ -208,7 +213,9 @@ $scrollBarSize: 8px;
     @media screen and (max-width: 320px) {
         width: 90%;
     }
-    
+    @media screen and (min-width: 2560px) {
+        width: 1400px;
+    }
 }
 
 .info{

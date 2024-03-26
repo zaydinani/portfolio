@@ -1,0 +1,222 @@
+@import '_variables';
+aside {
+    background-color: $sidebar-color-dark;
+    height: 100vh;
+    width: 17%;
+    padding: 2rem 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    @include flex(space-between, _, column, _);
+    .light & {
+        background-color: $sidebar-color-light;
+        color: black;
+    }
+    .logo{
+        @include flex(center, center, column, 5rem);
+        img{
+            height: 4rem;
+            width: 4rem;
+        }
+        .sidebar_nav {
+
+            width: 100%;
+            @include reset-list-styles;
+            @include flex(flex-start, _, column, 1rem);
+            .nav_link{
+                @include flex(flex-start, _, _, 1rem);
+                padding: .5rem 0;
+                
+                svg {
+    
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    path{
+                        transition: .5s ease-in-out;
+                    }
+                }
+                a{
+                    transition: .5s ease-in-out;
+                    color: $headers-dark;
+                    font-size: 16px;
+                    .light & {
+                        color: black;
+                    }
+                }
+                &:hover {
+                    a{
+                        color: $button-main;
+                    }
+                    svg{
+                        path{
+                            fill: $button-main;
+                        }
+                    }
+                }
+            } 
+                /*!----------------dark mode toggle-----------------------*/
+    .navLink {
+        border-radius: 25px;  
+        .checkbox {
+          opacity: 0;
+          position: absolute;
+        } 
+        .checkbox:checked + .label .ball {
+          transform: translateX(-24px);
+        }
+        .label {
+          background-color: $main-dark;
+          display: flex;
+          border-radius: 50px;
+          height: 26px;
+          width: 50px;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          padding: 5px;
+          .fa-sun {
+            height: 16px;
+          }
+          .fa-moon {
+            height: 16px;
+          }
+          .ball {
+            background-color: $button-secondary;
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            top: 1px;
+            right: 1.5px;
+            border-radius: 50%;
+            transition: 0.2s linear;
+          }
+        }
+      }  
+        }
+
+    }
+    .admin{
+        @include flex(space-between, center, row, _);
+        div{
+            @include flex(space-between, center, _, 1rem);
+            img{
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+            }
+
+        }
+        a {
+            svg{
+                height: 1.5rem;
+                width: 1.5rem;
+                path{
+                    transition: .5s ease-in-out;
+                }
+            }
+            &:hover {
+                svg{
+                    path{
+                        fill: $button-main;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    aside {
+        .admin{
+            img{
+                height: 2rem;
+                width: 2rem;
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    aside {
+        width: 7%; 
+        transition: .3s ease-in-out;
+
+
+        .logo{
+            img{
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+        .sidebar_nav {
+            .navLink{
+                display: none;
+            }
+            .nav_link{
+                a{
+                    display: none;
+                }
+            }   
+        }
+        .admin{
+            p{
+                display: none
+            }
+            img{
+                display: none;
+
+            }
+        }
+        &:hover{
+            width: 27%;    
+            .logo{
+                img{
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+            .sidebar_nav {
+                .navLink{
+                    display: block;
+                }
+                .nav_link{
+                    a{
+                        display: block;
+                    }
+                }   
+            }
+            .admin{
+                p{
+                    display: block;
+                }
+                img{
+                    display: block;
+    
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    aside {
+        width: 12%; 
+        &:hover{
+            width: 45%; 
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    aside {
+        width: 15%; 
+    }
+}
+@media screen and (max-width: 320px) {
+    aside {
+        width: 16%; 
+        &:hover{
+            width: 55%; 
+        }
+    }
+}

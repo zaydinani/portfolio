@@ -1,0 +1,151 @@
+@import '_variables';
+
+.dash_container{
+    position: relative;
+    left: 17%;
+    width: 83%;
+    text-align: center;
+    @include flex(_, _, column, 3rem);
+    padding: 1rem 2rem;
+    .titles{
+        font-size: 32px;
+        font-weight: 600;
+        color: $paragraph-font-dark;
+        margin-bottom: 2rem
+    }
+    .cards_container{
+        .projects{
+            @include flex(space-around, _, row, 1rem);
+            .project{
+                border: 1px solid $borders;
+                height: 27rem;
+                width: 45%;
+                padding: 1rem;
+                border-radius: 8px;
+                background-color: $projects-background-dark;
+                box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08); 
+                transition: .5s ease-in-out;
+                &:hover{
+                    background-color: #000;
+    
+                }
+                .light & {
+                    background-color: $projects-background-light;
+                    &:hover{
+                        background-color: #fff;
+                        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2); 
+    
+                    }
+                }
+                .img{
+                    height: 50%;
+                    border-radius: 8px;
+                    margin-bottom: 0.4rem;
+                    background-color: white;
+                    @include flex(center, center,_,_ );
+                    img{
+                        width: 90%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .project-info{
+                    text-align: left;
+                    a{
+                        font-weight: 500;
+                        font-size: 29px;
+                        color: $button-main;
+                        margin-top: .7rem;
+                        cursor: pointer;
+                        transition: 0.5s ease-in-out;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $paragraph-font-dark;
+                        .light & {
+                            color: $project-font-color-light;
+                        }
+                        &.description {
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3; // Number of lines to display before ellipsis
+                            -webkit-box-orient: vertical;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .date{
+                        margin-bottom: 1rem;
+                    }
+                }
+                .actions{
+                    @include flex(_, _, row, 1.5rem);
+                    cursor: pointer;
+                    margin-top: .5rem;
+                    width: fit-content;
+                }
+            }
+        }
+        .more{
+            padding: 1rem 0;
+            @include flex(flex-end, _, row, 3rem);
+            a{
+                color: $button-secondary;
+                text-decoration: none;
+                text-transform: capitalize;
+                transition: 0.3s ease-in-out;
+
+                &:hover{
+                    color: #5552FF;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .dash_container{
+        left: 7%;
+        width: 93%;
+        .cards_container{
+            .projects{
+                .project{
+                    height: fit-content;
+                    .project-info{
+                        a{
+                            font-size: 22px;
+                        }
+                        p{
+                            font-size: 14px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .dash_container{
+        left: 12%;
+        width: 88%;
+        .cards_container{
+            .projects{
+                @include flex(space-around, _, column, 3rem);
+                .project{
+
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .dash_container{
+        left: 15%;
+        width: 85%;
+
+    }
+}
