@@ -137,5 +137,60 @@
             "/projects/laragigs/8.png",
             "/projects/laragigs/9.png"
         ]
+    },
+    "AsImmobilier": { 
+        "name" : "AsImmobilier", 
+        "url": "https://asimmbolier.000.pe/",
+        "githubUrl": "",
+        "date": "20 mar 2024",
+        "type": "web app",
+        "projectLogo" : "/projects/asimmoblier/logo.png",
+        "description": {
+            "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
+            "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
+        },
+        "languages": {
+            "wordpress": "/skills/wordpress.svg"
+        },
+        "screenShots":[
+            "/projects/asimmoblier/1.jpg",
+            "/projects/asimmoblier/2.png",
+            "/projects/asimmoblier/3.png",
+            "/projects/asimmoblier/4.png",
+            "/projects/asimmoblier/5.png",
+            "/projects/asimmoblier/6.png",
+            "/projects/asimmoblier/7.png",
+            "/projects/asimmoblier/8.png",
+            "/projects/asimmoblier/9.jpg",
+            "/projects/asimmoblier/10.png",
+            "/projects/asimmoblier/11.png",
+            "/projects/asimmoblier/12.png"
+        ]
+    },
+    "CosmetiCraft": { 
+        "name" : "CosmetiCraft", 
+        "url": "https://cosmeticraft.infinityfreeapp.com/",
+        "githubUrl": "",
+        "date": "17 nov 2023",
+        "type": "Landing Page",
+        "projectLogo" : "/projects/cosmeticraft/logo.png",
+        "description": {
+            "mainDescription": "For a Moroccan hair transplant and cosmetics clinic seeking to expand its global reach, I crafted a captivating landing page using WordPress. The design prioritizes elegance with a clutter-free layout and inviting color schemes, ensuring a positive first impression for potential clients worldwide. Straightforward navigation guides users effortlessly through the information they seek, whether it's learning about the clinic's expertise or initiating contact.",
+            "secondaryDescription": "To enhance user experience further, the landing page utilizes a user-friendly contact form, allowing for seamless communication. Additionally, comprehensive information about the clinic's services and areas of expertise is readily available, empowering potential clients to make informed decisions. This combination of elegance, ease of use, and informative content creates a landing page that effectively attracts and engages a global audience."
+        },
+        "languages": {
+            "wordpress": "/skills/wordpress.svg"
+        },
+        "screenShots":[
+            "/projects/cosmeticraft/1.png",
+            "/projects/cosmeticraft/2.png",
+            "/projects/cosmeticraft/3.png",
+            "/projects/cosmeticraft/4.png",
+            "/projects/cosmeticraft/5.png",
+            "/projects/cosmeticraft/6.png",
+            "/projects/cosmeticraft/7.png",
+            "/projects/cosmeticraft/8.png",
+            "/projects/cosmeticraft/9.png"
+        ]
     }
 }
