@@ -1,196 +1,196 @@
 {
-    "GroveMade": { 
-        "name" : "GroveMade", 
-        "url": "https://grovemade-clone.onrender.com",
-        "githubUrl": "https://github.com/zaydinani/E-commerce",
-        "date": "27 june 2023",
-        "type": "Ecommerce website",
-        "projectLogo" : "/projects/grovemade/logo.png",
-        "description": {
-            "mainDescription": " an e-commerce platform that offers a seamless shopping experience. Whether you're a customer looking to purchase products or an admin managing the platform, our website provides a user-friendly interface to meet your needs. You can explore a wide range of products, add them to your cart, and easily manage your purchases. As an admin, you have access to additional features for product and order management, allowing you to efficiently handle the platform's operations.",
-            "secondaryDescription": " this website is a clone website inspired by the elegant design of grovemade.com. I was captivated by their design, and I embarked on the challenge of replicating it for my own website. It's important to note that this project is solely for personal development and skill enhancement, and I do not generate any revenue from it. "
-        },
-        "languages": {
-            "expressjs": "/skills/express js.svg",
-            "nodejs": "/skills/node.svg",
-            "ejs": "/skills/ejs.svg",
-            "css": "/skills/css.svg",
-            "mongodb": "/skills/mongodb.svg"
-        },
-        "screenShots":[
-            "/projects/grovemade/1.png",
-            "/projects/grovemade/2.png",
-            "/projects/grovemade/3.png",
-            "/projects/grovemade/4.png",
-            "/projects/grovemade/5.png",
-            "/projects/grovemade/6.png",
-            "/projects/grovemade/7.png",
-            "/projects/grovemade/8.png",
-            "/projects/grovemade/9.png",
-            "/projects/grovemade/10.png",
-            "/projects/grovemade/11.png",
-            "/projects/grovemade/12.png",
-            "/projects/grovemade/13.png",
-            "/projects/grovemade/14.png",
-            "/projects/grovemade/15.png",
-            "/projects/grovemade/16.png",
-            "/projects/grovemade/17.png",
-            "/projects/grovemade/18.png",
-            "/projects/grovemade/19.png",
-            "/projects/grovemade/20.png"
-        ]
+  "GroveMade": {
+    "name": "GroveMade",
+    "url": "https://grovemade-clone.onrender.com",
+    "githubUrl": "https://github.com/zaydinani/E-commerce",
+    "date": "27 june 2023",
+    "type": "Ecommerce website",
+    "projectLogo": "/projects/grovemade/logo.png",
+    "description": {
+      "mainDescription": " an e-commerce platform that offers a seamless shopping experience. Whether you're a customer looking to purchase products or an admin managing the platform, our website provides a user-friendly interface to meet your needs. You can explore a wide range of products, add them to your cart, and easily manage your purchases. As an admin, you have access to additional features for product and order management, allowing you to efficiently handle the platform's operations.",
+      "secondaryDescription": " this website is a clone website inspired by the elegant design of grovemade.com. I was captivated by their design, and I embarked on the challenge of replicating it for my own website. It's important to note that this project is solely for personal development and skill enhancement, and I do not generate any revenue from it. "
     },
-    "TechJoy": { 
-        "name" : "TechJoy", 
-        "url": "",
-        "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
-        "date": "27 january 2023",
-        "type": "blog website",
-        "projectLogo" : "/projects/techjoy/logo.png",
-        "description": {
-            "mainDescription": "During the early stages of my journey into Node.js, I embarked on an exciting collaborative project with my friends – a blog platform that served as a testament to our collective learning and creativity. Our blog was a hub for technology enthusiasts, offering an array of insightful articles for readers to explore. From cutting-edge developments to industry insights, our platform provided a space for users to engage, learn, and share their thoughts through comments.",
-            "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."
-        },
-        "languages": {
-            "expressjs": "/skills/express js.svg",
-            "nodejs": "/skills/node.svg",
-            "ejs": "/skills/ejs.svg",
-            "css": "/skills/css.svg",
-            "mongodb": "/skills/mysql.svg"
-        },
-        "screenShots":[
-            "/projects/techjoy/1.png",
-            "/projects/techjoy/2.png",
-            "/projects/techjoy/3.png",
-            "/projects/techjoy/4.png",
-            "/projects/techjoy/5.png",
-            "/projects/techjoy/6.png",
-            "/projects/techjoy/7.png",
-            "/projects/techjoy/8.png",
-            "/projects/techjoy/9.png",
-            "/projects/techjoy/10.png",
-            "/projects/techjoy/11.png",
-            "/projects/techjoy/12.png",
-            "/projects/techjoy/13.png"
-        ]
+    "languages": {
+      "expressjs": "/skills/express js.svg",
+      "nodejs": "/skills/node.svg",
+      "ejs": "/skills/ejs.svg",
+      "css": "/skills/css.svg",
+      "mongodb": "/skills/mongodb.svg"
     },
-    "GameTrack": { 
-        "name" : "GameTrack", 
-        "url": "https://game-track-o3qa.onrender.com/",
-        "githubUrl": "https://github.com/zaydinani/game-track",
-        "date": "6 jul 2023",
-        "type": "web app",
-        "projectLogo" : "/projects/gametrack/logo.png",
-        "description": {
-            "mainDescription": "My project 'Game Track' emerged as a captivating endeavor fueled by my fascination for both gaming and web development. Crafted using the power of Sass, this platform allows users to dive into the vast realm of video games across all platforms. Leveraging the rawg API, users can seamlessly explore an extensive library of games, unveiling crucial details and information about their favorite titles. The ability to search for specific games and discover their intricate details, platform compatibility, system requirements, and captivating screenshots adds an immersive layer to the gaming experience.",
-            "secondaryDescription": " What sets 'Game Track' apart is its intelligent feature that lets users meticulously organize their game collection. With options to categorize games as owned, finished, or on the wishlist, users can effortlessly track and manage their gaming journey. Our design approach exudes elegance, enhancing the user interface and guaranteeing an intuitive and visually pleasing experience. Through 'Game Track,' I aimed to bridge my passion for gaming and technical prowess, resulting in a dynamic and stylish platform for fellow gamers to relish."
-        },
-        "languages": {
-            "react": "/skills/reactjs.svg",
-            "sass": "/skills/sass.svg"
-        },
-        "screenShots":[
-            "/projects/gametrack/1.png",
-            "/projects/gametrack/2.png",
-            "/projects/gametrack/3.png",
-            "/projects/gametrack/4.png",
-            "/projects/gametrack/5.png",
-            "/projects/gametrack/6.png",
-            "/projects/gametrack/7.png",
-            "/projects/gametrack/8.png",
-            "/projects/gametrack/9.png",
-            "/projects/gametrack/10.png",
-            "/projects/gametrack/11.png",
-            "/projects/gametrack/12.png",
-            "/projects/gametrack/13.png",
-            "/projects/gametrack/14.png",
-            "/projects/gametrack/15.png",
-            "/projects/gametrack/16.png",
-            "/projects/gametrack/17.png"
-        ]
+    "screenShots": [
+      "/projects/grovemade/1.png",
+      "/projects/grovemade/2.png",
+      "/projects/grovemade/3.png",
+      "/projects/grovemade/4.png",
+      "/projects/grovemade/5.png",
+      "/projects/grovemade/6.png",
+      "/projects/grovemade/7.png",
+      "/projects/grovemade/8.png",
+      "/projects/grovemade/9.png",
+      "/projects/grovemade/10.png",
+      "/projects/grovemade/11.png",
+      "/projects/grovemade/12.png",
+      "/projects/grovemade/13.png",
+      "/projects/grovemade/14.png",
+      "/projects/grovemade/15.png",
+      "/projects/grovemade/16.png",
+      "/projects/grovemade/17.png",
+      "/projects/grovemade/18.png",
+      "/projects/grovemade/19.png",
+      "/projects/grovemade/20.png"
+    ]
+  },
+  "TechJoy": {
+    "name": "TechJoy",
+    "url": "",
+    "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
+    "date": "27 january 2023",
+    "type": "blog website",
+    "projectLogo": "/projects/techjoy/logo.png",
+    "description": {
+      "mainDescription": "During the early stages of my journey into Node.js, I embarked on an exciting collaborative project with my friends – a blog platform that served as a testament to our collective learning and creativity. Our blog was a hub for technology enthusiasts, offering an array of insightful articles for readers to explore. From cutting-edge developments to industry insights, our platform provided a space for users to engage, learn, and share their thoughts through comments.",
+      "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."
     },
-    "LaraGigs": { 
-        "name" : "LaraGigs", 
-        "url": "",
-        "githubUrl": "https://github.com/zaydinani/laragigs",
-        "date": "25 aug 2023",
-        "type": "job listing",
-        "projectLogo" : "/projects/laragigs/logo.png",
-        "description": {
-            "mainDescription": "Embark on a dynamic job-seeking journey within a meticulously crafted website driven by Laravel and MySQL. Seamlessly traverse the realm of employment possibilities through an intuitive interface that offers swift sign-up and login functionalities. Personalize your job search with pagination-driven browsing, effortlessly sifting through an array of job listings curated to match your aspirations.",
-            "secondaryDescription": "Complementing the job seeker's experience, companies can seamlessly join the platform, leveraging a user-friendly sign-up process. Empowered with a dedicated dashboard, employers can effortlessly list job vacancies, ensuring a streamlined connection with potential talents. This platform, forged with precision, also prioritizes error handling, promising a glitch-free experience for all users. As an embodiment of my dedication to mastering Laravel and MySQL, this website not only encapsulates a functional job portal but also signifies my commitment to continuous learning in the world of web development."
-        },
-        "languages": {
-            "html": "/skills/html.svg",
-            "laravel": "/skills/laravel.svg",
-            "mysql": "/skills/mysql.svg",
-            "tailwind": "/skills/tailwind.svg"
-        },
-        "screenShots":[
-            "/projects/laragigs/1.png",
-            "/projects/laragigs/2.png",
-            "/projects/laragigs/3.png",
-            "/projects/laragigs/4.png",
-            "/projects/laragigs/5.png",
-            "/projects/laragigs/6.png",
-            "/projects/laragigs/7.png",
-            "/projects/laragigs/8.png",
-            "/projects/laragigs/9.png"
-        ]
+    "languages": {
+      "expressjs": "/skills/express js.svg",
+      "nodejs": "/skills/node.svg",
+      "ejs": "/skills/ejs.svg",
+      "css": "/skills/css.svg",
+      "mongodb": "/skills/mysql.svg"
     },
-    "AsImmobilier": { 
-        "name" : "AsImmobilier", 
-        "url": "https://asimmbolier.000.pe/",
-        "githubUrl": "",
-        "date": "20 mar 2024",
-        "type": "web app",
-        "projectLogo" : "/projects/asimmoblier/logo.png",
-        "description": {
-            "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
-            "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
-        },
-        "languages": {
-            "wordpress": "/skills/wordpress.svg"
-        },
-        "screenShots":[
-            "/projects/asimmoblier/1.jpg",
-            "/projects/asimmoblier/2.png",
-            "/projects/asimmoblier/3.png",
-            "/projects/asimmoblier/4.png",
-            "/projects/asimmoblier/5.png",
-            "/projects/asimmoblier/6.png",
-            "/projects/asimmoblier/7.png",
-            "/projects/asimmoblier/8.png",
-            "/projects/asimmoblier/9.jpg",
-            "/projects/asimmoblier/10.png",
-            "/projects/asimmoblier/11.png",
-            "/projects/asimmoblier/12.png"
-        ]
+    "screenShots": [
+      "/projects/techjoy/1.png",
+      "/projects/techjoy/2.png",
+      "/projects/techjoy/3.png",
+      "/projects/techjoy/4.png",
+      "/projects/techjoy/5.png",
+      "/projects/techjoy/6.png",
+      "/projects/techjoy/7.png",
+      "/projects/techjoy/8.png",
+      "/projects/techjoy/9.png",
+      "/projects/techjoy/10.png",
+      "/projects/techjoy/11.png",
+      "/projects/techjoy/12.png",
+      "/projects/techjoy/13.png"
+    ]
+  },
+  "GameTrack": {
+    "name": "GameTrack",
+    "url": "https://gamestrack.vercel.app/",
+    "githubUrl": "https://github.com/zaydinani/game-track",
+    "date": "6 jul 2023",
+    "type": "web app",
+    "projectLogo": "/projects/gametrack/logo.png",
+    "description": {
+      "mainDescription": "My project 'Game Track' emerged as a captivating endeavor fueled by my fascination for both gaming and web development. Crafted using the power of Sass, this platform allows users to dive into the vast realm of video games across all platforms. Leveraging the rawg API, users can seamlessly explore an extensive library of games, unveiling crucial details and information about their favorite titles. The ability to search for specific games and discover their intricate details, platform compatibility, system requirements, and captivating screenshots adds an immersive layer to the gaming experience.",
+      "secondaryDescription": " What sets 'Game Track' apart is its intelligent feature that lets users meticulously organize their game collection. With options to categorize games as owned, finished, or on the wishlist, users can effortlessly track and manage their gaming journey. Our design approach exudes elegance, enhancing the user interface and guaranteeing an intuitive and visually pleasing experience. Through 'Game Track,' I aimed to bridge my passion for gaming and technical prowess, resulting in a dynamic and stylish platform for fellow gamers to relish."
     },
-    "CosmetiCraft": { 
-        "name" : "CosmetiCraft", 
-        "url": "https://cosmeticraft.infinityfreeapp.com/",
-        "githubUrl": "",
-        "date": "17 nov 2023",
-        "type": "Landing Page",
-        "projectLogo" : "/projects/cosmeticraft/logo.png",
-        "description": {
-            "mainDescription": "For a Moroccan hair transplant and cosmetics clinic seeking to expand its global reach, I crafted a captivating landing page using WordPress. The design prioritizes elegance with a clutter-free layout and inviting color schemes, ensuring a positive first impression for potential clients worldwide. Straightforward navigation guides users effortlessly through the information they seek, whether it's learning about the clinic's expertise or initiating contact.",
-            "secondaryDescription": "To enhance user experience further, the landing page utilizes a user-friendly contact form, allowing for seamless communication. Additionally, comprehensive information about the clinic's services and areas of expertise is readily available, empowering potential clients to make informed decisions. This combination of elegance, ease of use, and informative content creates a landing page that effectively attracts and engages a global audience."
-        },
-        "languages": {
-            "wordpress": "/skills/wordpress.svg"
-        },
-        "screenShots":[
-            "/projects/cosmeticraft/1.png",
-            "/projects/cosmeticraft/2.png",
-            "/projects/cosmeticraft/3.png",
-            "/projects/cosmeticraft/4.png",
-            "/projects/cosmeticraft/5.png",
-            "/projects/cosmeticraft/6.png",
-            "/projects/cosmeticraft/7.png",
-            "/projects/cosmeticraft/8.png",
-            "/projects/cosmeticraft/9.png"
-        ]
-    }
+    "languages": {
+      "react": "/skills/reactjs.svg",
+      "sass": "/skills/sass.svg"
+    },
+    "screenShots": [
+      "/projects/gametrack/1.png",
+      "/projects/gametrack/2.png",
+      "/projects/gametrack/3.png",
+      "/projects/gametrack/4.png",
+      "/projects/gametrack/5.png",
+      "/projects/gametrack/6.png",
+      "/projects/gametrack/7.png",
+      "/projects/gametrack/8.png",
+      "/projects/gametrack/9.png",
+      "/projects/gametrack/10.png",
+      "/projects/gametrack/11.png",
+      "/projects/gametrack/12.png",
+      "/projects/gametrack/13.png",
+      "/projects/gametrack/14.png",
+      "/projects/gametrack/15.png",
+      "/projects/gametrack/16.png",
+      "/projects/gametrack/17.png"
+    ]
+  },
+  "LaraGigs": {
+    "name": "LaraGigs",
+    "url": "",
+    "githubUrl": "https://github.com/zaydinani/laragigs",
+    "date": "25 aug 2023",
+    "type": "job listing",
+    "projectLogo": "/projects/laragigs/logo.png",
+    "description": {
+      "mainDescription": "Embark on a dynamic job-seeking journey within a meticulously crafted website driven by Laravel and MySQL. Seamlessly traverse the realm of employment possibilities through an intuitive interface that offers swift sign-up and login functionalities. Personalize your job search with pagination-driven browsing, effortlessly sifting through an array of job listings curated to match your aspirations.",
+      "secondaryDescription": "Complementing the job seeker's experience, companies can seamlessly join the platform, leveraging a user-friendly sign-up process. Empowered with a dedicated dashboard, employers can effortlessly list job vacancies, ensuring a streamlined connection with potential talents. This platform, forged with precision, also prioritizes error handling, promising a glitch-free experience for all users. As an embodiment of my dedication to mastering Laravel and MySQL, this website not only encapsulates a functional job portal but also signifies my commitment to continuous learning in the world of web development."
+    },
+    "languages": {
+      "html": "/skills/html.svg",
+      "laravel": "/skills/laravel.svg",
+      "mysql": "/skills/mysql.svg",
+      "tailwind": "/skills/tailwind.svg"
+    },
+    "screenShots": [
+      "/projects/laragigs/1.png",
+      "/projects/laragigs/2.png",
+      "/projects/laragigs/3.png",
+      "/projects/laragigs/4.png",
+      "/projects/laragigs/5.png",
+      "/projects/laragigs/6.png",
+      "/projects/laragigs/7.png",
+      "/projects/laragigs/8.png",
+      "/projects/laragigs/9.png"
+    ]
+  },
+  "AsImmobilier": {
+    "name": "AsImmobilier",
+    "url": "https://asimmbolier.000.pe/",
+    "githubUrl": "",
+    "date": "20 mar 2024",
+    "type": "web app",
+    "projectLogo": "/projects/asimmoblier/logo.png",
+    "description": {
+      "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
+      "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
+    },
+    "languages": {
+      "wordpress": "/skills/wordpress.svg"
+    },
+    "screenShots": [
+      "/projects/asimmoblier/1.jpg",
+      "/projects/asimmoblier/2.png",
+      "/projects/asimmoblier/3.png",
+      "/projects/asimmoblier/4.png",
+      "/projects/asimmoblier/5.png",
+      "/projects/asimmoblier/6.png",
+      "/projects/asimmoblier/7.png",
+      "/projects/asimmoblier/8.png",
+      "/projects/asimmoblier/9.jpg",
+      "/projects/asimmoblier/10.png",
+      "/projects/asimmoblier/11.png",
+      "/projects/asimmoblier/12.png"
+    ]
+  },
+  "CosmetiCraft": {
+    "name": "CosmetiCraft",
+    "url": "https://cosmeticraft.infinityfreeapp.com/",
+    "githubUrl": "",
+    "date": "17 nov 2023",
+    "type": "Landing Page",
+    "projectLogo": "/projects/cosmeticraft/logo.png",
+    "description": {
+      "mainDescription": "For a Moroccan hair transplant and cosmetics clinic seeking to expand its global reach, I crafted a captivating landing page using WordPress. The design prioritizes elegance with a clutter-free layout and inviting color schemes, ensuring a positive first impression for potential clients worldwide. Straightforward navigation guides users effortlessly through the information they seek, whether it's learning about the clinic's expertise or initiating contact.",
+      "secondaryDescription": "To enhance user experience further, the landing page utilizes a user-friendly contact form, allowing for seamless communication. Additionally, comprehensive information about the clinic's services and areas of expertise is readily available, empowering potential clients to make informed decisions. This combination of elegance, ease of use, and informative content creates a landing page that effectively attracts and engages a global audience."
+    },
+    "languages": {
+      "wordpress": "/skills/wordpress.svg"
+    },
+    "screenShots": [
+      "/projects/cosmeticraft/1.png",
+      "/projects/cosmeticraft/2.png",
+      "/projects/cosmeticraft/3.png",
+      "/projects/cosmeticraft/4.png",
+      "/projects/cosmeticraft/5.png",
+      "/projects/cosmeticraft/6.png",
+      "/projects/cosmeticraft/7.png",
+      "/projects/cosmeticraft/8.png",
+      "/projects/cosmeticraft/9.png"
+    ]
+  }
 }
