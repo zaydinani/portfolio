@@ -8,7 +8,7 @@ const SECURITY_CODE = import.meta.env.VITE_REACT_API_TOKEN_ARTICLES;
 export const fetchArticles = async () => {
   try {
     const response = await axios.get(
-      `${BASE_URL}/api/blog-articles?populate=*`,
+      `${BASE_URL}/api/blog-articles?populate[article_cover_image]=*&populate[blog_tags][populate]=tag_icon`,
       {
         headers: {
           Authorization: `Bearer ${SECURITY_CODE}`,

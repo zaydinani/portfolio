@@ -5,19 +5,19 @@ $secondary-color-dark: #1e1e1e;
 $headers-dark: #f2f2f2;
 $paragraph-font-dark: #898989;
 // light mode colors
-$main-light: #EFEFEF;
-$secondary-color-light: #E4E4E4;
+$main-light: #efefef;
+$secondary-color-light: #e4e4e4;
 $headers-light: #1e1e1e;
 $paragraph-font-light: #4f4f4f;
 $project-font-color-light: #737373;
 $projects-background-dark: #1c1c1c;
-$projects-background-light:#F9F9F9;
+$projects-background-light: #f9f9f9;
 $font-light: #1e1e1e;
 //fixed colors
-$button-main : #5552FF;
-$button-secondary : #c2c0ff;
+$button-main: #5552ff;
+$button-secondary: #c2c0ff;
 $borders: #cacaca;
-// alert colors 
+// alert colors
 $danger-color: #ff3838;
 $success-color: #41b468;
 //hover
@@ -26,239 +26,261 @@ $hover: #41b468;
 $sidebar-color-dark: #191919;
 $sidebar-color-light: #c8c8c8;
 
-$sidebar-border-color: #3C3C3C; 
+$sidebar-border-color: #3c3c3c;
 //scroll bar width
 $scrollBarSize: 8px;
 $borderRadius: 8px;
-/*FUNCTIONS*/ 
+/*FUNCTIONS*/
 @mixin reset-list-styles {
-    li {
-        list-style-type: none;
-        a{
-            color: black;
-            text-decoration: none;
-            text-transform: capitalize;
-        }
+  li {
+    list-style-type: none;
+    a {
+      color: black;
+      text-decoration: none;
+      text-transform: capitalize;
     }
+  }
 }
 /*ANIMATIONS FUNCTIONS*/
 @mixin fade-in($time) {
-    opacity: 0;
-    animation: fade-in $time ease forwards; 
-    @keyframes fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+  opacity: 0;
+  animation: fade-in $time ease forwards;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
 }
 @mixin scale-animations($down, $up) {
-    scale: .5; opacity: 0;
-    animation: fade-in linear forwards;
-    animation-timeline: view($down $up);
-    @keyframes fade-in {
-        to {scale: 1; opacity: 1;}
+  scale: 0.5;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view($down $up);
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
     }
+  }
 }
-@mixin slide-in{
-    transform: translateX(-100%);
-    opacity: 0;
-    animation: slide-in 1s ease forwards;
-    animation-timeline: view(80% 10%);
-    @keyframes slide-in {
-        0% {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
+@mixin slide-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slide-in 1s ease forwards;
+  animation-timeline: view(80% 10%);
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
     }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
-@mixin expand-middle-form{
-    opacity: 0;
-    animation: expand-form 1s ease forwards;
-    animation-timeline: view(50% 10%);
-    @keyframes expand-form {
-        0% {
-          transform: scaleX(0);
-          opacity: 0;
-        }
-        100% {
-          transform: scaleX(1);
-          opacity: 1;
-        }
+@mixin expand-middle-form {
+  opacity: 0;
+  animation: expand-form 1s ease forwards;
+  animation-timeline: view(50% 10%);
+  @keyframes expand-form {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
     }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
 }
 @mixin flex($justify-content, $align-items, $direction, $gap) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items:  $align-items;
-    flex-direction: $direction;
-    gap:  $gap;
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+  gap: $gap;
 }
-@mixin btn(){
-    ul{
-        @include flex(space-around, center, row,_ );
-        @include reset-list-styles();
-        .btn {
-            font-size: 20px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        li{
-            a{
-                color: white;
-            }
-        }
-        .main-btn{
-            background-color: $button-main;
-            transition: 0.5s ease-in-out;
-            color: #D0D5DD;
-            &:hover{
-                scale: 1.05;
-                background-color: $hover;
-                color: black;
-            }
-            a{
-                transition: 0.5s ease-in-out;
-                &:hover{
-                    color: black;
-                }
-
-            }
-        }
-        .secondary-btn{
-            background-color: $button-secondary;
-            transition: 0.5s ease-in-out;
-            color: black;
-            a{
-                color: black;
-
-            }
-        }
-        .secondary-btn:hover{
-            scale: 1.05;
-        }
-
+@mixin btn() {
+  ul {
+    @include flex(space-around, center, row, _);
+    @include reset-list-styles();
+    .btn {
+      font-size: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    @media screen and (max-width: 425px) {
-        ul{
-            .btn {
-                font-size: 15px;
-            }
-        }
+    li {
+      a {
+        color: white;
+      }
     }
-    @media screen and (max-width: 320px) {
-        ul{
-            .btn {
-                font-size: 13px;
-            }
+    .main-btn {
+      background-color: $button-main;
+      transition: 0.5s ease-in-out;
+      color: #d0d5dd;
+      &:hover {
+        scale: 1.05;
+        background-color: $hover;
+        color: black;
+      }
+      a {
+        transition: 0.5s ease-in-out;
+        &:hover {
+          color: black;
         }
+      }
     }
+    .secondary-btn {
+      background-color: $button-secondary;
+      transition: 0.5s ease-in-out;
+      color: black;
+      a {
+        color: black;
+      }
+    }
+    .secondary-btn:hover {
+      scale: 1.05;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    ul {
+      .btn {
+        font-size: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: 320px) {
+    ul {
+      .btn {
+        font-size: 13px;
+      }
+    }
+  }
 }
 
-@mixin section ($width, $height){
-    width: $width;
-    height: $height;
-    margin: 0 auto;
+@mixin section($width, $height) {
+  width: $width;
+  height: $height;
+  margin: 0 auto;
 }
-//SUCCESS MSG 
+//SUCCESS MSG
 @mixin alert-2($color) {
-    border-left: 4px solid $color;
-    background-color: rgba($color, 0.05);
-    
-    .alert-title {
-      color: $color;
-    }
+  border-left: 4px solid $color;
+  background-color: rgba($color, 0.05);
+
+  .alert-title {
+    color: $color;
   }
-  
-  .alert-2-success {
-    @include alert-2($success-color);
-  }
-  
-//ERROR MSG 
+}
+
+.alert-2-success {
+  @include alert-2($success-color);
+}
+
+//ERROR MSG
 @mixin alert-3($color) {
-    border: 1px solid lighten($color, 25%);
-    border-radius: 8px;
-    background-color: rgba($color, 0.05);
-    .alert-title {
-      color: $color;
-    }
+  border: 1px solid lighten($color, 25%);
+  border-radius: 8px;
+  background-color: rgba($color, 0.05);
+  .alert-title {
+    color: $color;
+  }
 }
-.section{
-    @include section(100%, 100vh);
-    //border: 1px solid red;
-    @media screen and (max-width: 425px) {
-        height: fit-content;  
-    }
+.section {
+  @include section(100%, 100vh);
+  //border: 1px solid red;
+  @media screen and (max-width: 425px) {
+    height: fit-content;
+  }
 }
-.skills-section{
-    @include section(100%, 100vh);
-    //border: 1px solid red;
-    @media screen and (max-width: 1024px) {
-        height: fit-content;  
-    }
-}
-
-.container{
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    //border: 1px solid green;
-    @media screen and (max-width: 320px) {
-        width: 90%;
-    }
-    @media screen and (min-width: 2560px) {
-        width: 1400px;
-    }
+.skills-section {
+  @include section(100%, 100vh);
+  //border: 1px solid red;
+  @media screen and (max-width: 1024px) {
+    height: fit-content;
+  }
 }
 
-.info{
-    text-align: center;
-    padding: 0 4rem 1rem;
-    h2{
-        margin-bottom: 1rem;
-        color: $headers-dark;
-        font-size: 42px;
-        font-weight: 600;
-        .light & {
-            color: $headers-light;
-        }
-    }
-    p{
-        color: $paragraph-font-dark;
-        font-size: 16px;
-        font-weight: 400;
-        .light & {
-            color: $paragraph-font-light;
-        }
-    }
-    @media screen and (max-width: 1440px) {
-        h1{
-            margin-bottom: 1rem;
-        }
-        p{
-            margin-bottom: 1rem;
-        }
-    }
-    @media screen and (max-width: 425px) {
-        padding: 0 0.5rem 1rem;
-    }
-
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  //border: 1px solid green;
+  @media screen and (max-width: 320px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 2560px) {
+    width: 1400px;
+  }
 }
-.features{
-    padding: 5rem  2.5rem;
-    height: 100%;
-    background-color: $secondary-color-dark;
+
+.info {
+  text-align: center;
+  padding: 0 4rem 1rem;
+  h2 {
+    margin-bottom: 1rem;
+    color: $headers-dark;
+    font-size: 42px;
+    font-weight: 600;
     .light & {
-        background-color: $main-light;
+      color: $headers-light;
+    }
+  }
+  p {
+    color: $paragraph-font-dark;
+    font-size: 16px;
+    font-weight: 400;
+    .light & {
+      color: $paragraph-font-light;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    padding: 0 0.5rem 1rem;
+  }
+}
+.features {
+  padding: 5rem 2.5rem;
+  height: 100%;
+  background-color: $secondary-color-dark;
+  .light & {
+    background-color: $main-light;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 5rem 1rem;
+  }
+}
+.loading-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  .joke-container {
+    width: 600px;
+    text-align: center;
+    .light & {
+      color: black;
     }
     @media screen and (max-width: 425px) {
-        padding: 5rem 1rem;
+      width: 90%;
     }
+  }
 }
