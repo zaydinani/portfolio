@@ -17,7 +17,7 @@ function LatestArticle(props) {
           <p className="date">{date}</p>
 
           {/* Displaying tags */}
-          <div className="tag">
+          <div className="tags">
             {tags &&
               tags.map((tag, index) => (
                 <span key={index} className="tag">

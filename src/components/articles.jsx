@@ -12,7 +12,7 @@ function Articles(props) {
         <a>{title}</a>
         <div className="metadata">
           <p className="date">{date}</p>
-          <div className="tag">
+          <div className="tags">
             {tags &&
               tags.map((tag, index) => (
                 <span key={index} className="tag">

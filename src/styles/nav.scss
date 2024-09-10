@@ -1,4 +1,4 @@
-@import '_variables';
+@import "_variables";
 .nav.is-active {
   height: 70%;
 }
@@ -11,10 +11,10 @@ nav {
   border: 1px solid $borders;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  @include flex(center, _,_,_);
+  @include flex(center, _, _, _);
   position: fixed;
   top: 1rem;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   z-index: 99;
   padding: 0 0.5rem;
@@ -29,31 +29,30 @@ nav {
       height: 45px;
     }
   }
-  
 
-  ul{
+  ul {
     @include reset-list-styles;
-    @include flex(space-around, center, row,_ );
+    @include flex(space-around, center, row, _);
     width: 100%;
-    .goHome{
-      text-decoration: none;      
+    .goHome {
+      text-decoration: none;
       color: white;
       font-size: 16px;
     }
-    .navLink{
+    .navLink {
       cursor: pointer;
       transition: 0.2s ease-in-out;
-      &:hover{
+      &:hover {
         color: $button-main;
       }
     }
     /*!----------------dark mode toggle-----------------------*/
     div {
-      border-radius: 25px;  
+      border-radius: 25px;
       .checkbox {
         opacity: 0;
         position: absolute;
-      } 
+      }
       .checkbox:checked + .label .ball {
         transform: translateX(-24px);
       }
@@ -88,27 +87,28 @@ nav {
   }
   &.light {
     div .label {
-      background-color: $borders ;
+      background-color: $borders;
     }
-    .navLink{
+    .navLink {
       color: $secondary-color-dark;
     }
-    .selected{
+    .selected {
       color: $button-main;
     }
+    border: 1px solid $borders-light;
   }
-  .mobileNavContainer{
+  .mobileNavContainer {
     width: 100%;
     height: fit-content;
     border-radius: 0;
-    @include flex(_, _,column,1.5rem);
+    @include flex(_, _, column, 1.5rem);
     padding: 1rem 2rem;
     .mobileNavLink {
       position: relative;
       color: white;
       font-size: 18px;
       cursor: pointer;
-      transition: .5s ease-in-out;
+      transition: 0.5s ease-in-out;
       width: fit-content;
       text-decoration: none;
       padding: 0 0 5px 0;
@@ -116,69 +116,69 @@ nav {
         color: $secondary-color-dark;
       }
       &::before {
-        content: ''; 
+        content: "";
         position: absolute;
-        bottom: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 2px; 
-        background-color: $button-main; 
-        transform: scaleX(0); 
-        transform-origin: left center; 
-        transition: transform 0.3s ease; 
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $button-main;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.3s ease;
       }
-    
+
       &:hover {
         color: $button-main;
-    
+
         &::before {
-          transform: scaleX(1); 
+          transform: scaleX(1);
         }
       }
     }
     .selected {
-      color: $button-main; 
+      color: $button-main;
       border-bottom: 2px solid $button-main;
-      transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out; 
+      transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
     }
   }
-  .selected{
+  .selected {
     color: $button-main;
     transition: 0.2s ease-in-out;
     cursor: pointer;
   }
-  .mobileNavLinkHome{
+  .mobileNavLinkHome {
     position: relative;
     color: white;
     font-size: 24px;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     width: fit-content;
     text-decoration: none;
     padding: 0 0 5px 0;
     .light & {
       color: $secondary-color-dark;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $button-main;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: $button-main;
+
       &::before {
-        content: ''; 
-        position: absolute;
-        bottom: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 2px; 
-        background-color: $button-main; 
-        transform: scaleX(0); 
-        transform-origin: left center; 
-        transition: transform 0.3s ease; 
+        transform: scaleX(1);
       }
-    
-      &:hover {
-        color: $button-main;
-    
-        &::before {
-          transform: scaleX(1); 
-        }
-      }
+    }
   }
 }
 /*!--------------------------hamburger menu--------------------*/
@@ -197,7 +197,7 @@ nav {
   .bar,
   &::after,
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 2px;
@@ -219,20 +219,15 @@ nav {
   }
 }
 
-
-
-
 /*? media queries*/
 /*?1st one just for hamburger menu*/
 @media screen and (min-width: 800px) {
-  .hamburger{
+  .hamburger {
     display: none;
   }
   .logo {
     display: none;
   }
-  
-
 }
 @media screen and (max-width: 800px) {
   nav {
@@ -242,12 +237,12 @@ nav {
     border: none;
     border-bottom: 1px solid $button-secondary;
     top: 0;
-    @include flex(space-between, _,_,_);
-    .navLink{
+    @include flex(space-between, _, _, _);
+    .navLink {
       display: none;
     }
-    div{
-      ul{
+    div {
+      ul {
         display: block;
       }
     }
@@ -265,7 +260,7 @@ nav {
       font-size: 12px;
     }
     /*!----------------dark mode toggle-----------------------*/
-    /*
+/*
     div {
       .label {
         .fa-sun {
@@ -293,5 +288,3 @@ nav {
   }
 }
 */
-
-
