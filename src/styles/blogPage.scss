@@ -302,7 +302,7 @@ main {
         background-color: $projects-background-dark;
         box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
         transition: 0.5s ease-in-out;
-        @include scale-animations(70%, 10%);
+        @include scale-animations(90%, 10%);
         &:hover {
           background-color: #000;
         }
@@ -435,7 +435,11 @@ main {
         .latest_articles {
           .latest_article {
             .latest_article_info {
+              a {
+                font-size: 22px;
+              }
               .latest_metadata {
+                margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
                 @include flex(flex-start, center, _, 0.5rem);
                 .date {
@@ -463,6 +467,31 @@ main {
       }
       .articles_container {
         width: 75%;
+        .article {
+          .article-info {
+            a {
+              font-size: 22px;
+            }
+            .metadata {
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              @include flex(flex-start, center, _, 0.5rem);
+              .date {
+                font-size: 14px;
+              }
+              .tags {
+                flex-wrap: nowrap;
+                .tag {
+                  img {
+                    height: 1.2rem;
+                  }
+                  flex-wrap: nowrap;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -506,6 +535,40 @@ main {
         }
       }
       .articles_container {
+        width: 90%;
+        .article {
+          .article-info {
+            a {
+              font-size: 18px;
+            }
+            .description {
+              font-size: 14px;
+            }
+            .metadata {
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              @include flex(flex-start, center, _, 0.5rem);
+              .date {
+                font-size: 12px;
+              }
+              .tags {
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+                .tag {
+                  img {
+                    height: 1rem;
+                  }
+                  flex-wrap: nowrap;
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      /*
+      .articles_container {
+        width: 95%;
         h1 {
           font-size: 34px;
         }
@@ -537,6 +600,7 @@ main {
           }
         }
       }
+        */
     }
   }
 }

@@ -15,15 +15,29 @@ function BlogPage() {
   const [articles, setArticles] = useState([]);
   const [latestArticle, setLatestArticle] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [joke, setJoke] = useState("");
-  const [tags, setTags] = useState([]); // State for tags
+  const [jokes, setJokes] = useState([]); // Store an array of jokes
+  const [currentJokeIndex, setCurrentJokeIndex] = useState(0); // Track the current joke to display
+  const [tags, setTags] = useState([]);
 
   useEffect(() => {
     const getArticlesJokesAndTags = async () => {
       try {
-        // Fetch joke
-        const fetchedJoke = await fetchJoke();
-        setJoke(fetchedJoke);
+        // Fetch jokes
+        const fetchedJokes = await fetchJoke();
+
+        // Debug log the fetched jokes
+        console.log("Fetched jokes:", fetchedJokes);
+
+        // Safely handle the case when jokes are undefined or the structure is unexpected
+        if (
+          fetchedJokes &&
+          fetchedJokes.jokes &&
+          Array.isArray(fetchedJokes.jokes)
+        ) {
+          setJokes(fetchedJokes.jokes);
+        } else {
+          console.error("Jokes data is missing or in an unexpected format.");
+        }
 
         // Fetch articles
         const articlesData = await fetchArticles();
@@ -39,7 +53,11 @@ function BlogPage() {
 
         // Fetch tags
         const tagsData = await fetchTags();
-        setTags(tagsData.data); // Assuming data.data contains the tags array
+        if (tagsData && tagsData.data) {
+          setTags(tagsData.data); // Assuming data.data contains the tags array
+        } else {
+          console.error("Tags data is missing or in an unexpected format.");
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -52,6 +70,43 @@ function BlogPage() {
     getArticlesJokesAndTags();
   }, []);
 
+  // Add another useEffect to handle switching the jokes every 3 seconds
+  useEffect(() => {
+    // If there are jokes and we are still loading, switch the joke every 3 seconds
+    if (loading && jokes.length > 0) {
+      const intervalId = setInterval(() => {
+        setCurrentJokeIndex((prevIndex) => (prevIndex + 1) % jokes.length); // Cycle through jokes
+      }, 5000); // Switch joke every 3 seconds
+
+      // Clean up interval when loading finishes or the component unmounts
+      return () => clearInterval(intervalId);
+    }
+  }, [loading, jokes]); // Runs when loading or jokes change
+
+  // Function to render a joke based on its type (single or twopart)
+  const renderJoke = (joke) => {
+    if (joke.type === "single") {
+      return (
+        <>
+          <h3 className="apology">
+            sorry for the slow loading enjoy some jokes though
+          </h3>
+          <h4>{joke.joke}</h4>
+        </>
+      );
+    } else if (joke.type === "twopart") {
+      return (
+        <>
+          <h3 className="apology">
+            sorry for the slow loading enjoy some jokes though
+          </h3>
+          <h4>{joke.setup}</h4>
+          <h4>{joke.delivery}</h4>
+        </>
+      );
+    }
+  };
+
   return (
     <main>
       {loading ? (
@@ -60,10 +115,14 @@ function BlogPage() {
             autoplay
             loop
             src={loadingAnimation}
-            style={{ height: "200px", width: "200px" }}
+            style={{ height: "100px", width: "100px", marginBottom: "1.5rem" }}
           />
           <div className="joke-container">
-            <h3>{joke ? joke : "Loading a joke for you..."}</h3>
+            {jokes.length > 0 ? (
+              renderJoke(jokes[currentJokeIndex]) // Display the current joke
+            ) : (
+              <h3>Loading a joke for you...</h3>
+            )}
           </div>
         </div>
       ) : (

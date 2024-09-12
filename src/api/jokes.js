@@ -3,17 +3,16 @@
 export const fetchJoke = async () => {
   try {
     const response = await fetch(
-      "https://v2.jokeapi.dev/joke/Programming,Dark,Pun,Spooky?blacklistFlags=religious"
+      "https://v2.jokeapi.dev/joke/Programming,Dark,Pun?blacklistFlags=religious&amount=5"
     );
-    const jokeData = await response.json();
-
-    if (jokeData.type === "single") {
-      return jokeData.joke; // Return the single joke
-    } else if (jokeData.type === "twopart") {
-      return `${jokeData.setup} - ${jokeData.delivery}`; // Return two-part joke
+    if (!response.ok) {
+      throw new Error("Failed to fetch jokes");
     }
+    const data = await response.json();
+    console.log("Fetched jokes from API:", data); // Debugging log
+    return data; // Ensure the returned structure matches what you're expecting
   } catch (error) {
     console.error("Error fetching joke:", error);
-    return "Couldn't fetch a joke at the moment!"; // Return a fallback message
+    return null; // Safely return null in case of error
   }
 };
