@@ -1,8 +1,8 @@
-function Tag(props) {
+function Genre(props) {
   const { title, icon } = props;
 
   return (
-    <a className="tag">
+    <a className="tags">
       {icon && (
         <img
           src={icon}
@@ -16,4 +16,4 @@ function Tag(props) {
   );
 }
 
-export default Tag;
+export default tags;

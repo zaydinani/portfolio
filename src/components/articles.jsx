@@ -1,5 +1,5 @@
 function Articles(props) {
-  const { image, title, date, description, tags } = props; // Accept tags as a prop
+  const { image, title, date, description, genres } = props; // Use genres instead of tags
   const BASE_URL = import.meta.env.VITE_REACT_BASE_URL;
 
   return (
@@ -12,15 +12,17 @@ function Articles(props) {
         <a>{title}</a>
         <div className="metadata">
           <p className="date">{date}</p>
-          <div className="tags">
-            {tags &&
-              tags.map((tag, index) => (
-                <span key={index} className="tag">
+
+          {/* Display genres */}
+          <div className="genres">
+            {genres &&
+              genres.map((genre, index) => (
+                <span key={index} className="genre">
                   <img
-                    src={`${BASE_URL}${tag.attributes.tag_icon.data?.attributes.url}`}
-                    alt={title}
+                    src={`${BASE_URL}${genre.attributes.genre_icon?.data?.attributes?.url}`} // Assuming 'genre_icon' holds the icon info
+                    alt={genre.attributes.genre_name} // Use genre name for alt text
                   />
-                  {tag.attributes.tag_name} {/* Display the tag name */}
+                  {genre.attributes.genre_name} {/* Display the genre name */}
                 </span>
               ))}
           </div>

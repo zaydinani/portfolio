@@ -43,92 +43,110 @@ main {
         }
       }
       .latest_articles {
+        @include flex(center, center, row, _);
         width: 50%;
         .latest_article {
           border: 1px solid $borders;
           height: 23rem;
+          display: block;
           width: 100%;
-          padding: 1rem;
-          border-radius: 8px;
-          background-color: $projects-background-dark;
-          box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
-          transition: 0.5s ease-in-out;
-          &:hover {
-            background-color: #000;
-          }
-          .light & {
-            background-color: $projects-background-light;
-            border: 1px solid $borders-light;
 
-            &:hover {
-              background-color: #fff;
-              box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
-            }
-          }
-          .img {
-            height: 50%;
+          .latest_article_comp {
+            height: 100%;
+            padding: 1rem;
             border-radius: 8px;
-            margin-bottom: 0.4rem;
-            @include flex(center, center, _, _);
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
+            background-color: $projects-background-dark;
+            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
+            transition: 0.5s ease-in-out;
+            .img {
+              height: 50%;
               border-radius: 8px;
-            }
-          }
-          .latest_article_info {
-            text-align: left;
-            margin: 0;
-            width: 100%;
-            a {
-              font-weight: 500;
-              font-size: 29px;
-              color: $headers-dark;
-              margin-top: 0.7rem;
-              cursor: pointer;
-              transition: 0.5s ease-in-out;
-              &:hover {
-                color: $hover;
-              }
-              .light & {
-                color: $paragraph-font-light;
+              margin-bottom: 0.4rem;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
               }
             }
-            .latest_metadata {
+            .latest_article_info {
+              text-align: left;
+              margin: 0;
               width: 100%;
-              margin: 0 0 1rem 0;
-              @include flex(flex-start, center, _, 2rem);
-              .tags {
-                @include flex(_, flex-start, _, 0.5rem);
-                margin: 0px;
-              }
-              .tag {
-                border: 1px solid $borders;
-                margin: 0;
-                width: fit-content;
-                padding: 0.3rem 0.5rem;
-                background-color: $tag-background-dark;
-                border-radius: 50px;
-                transition: 0.3s ease-in-out;
-                font-size: 14px;
-                font-weight: 300;
+              a {
+                font-weight: 500;
+                font-size: 24px;
+                color: $headers-dark;
+                margin-top: 0.7rem;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
                 &:hover {
-                  background-color: $tag-background-dark-hover;
+                  color: $hover;
                 }
                 .light & {
                   color: $paragraph-font-light;
-                  border: 1px solid $borders-light;
-                  background-color: $tag-background-light;
                   &:hover {
-                    background-color: $tag-background-light-hover;
+                    color: $hover;
                   }
                 }
-                @include flex(_, center, _, 0.5rem);
+              }
+              .latest_metadata {
+                width: 100%;
+                margin: 0.5rem 0 1rem 0;
+                @include flex(flex-start, center, _, 2rem);
+                .genres {
+                  @include flex(_, flex-start, _, 0.5rem);
+                  margin: 0px;
+                  @include flex(_, center, _, 0.5rem);
+                  p {
+                    color: $paragraph-font-dark;
+                    .light & {
+                      color: $paragraph-font-light;
+                    }
+                  }
+                  .genre {
+                    @include flex(center, center, _, 0.5rem);
+
+                    border: 1px solid $borders;
+                    margin: 0;
+                    width: fit-content;
+                    padding: 0.3rem 0.5rem;
+                    background-color: $tag-background-dark;
+                    border-radius: 50px;
+                    transition: 0.3s ease-in-out;
+                    font-size: 14px;
+                    font-weight: 300;
+                    &:hover {
+                      background-color: $tag-background-dark-hover;
+                    }
+                    .light & {
+                      color: $paragraph-font-light;
+                      border: 1px solid $borders-light;
+                      background-color: $tag-background-light;
+                      &:hover {
+                        background-color: $tag-background-light-hover;
+                      }
+                    }
+                  }
+                  span > img {
+                    height: 1rem;
+                  }
+                }
+
                 p {
+                  font-weight: 400;
+                  font-size: 16px;
                   color: $paragraph-font-dark;
                   .light & {
-                    color: $paragraph-font-light;
+                    color: $project-font-color-light;
+                  }
+                  &.description {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3; // Number of lines to display before ellipsis
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
                   }
                 }
               }
@@ -148,19 +166,16 @@ main {
                 }
               }
             }
-            p {
-              font-weight: 400;
-              font-size: 16px;
-              color: $paragraph-font-dark;
-              .light & {
-                color: $project-font-color-light;
-              }
-              &.description {
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 3; // Number of lines to display before ellipsis
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
+            &:hover {
+              background-color: #000;
+            }
+            .light & {
+              background-color: $projects-background-light;
+              border: 1px solid $borders-light;
+
+              &:hover {
+                background-color: #fff;
+                box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
               }
             }
           }
@@ -177,8 +192,9 @@ main {
       margin: 0 auto;
       text-align: center;
       h1 {
-        font-size: 38px;
+        font-size: 32px;
         font-weight: 500;
+        margin-bottom: 1rem;
         .light & {
           color: $font-light;
         }
@@ -194,12 +210,14 @@ main {
           width: 70%;
           height: 2.5rem;
           outline: none;
-          background-color: $button-secondary;
+          background-color: $search-bar;
+          border: 1px solid $borders;
           &::placeholder {
             color: #929292;
           }
           .light & {
             background-color: #d0d5dd;
+            border: 1px solid $borders-light;
           }
         }
         button {
@@ -228,12 +246,12 @@ main {
         }
       }
     }
-    .tags {
+    .genres {
       width: 100%;
       margin-top: 1rem;
       @include flex(space-between, center, row, 1rem);
       flex-wrap: wrap;
-      .tag {
+      .genre {
         cursor: pointer;
         padding: 0.4rem 0.8rem;
         @include flex(space-between, center, row, 0rem);
@@ -282,7 +300,7 @@ main {
       width: 50%;
       margin: 0 auto;
       h1 {
-        font-size: 38px;
+        font-size: 32px;
         font-weight: 500;
         margin: 2rem 0;
         text-align: center;
@@ -330,7 +348,7 @@ main {
           width: 65%;
           a {
             font-weight: 500;
-            font-size: 29px;
+            font-size: 24px;
             color: $headers-dark;
             cursor: pointer;
             transition: 0.5s ease-in-out;
@@ -339,6 +357,9 @@ main {
             }
             .light & {
               color: $paragraph-font-light;
+              &:hover {
+                color: $hover;
+              }
             }
           }
           p {
@@ -359,33 +380,38 @@ main {
           .metadata {
             @include flex(flex-start, center, _, 2rem);
             margin-bottom: 0.5rem;
-            .tags {
+            margin-top: 0.5rem;
+
+            .genres {
               margin: 0px;
               @include flex(flex-start, flex-start, _, 2rem);
-            }
-            .tag {
-              @include flex(space-between, center, _, 0.2rem);
-              border: 1px solid $borders;
-              background-color: $tag-background-dark;
-              border-radius: 50px;
-              transition: 0.3s ease-in-out;
-              font-size: 14px;
-              font-weight: 300;
-              &:hover {
-                background-color: $tag-background-dark-hover;
-              }
-              .light & {
-                color: $paragraph-font-light;
-                border: 1px solid $borders-light;
-                background-color: $tag-background-light;
+              .genre {
+                @include flex(space-between, center, _, 0.2rem);
+                border: 1px solid $borders;
+                background-color: $tag-background-dark;
+                border-radius: 50px;
+                transition: 0.3s ease-in-out;
+                font-size: 14px;
+                font-weight: 300;
                 &:hover {
-                  background-color: $tag-background-light-hover;
+                  background-color: $tag-background-dark-hover;
                 }
-              }
-              p {
-                color: $paragraph-font-dark;
                 .light & {
                   color: $paragraph-font-light;
+                  border: 1px solid $borders-light;
+                  background-color: $tag-background-light;
+                  &:hover {
+                    background-color: $tag-background-light-hover;
+                  }
+                }
+                p {
+                  color: $paragraph-font-dark;
+                  .light & {
+                    color: $paragraph-font-light;
+                  }
+                }
+                img {
+                  height: 1rem;
                 }
               }
             }
@@ -445,9 +471,9 @@ main {
                 .date {
                   font-size: 14px;
                 }
-                .tags {
+                .genres {
                   flex-wrap: nowrap;
-                  .tag {
+                  .genre {
                     img {
                       height: 1.2rem;
                     }
@@ -503,26 +529,28 @@ main {
       .hero {
         @include flex(space-between, center, column, _);
         width: 100%;
-        padding-top: 2rem;
+        padding-top: 4rem;
         .page_info {
-          width: 80%;
+          width: 90%;
           margin-bottom: 1rem;
           h1 {
-            font-size: 34px;
+            font-size: 28px;
           }
           p {
             font-size: 16px;
           }
         }
         .latest_articles {
-          width: 80%;
+          width: 90%;
         }
       }
     }
     .articles_section {
       .search_section {
+        padding: 0;
+        width: 90%;
         h1 {
-          font-size: 34px;
+          font-size: 28px;
         }
         form {
           @include flex(center, center, column, 1rem);
@@ -536,6 +564,9 @@ main {
       }
       .articles_container {
         width: 90%;
+        h1 {
+          font-size: 28px;
+        }
         .article {
           .article-info {
             a {
@@ -547,7 +578,7 @@ main {
             .metadata {
               margin-top: 0.5rem;
               margin-bottom: 0.5rem;
-              @include flex(flex-start, center, _, 0.5rem);
+              @include flex(flex-start, flex-start, column, 0.5rem);
               .date {
                 font-size: 12px;
               }

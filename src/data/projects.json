@@ -1,4 +1,76 @@
 {
+  "Sneakerly": {
+    "name": "Sneakerly",
+    "url": "https://sneakerly.000.pe/",
+    "githubUrl": "",
+    "date": "24 aug 2024",
+    "type": "E-commerce",
+    "projectLogo": "/projects/sneakerly/logo.png",
+    "description": {
+      "mainDescription": "Sneakerly is a fully-featured e-commerce website designed to help a global shoe brand reach customers worldwide. Built using WordPress and Elementor, the website delivers a seamless shopping experience, with multiple plugins enhancing its functionality. For user authentication, I integrated Ultimate Member, ensuring secure and efficient sign-ups. Advanced Custom Fields (ACF) was used to enrich product information, while GTranslate makes the site accessible in English, Arabic, and Spanish.",
+      "secondaryDescription": "WooCommerce handles the core e-commerce functions, supported by WP Mail SMTP for email management and WooCommerce Stripe Gateway for secure payments. Additional features like WooGallery, WBW Currency Switcher, Variation Swatches, and advanced addons such as The Plus Addons, ShopLentor, and PowerPack Pro enhance the design and user experience, ensuring a smooth, dynamic, and global-friendly shopping experience."
+    },
+    "languages": {
+      "wordpress": "/skills/wordpress.svg"
+    },
+    "screenShots": [
+      "/projects/sneakerly/1.png",
+      "/projects/sneakerly/2.png",
+      "/projects/sneakerly/3.png",
+      "/projects/sneakerly/4.png",
+      "/projects/sneakerly/5.png",
+      "/projects/sneakerly/6.png",
+      "/projects/sneakerly/7.png",
+      "/projects/sneakerly/8.png",
+      "/projects/sneakerly/9.png",
+      "/projects/sneakerly/10.png",
+      "/projects/sneakerly/11.png",
+      "/projects/sneakerly/12.png",
+      "/projects/sneakerly/13.png",
+      "/projects/sneakerly/14.png",
+      "/projects/sneakerly/15.png",
+      "/projects/sneakerly/16.png",
+      "/projects/sneakerly/17.png",
+      "/projects/sneakerly/18.png",
+      "/projects/sneakerly/19.png",
+      "/projects/sneakerly/20.png",
+      "/projects/sneakerly/21.png"
+    ]
+  },
+  "AsImmobilier": {
+    "name": "AsImmobilier",
+    "url": "https://asimmobilier.000.pe/",
+    "githubUrl": "",
+    "date": "20 mar 2024",
+    "type": "web app",
+    "projectLogo": "/projects/asimmoblier/logo.png",
+    "description": {
+      "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
+      "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
+    },
+    "languages": {
+      "wordpress": "/skills/wordpress.svg"
+    },
+    "screenShots": [
+      "/projects/asimmoblier/1.jpg",
+      "/projects/asimmoblier/2.png",
+      "/projects/asimmoblier/3.png",
+      "/projects/asimmoblier/4.png",
+      "/projects/asimmoblier/5.png",
+      "/projects/asimmoblier/6.png",
+      "/projects/asimmoblier/7.jpg",
+      "/projects/asimmoblier/8.jpg",
+      "/projects/asimmoblier/9.png",
+      "/projects/asimmoblier/10.png",
+      "/projects/asimmoblier/11.png",
+      "/projects/asimmoblier/12.png",
+      "/projects/asimmoblier/13.png",
+      "/projects/asimmoblier/14.png",
+      "/projects/asimmoblier/15.png",
+      "/projects/asimmoblier/16.png",
+      "/projects/asimmoblier/17.png"
+    ]
+  },
   "GroveMade": {
     "name": "GroveMade",
     "url": "https://grovemade-clone.onrender.com",
@@ -40,40 +112,6 @@
       "/projects/grovemade/20.png"
     ]
   },
-  "TechJoy": {
-    "name": "TechJoy",
-    "url": "",
-    "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
-    "date": "27 january 2023",
-    "type": "blog website",
-    "projectLogo": "/projects/techjoy/logo.png",
-    "description": {
-      "mainDescription": "During the early stages of my journey into Node.js, I embarked on an exciting collaborative project with my friends – a blog platform that served as a testament to our collective learning and creativity. Our blog was a hub for technology enthusiasts, offering an array of insightful articles for readers to explore. From cutting-edge developments to industry insights, our platform provided a space for users to engage, learn, and share their thoughts through comments.",
-      "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."
-    },
-    "languages": {
-      "expressjs": "/skills/express js.svg",
-      "nodejs": "/skills/node.svg",
-      "ejs": "/skills/ejs.svg",
-      "css": "/skills/css.svg",
-      "mongodb": "/skills/mysql.svg"
-    },
-    "screenShots": [
-      "/projects/techjoy/1.png",
-      "/projects/techjoy/2.png",
-      "/projects/techjoy/3.png",
-      "/projects/techjoy/4.png",
-      "/projects/techjoy/5.png",
-      "/projects/techjoy/6.png",
-      "/projects/techjoy/7.png",
-      "/projects/techjoy/8.png",
-      "/projects/techjoy/9.png",
-      "/projects/techjoy/10.png",
-      "/projects/techjoy/11.png",
-      "/projects/techjoy/12.png",
-      "/projects/techjoy/13.png"
-    ]
-  },
   "GameTrack": {
     "name": "GameTrack",
     "url": "https://game-track-o3qa.onrender.com/",
@@ -109,6 +147,40 @@
       "/projects/gametrack/17.png"
     ]
   },
+  "TechJoy": {
+    "name": "TechJoy",
+    "url": "",
+    "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
+    "date": "27 january 2023",
+    "type": "blog website",
+    "projectLogo": "/projects/techjoy/logo.png",
+    "description": {
+      "mainDescription": "During the early stages of my journey into Node.js, I embarked on an exciting collaborative project with my friends – a blog platform that served as a testament to our collective learning and creativity. Our blog was a hub for technology enthusiasts, offering an array of insightful articles for readers to explore. From cutting-edge developments to industry insights, our platform provided a space for users to engage, learn, and share their thoughts through comments.",
+      "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."
+    },
+    "languages": {
+      "expressjs": "/skills/express js.svg",
+      "nodejs": "/skills/node.svg",
+      "ejs": "/skills/ejs.svg",
+      "css": "/skills/css.svg",
+      "mongodb": "/skills/mysql.svg"
+    },
+    "screenShots": [
+      "/projects/techjoy/1.png",
+      "/projects/techjoy/2.png",
+      "/projects/techjoy/3.png",
+      "/projects/techjoy/4.png",
+      "/projects/techjoy/5.png",
+      "/projects/techjoy/6.png",
+      "/projects/techjoy/7.png",
+      "/projects/techjoy/8.png",
+      "/projects/techjoy/9.png",
+      "/projects/techjoy/10.png",
+      "/projects/techjoy/11.png",
+      "/projects/techjoy/12.png",
+      "/projects/techjoy/13.png"
+    ]
+  },
   "LaraGigs": {
     "name": "LaraGigs",
     "url": "",
@@ -136,66 +208,6 @@
       "/projects/laragigs/7.png",
       "/projects/laragigs/8.png",
       "/projects/laragigs/9.png"
-    ]
-  },
-  "AsImmobilier": {
-    "name": "AsImmobilier",
-    "url": "https://asimmobilier.000.pe/",
-    "githubUrl": "",
-    "date": "20 mar 2024",
-    "type": "web app",
-    "projectLogo": "/projects/asimmoblier/logo.png",
-    "description": {
-      "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
-      "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
-    },
-    "languages": {
-      "wordpress": "/skills/wordpress.svg"
-    },
-    "screenShots": [
-      "/projects/asimmoblier/1.jpg",
-      "/projects/asimmoblier/2.png",
-      "/projects/asimmoblier/3.png",
-      "/projects/asimmoblier/4.png",
-      "/projects/asimmoblier/5.png",
-      "/projects/asimmoblier/6.png",
-      "/projects/asimmoblier/7.jpg",
-      "/projects/asimmoblier/8.jpg",
-      "/projects/asimmoblier/9.png",
-      "/projects/asimmoblier/10.png",
-      "/projects/asimmoblier/11.png",
-      "/projects/asimmoblier/12.png",
-      "/projects/asimmoblier/13.png",
-      "/projects/asimmoblier/14.png",
-      "/projects/asimmoblier/15.png",
-      "/projects/asimmoblier/16.png",
-      "/projects/asimmoblier/17.png"
-    ]
-  },
-  "CosmetiCraft": {
-    "name": "CosmetiCraft",
-    "url": "https://cosmeticraft.infinityfreeapp.com/",
-    "githubUrl": "",
-    "date": "17 nov 2023",
-    "type": "Landing Page",
-    "projectLogo": "/projects/cosmeticraft/logo.png",
-    "description": {
-      "mainDescription": "For a Moroccan hair transplant and cosmetics clinic seeking to expand its global reach, I crafted a captivating landing page using WordPress. The design prioritizes elegance with a clutter-free layout and inviting color schemes, ensuring a positive first impression for potential clients worldwide. Straightforward navigation guides users effortlessly through the information they seek, whether it's learning about the clinic's expertise or initiating contact.",
-      "secondaryDescription": "To enhance user experience further, the landing page utilizes a user-friendly contact form, allowing for seamless communication. Additionally, comprehensive information about the clinic's services and areas of expertise is readily available, empowering potential clients to make informed decisions. This combination of elegance, ease of use, and informative content creates a landing page that effectively attracts and engages a global audience."
-    },
-    "languages": {
-      "wordpress": "/skills/wordpress.svg"
-    },
-    "screenShots": [
-      "/projects/cosmeticraft/1.png",
-      "/projects/cosmeticraft/2.png",
-      "/projects/cosmeticraft/3.png",
-      "/projects/cosmeticraft/4.png",
-      "/projects/cosmeticraft/5.png",
-      "/projects/cosmeticraft/6.png",
-      "/projects/cosmeticraft/7.png",
-      "/projects/cosmeticraft/8.png",
-      "/projects/cosmeticraft/9.png"
     ]
   }
 }

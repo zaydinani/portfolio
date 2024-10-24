@@ -1,6 +1,6 @@
 import "../styles/blogPage.scss";
 import Articles from "../components/articles";
-import Tag from "../components/tag";
+import Genre from "../components/genre";
 import LatestArticle from "../components/latestArticle";
 import React, { useState, useEffect } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -8,6 +8,7 @@ import loadingAnimation from "../dotloading.json";
 import { fetchArticles } from "../api/articles";
 import { fetchJoke } from "../api/jokes";
 import { fetchTags } from "../api/tags"; // Import the fetchTags function
+import { fetchGenres } from "../api/genres"; // Use fetchGenres to get genres instead of tags
 
 const BASE_URL = import.meta.env.VITE_REACT_BASE_URL;
 
@@ -18,25 +19,19 @@ function BlogPage() {
   const [jokes, setJokes] = useState([]); // Store an array of jokes
   const [currentJokeIndex, setCurrentJokeIndex] = useState(0); // Track the current joke to display
   const [tags, setTags] = useState([]);
+  const [genres, setGenres] = useState([]); // Replace tags with genres
 
   useEffect(() => {
-    const getArticlesJokesAndTags = async () => {
+    const getArticlesJokesAndGenres = async () => {
       try {
         // Fetch jokes
         const fetchedJokes = await fetchJoke();
-
-        // Debug log the fetched jokes
-        console.log("Fetched jokes:", fetchedJokes);
-
-        // Safely handle the case when jokes are undefined or the structure is unexpected
         if (
           fetchedJokes &&
           fetchedJokes.jokes &&
           Array.isArray(fetchedJokes.jokes)
         ) {
           setJokes(fetchedJokes.jokes);
-        } else {
-          console.error("Jokes data is missing or in an unexpected format.");
         }
 
         // Fetch articles
@@ -51,12 +46,12 @@ function BlogPage() {
           setLatestArticle(sortedArticles[0]);
         }
 
-        // Fetch tags
-        const tagsData = await fetchTags();
-        if (tagsData && tagsData.data) {
-          setTags(tagsData.data); // Assuming data.data contains the tags array
+        // Fetch genres instead of tags
+        const genresData = await fetchGenres();
+        if (genresData && genresData.data) {
+          setGenres(genresData.data); // Assuming data.data contains the genres array
         } else {
-          console.error("Tags data is missing or in an unexpected format.");
+          console.error("Genres data is missing or in an unexpected format.");
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -67,7 +62,7 @@ function BlogPage() {
       }
     };
 
-    getArticlesJokesAndTags();
+    getArticlesJokesAndGenres();
   }, []);
 
   // Add another useEffect to handle switching the jokes every 3 seconds
@@ -139,18 +134,22 @@ function BlogPage() {
               </div>
 
               <div className="latest_articles">
-                {latestArticle && (
-                  <LatestArticle
-                    name={latestArticle.attributes.article_title}
-                    image={`${BASE_URL}${latestArticle.attributes.article_cover_image?.data?.attributes?.url}`}
-                    title={latestArticle.attributes.article_title}
-                    date={new Date(
-                      latestArticle.attributes.createdAt
-                    ).toLocaleDateString()}
-                    description={latestArticle.attributes.article_excerpt}
-                    tags={latestArticle.attributes.blog_tags?.data}
-                  />
-                )}
+                <div className="latest_article">
+                  {latestArticle && (
+                    <LatestArticle
+                      articleId={latestArticle.id} // Pass articleId if needed
+                      name={latestArticle.attributes.article_title}
+                      image={`${BASE_URL}${latestArticle.attributes.article_cover_image?.data?.attributes?.url}`}
+                      title={latestArticle.attributes.article_title}
+                      date={new Date(
+                        latestArticle.attributes.createdAt
+                      ).toLocaleDateString()}
+                      description={latestArticle.attributes.article_excerpt}
+                      // Pass the genres for the latest article
+                      genres={latestArticle.attributes.blog_genres?.data || []} // Pass genres array or empty array if no genres
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -167,12 +166,12 @@ function BlogPage() {
                 />
                 <button>search</button>
               </form>
-              <div className="tags">
-                {tags.map((tag) => (
-                  <Tag
-                    key={tag.id}
-                    title={tag.attributes.tag_name}
-                    icon={`${BASE_URL}${tag.attributes.tag_icon.data?.attributes.url}`}
+              <div className="genres">
+                {genres.map((genre) => (
+                  <Genre
+                    key={genre.id}
+                    title={genre.attributes.genre_name} // Assuming 'genre_name' is the field for genre name
+                    icon={`${BASE_URL}${genre.attributes.genre_icon?.data?.attributes?.url}`} // Assuming 'genre_icon' holds the image info
                   />
                 ))}
               </div>
@@ -190,6 +189,7 @@ function BlogPage() {
                   ).toLocaleDateString()}
                   description={article.attributes.article_excerpt}
                   tags={article.attributes.blog_tags?.data}
+                  genres={article.attributes.blog_genres?.data || []} // Pass genres array or empty array if no genres
                 />
               ))}
             </div>

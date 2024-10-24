@@ -1,9 +1,9 @@
 function LatestArticle(props) {
-  const { image, title, date, description, tags } = props;
+  const { image, title, date, description, genres } = props; // Replace 'tags' with 'genres'
   const BASE_URL = import.meta.env.VITE_REACT_BASE_URL;
 
   return (
-    <div className="latest_article">
+    <div className="latest_article_comp">
       {/* Image */}
       <div className="img">
         <img src={image} alt={title} />
@@ -16,16 +16,16 @@ function LatestArticle(props) {
         <div className="latest_metadata">
           <p className="date">{date}</p>
 
-          {/* Displaying tags */}
-          <div className="tags">
-            {tags &&
-              tags.map((tag, index) => (
-                <span key={index} className="tag">
+          {/* Displaying genres instead of tags */}
+          <div className="genres">
+            {genres &&
+              genres.map((genre, index) => (
+                <span key={index} className="genre">
                   <img
-                    src={`${BASE_URL}${tag.attributes.tag_icon.data?.attributes.url}`}
-                    alt={title}
+                    src={`${BASE_URL}${genre.attributes.genre_icon?.data?.attributes?.url}`} // Assuming 'genre_icon' holds the icon info
+                    alt={genre.attributes.genre_name} // Use genre name for alt text
                   />
-                  {tag.attributes.tag_name} {/* Display the tag name */}
+                  {genre.attributes.genre_name} {/* Display the genre name */}
                 </span>
               ))}
           </div>
