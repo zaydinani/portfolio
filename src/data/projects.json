@@ -37,6 +37,49 @@
       "/projects/sneakerly/21.png"
     ]
   },
+  "Madina": {
+    "name": "Madina",
+    "url": "https://madina.000.pe/",
+    "githubUrl": "",
+    "date": "29 Nov 2024",
+    "type": "E-commerce",
+    "projectLogo": "/projects/Madina/logo.png",
+    "description": {
+      "mainDescription": "Madina is a fully responsive and feature-rich website designed for a traditional Moroccan food restaurant. It provides a seamless online experience where customers can explore the restaurant's diverse menu and order food for pickup or delivery. The website offers an advanced filtering and search system, making it easy to find meals based on preferences. Each dish comes with customizable options, such as serving sizes, additional toppings, and other variations, ensuring customers can tailor their orders to their liking.",
+      "secondaryDescription": "One of the standout features of Madina is its table reservation functionality, allowing users to book a table at the restaurant for later dining. Additionally, the website supports user authentication, enabling customers to create accounts and save their information for faster checkout and personalized experiences. Built with usability and performance in mind, the site combines traditional Moroccan aesthetics with modern design principles, reflecting the authenticity and warmth of the restaurant while providing cutting-edge functionality."
+    },
+    "languages": {
+      "wordpress": "/skills/wordpress.svg"
+    },
+    "screenShots": [
+      "/projects/Madina/1.png",
+      "/projects/Madina/2.png",
+      "/projects/Madina/3.png",
+      "/projects/Madina/4.png",
+      "/projects/Madina/5.png",
+      "/projects/Madina/6.png",
+      "/projects/Madina/7.png",
+      "/projects/Madina/8.png",
+      "/projects/Madina/9.png",
+      "/projects/Madina/10.png",
+      "/projects/Madina/11.png",
+      "/projects/Madina/12.png",
+      "/projects/Madina/13.png",
+      "/projects/Madina/14.png",
+      "/projects/Madina/15.png",
+      "/projects/Madina/16.png",
+      "/projects/Madina/17.png",
+      "/projects/Madina/18.png",
+      "/projects/Madina/19.png",
+      "/projects/Madina/20.png",
+      "/projects/Madina/21.png",
+      "/projects/Madina/22.png",
+      "/projects/Madina/23.png",
+      "/projects/Madina/24.png",
+      "/projects/Madina/25.png",
+      "/projects/Madina/26.png"
+    ]
+  },
   "AsImmobilier": {
     "name": "AsImmobilier",
     "url": "https://asimmobilier.000.pe/",
