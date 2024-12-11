@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 function LatestArticle(props) {
-  const { image, title, date, description, genres } = props; // Replace 'tags' with 'genres'
+  const { id, image, title, date, description, genres } = props; // Add `id` here
   const BASE_URL = import.meta.env.VITE_REACT_BASE_URL;
+  const navigate = useNavigate();
+
+  const handleTitleClick = () => {
+    navigate(`/article/${id}`); // Navigate to the article page with the article ID
+  };
 
   return (
     <div className="latest_article_comp">
@@ -10,7 +17,9 @@ function LatestArticle(props) {
       </div>
       <div className="latest_article_info">
         {/* Title */}
-        <a>{title}</a>
+        <a onClick={handleTitleClick} style={{ cursor: "pointer" }}>
+          {title}
+        </a>
 
         {/* Metadata */}
         <div className="latest_metadata">

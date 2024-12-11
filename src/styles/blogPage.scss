@@ -46,12 +46,12 @@ main {
         @include flex(center, center, row, _);
         width: 50%;
         .latest_article {
-          border: 1px solid $borders;
           height: 23rem;
           display: block;
           width: 100%;
 
           .latest_article_comp {
+            border: 1px solid $borders;
             height: 100%;
             padding: 1rem;
             border-radius: 8px;

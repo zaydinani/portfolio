@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 function Articles(props) {
-  const { image, title, date, description, genres } = props; // Use genres instead of tags
+  const { id, image, title, date, description, genres } = props; // Use genres instead of tags
   const BASE_URL = import.meta.env.VITE_REACT_BASE_URL;
+  const navigate = useNavigate();
+
+  const handleTitleClick = () => {
+    navigate(`/article/${id}`); // Navigate to the article page with the article ID
+  };
 
   return (
     <div className="article">
@@ -9,7 +16,9 @@ function Articles(props) {
         {/* Ensure image exists */}
       </div>
       <div className="article-info">
-        <a>{title}</a>
+        <a onClick={handleTitleClick} style={{ cursor: "pointer" }}>
+          {title}
+        </a>{" "}
         <div className="metadata">
           <p className="date">{date}</p>
 

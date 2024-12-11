@@ -137,6 +137,7 @@ function BlogPage() {
                 <div className="latest_article">
                   {latestArticle && (
                     <LatestArticle
+                      id={latestArticle.id}
                       articleId={latestArticle.id} // Pass articleId if needed
                       name={latestArticle.attributes.article_title}
                       image={`${BASE_URL}${latestArticle.attributes.article_cover_image?.data?.attributes?.url}`}
@@ -181,6 +182,7 @@ function BlogPage() {
               <h1>All Articles</h1>
               {articles.map((article, index) => (
                 <Articles
+                  id={article.id}
                   key={index}
                   title={article.attributes.article_title}
                   image={`${BASE_URL}${article.attributes.article_cover_image?.data?.attributes?.url}`}
