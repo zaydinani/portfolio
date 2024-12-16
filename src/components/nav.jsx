@@ -1,27 +1,26 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from "react";
 //react scroll
-import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
-import data from "../data/data.json"
+import { Link, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import data from "../data/data.json";
 
 //theme context for dark mode
-import { ThemeContext } from '../util/themeContext';
+import { ThemeContext } from "../util/themeContext";
 //my styles
 import "../styles/nav.scss";
 
 function Nav() {
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleBodyClass = (newTheme) => {
-    document.body.classList.remove(theme === 'dark' ? 'dark' : 'light');
-    document.body.classList.add(newTheme === 'dark' ? 'dark' : 'light');
+    document.body.classList.remove(theme === "dark" ? "dark" : "light");
+    document.body.classList.add(newTheme === "dark" ? "dark" : "light");
   };
-  
 
   const handleToggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme = theme === "dark" ? "light" : "dark";
     toggleTheme();
     toggleBodyClass(newTheme);
   };
@@ -44,91 +43,98 @@ function Nav() {
     setIsMenuActive(false);
   };
 
-
   return (
-    
-    <nav className={`nav ${isMenuActive ? 'is-active' : ''} ${theme === 'dark' ? 'dark' : 'light'}`}>
-      <button className={`hamburger ${isMenuActive ? 'is-active' : ''}`} onClick={toggleMenu}>
+    <nav
+      className={`nav ${isMenuActive ? "is-active" : ""} ${
+        theme === "dark" ? "dark" : "light"
+      }`}
+    >
+      <button
+        className={`hamburger ${isMenuActive ? "is-active" : ""}`}
+        onClick={toggleMenu}
+      >
         <div className="bar"></div>
       </button>
       <div className="logo">
-        <img src={data['zayd-data'].about.logo} alt="" />
+        <a href={data["zayd-data"].about.portfolioDomain}>
+          <img src={data["zayd-data"].about.logo} alt="" />
+        </a>
       </div>
       <ul>
-        {location.pathname.startsWith('/project/') ? (
-          <RouterLink  className='goHome navLink' to="/">
+        {location.pathname.startsWith("/project/") ? (
+          <RouterLink className="goHome navLink" to="/">
             Go Back Home
-          </RouterLink >
+          </RouterLink>
         ) : (
           <>
             <Link
-              className='navLink'
+              className="navLink"
               activeClass="selected"
               to="about"
               spy={true}
               smooth={true}
               duration={1000}
               offset={0}
-              onSetActive={() => handleSetActiveSection('about')}
+              onSetActive={() => handleSetActiveSection("about")}
             >
               about
             </Link>
             <Link
-              className='navLink'
+              className="navLink"
               activeClass="selected"
               to="skills"
               spy={true}
               smooth={true}
               duration={1000}
               offset={0}
-              onSetActive={() => handleSetActiveSection('skills')}
+              onSetActive={() => handleSetActiveSection("skills")}
             >
               skills
             </Link>
             <Link
-              className='navLink'
+              className="navLink"
               activeClass="selected"
               to="projects"
               spy={true}
               smooth={true}
               duration={1000}
               offset={0}
-              onSetActive={() => handleSetActiveSection('projects')}
+              onSetActive={() => handleSetActiveSection("projects")}
             >
               projects
             </Link>
             <Link
-              className='navLink'
+              className="navLink"
               activeClass="selected"
               to="features"
               spy={true}
               smooth={true}
               duration={1000}
               offset={0}
-              onSetActive={() => handleSetActiveSection('contact')}
+              onSetActive={() => handleSetActiveSection("contact")}
             >
               features
             </Link>
             <Link
-              className='navLink'
+              className="navLink"
               activeClass="selected"
               to="contact"
               spy={true}
               smooth={true}
               duration={1000}
               offset={0}
-              onSetActive={() => handleSetActiveSection('contact')}
+              onSetActive={() => handleSetActiveSection("contact")}
             >
               contact
             </Link>
           </>
         )}
-        <div className='navLink'>
+        <div className="navLink">
           <input
             type="checkbox"
             className="checkbox"
             id="checkbox"
-            checked={theme === 'dark'}
+            checked={theme === "dark"}
             onChange={handleToggleTheme}
           />
           <label htmlFor="checkbox" className="label">
@@ -138,85 +144,85 @@ function Nav() {
           </label>
         </div>
         {isMenuActive ? (
-          location.pathname.startsWith('/project/') ? (
-            <RouterLink 
-              className='mobileNavLinkHome'
+          location.pathname.startsWith("/project/") ? (
+            <RouterLink
+              className="mobileNavLinkHome"
               to="/"
               onClick={() => {
                 closeMenu();
-                setActiveSection(''); // Clear active section
+                setActiveSection(""); // Clear active section
               }}
             >
               Go Back Home
             </RouterLink>
           ) : (
-            <div className='mobileNavContainer'>
+            <div className="mobileNavContainer">
               <Link
                 className={`mobileNavLink ${
-                  activeSection === 'about' ? 'selected' : ''
+                  activeSection === "about" ? "selected" : ""
                 }`}
                 to="about"
                 spy={true}
                 smooth={true}
                 duration={1000}
                 offset={0}
-                onSetActive={() => handleSetActiveSection('about')}
+                onSetActive={() => handleSetActiveSection("about")}
                 onClick={closeMenu}
               >
                 about
               </Link>
               <Link
                 className={`mobileNavLink ${
-                  activeSection === 'skills' ? 'selected' : ''
-                }`}            
+                  activeSection === "skills" ? "selected" : ""
+                }`}
                 to="skills"
                 spy={true}
                 smooth={true}
                 duration={1000}
                 offset={0}
-                onSetActive={() => handleSetActiveSection('skills')}
+                onSetActive={() => handleSetActiveSection("skills")}
                 onClick={closeMenu}
               >
                 skills
               </Link>
               <Link
                 className={`mobileNavLink ${
-                  activeSection === 'projects' ? 'selected' : ''
-                }`}            
+                  activeSection === "projects" ? "selected" : ""
+                }`}
                 to="projects"
                 spy={true}
                 smooth={true}
                 duration={1000}
                 offset={0}
-                onSetActive={() => handleSetActiveSection('projects')}
+                onSetActive={() => handleSetActiveSection("projects")}
                 onClick={closeMenu}
               >
                 projects
               </Link>
               <Link
                 className={`mobileNavLink ${
-                  activeSection === 'features' ? 'selected' : ''
-                }`}            
+                  activeSection === "features" ? "selected" : ""
+                }`}
                 to="features"
                 spy={true}
                 smooth={true}
                 duration={1000}
                 offset={0}
-                onSetActive={() => handleSetActiveSection('features')}
+                onSetActive={() => handleSetActiveSection("features")}
                 onClick={closeMenu}
               >
                 features
               </Link>
               <Link
                 className={`mobileNavLink ${
-                  activeSection === 'contact' ? 'selected' : ''
-                }`}            
+                  activeSection === "contact" ? "selected" : ""
+                }`}
                 to="contact"
                 spy={true}
                 smooth={true}
                 duration={1000}
                 offset={0}
-                onSetActive={() => handleSetActiveSection('contact')}
+                onSetActive={() => handleSetActiveSection("contact")}
                 onClick={closeMenu}
               >
                 contact
@@ -226,12 +232,16 @@ function Nav() {
                   type="checkbox"
                   className="checkbox"
                   id="checkbox"
-                  checked={theme === 'dark'}
+                  checked={theme === "dark"}
                   onChange={handleToggleTheme}
                 />
                 <label htmlFor="checkbox" className="label">
                   <img className="fa-sun" src="/icons/sun-solid.png" alt="" />
-                  <img className="fa-moon" src="/icons/moon purple.png" alt="" />
+                  <img
+                    className="fa-moon"
+                    src="/icons/moon purple.png"
+                    alt=""
+                  />
                   <div className="ball"></div>
                 </label>
               </div>

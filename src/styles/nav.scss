@@ -22,7 +22,7 @@ nav {
     width: 45px;
     height: 45px;
     position: absolute;
-    right: 10px;
+    left: 25px;
     top: 9px;
     img {
       width: 45px;
@@ -193,6 +193,7 @@ nav {
   border: none;
   position: absolute;
   top: 2px;
+  right: 10px;
   z-index: 100;
   .bar,
   &::after,
