@@ -119,6 +119,21 @@
           "description": "Server-side scripting language for creating dynamic web pages."
         },
         {
+          "title": "Elementor",
+          "icon": "/skills/Elementor.svg",
+          "description": "Drag-and-drop website builder for creating responsive designs."
+        },
+        {
+          "title": "Figma",
+          "icon": "/skills/figma.svg",
+          "description": "Collaborative design tool for creating user interfaces and prototypes."
+        },
+        {
+          "title": "Woocommerce",
+          "icon": "/skills/woocommerce.svg",
+          "description": "E-commerce plugin for creating online stores and managing sales."
+        },
+        {
           "title": "NextJS",
           "icon": "/skills/next-js.svg",
           "description": "a React framework that enables server-side rendering for creating dynamic web pages."
