@@ -5,7 +5,7 @@
     "githubUrl": "",
     "date": "24 aug 2024",
     "type": "E-commerce",
-    "projectLogo": "/projects/sneakerly/logo.png",
+    "projectLogo": "/projects/sneakerly/logo.webp",
     "description": {
       "mainDescription": "Sneakerly is a fully-featured e-commerce website designed to help a global shoe brand reach customers worldwide. Built using WordPress and Elementor, the website delivers a seamless shopping experience, with multiple plugins enhancing its functionality. For user authentication, I integrated Ultimate Member, ensuring secure and efficient sign-ups. Advanced Custom Fields (ACF) was used to enrich product information, while GTranslate makes the site accessible in English, Arabic, and Spanish.",
       "secondaryDescription": "WooCommerce handles the core e-commerce functions, supported by WP Mail SMTP for email management and WooCommerce Stripe Gateway for secure payments. Additional features like WooGallery, WBW Currency Switcher, Variation Swatches, and advanced addons such as The Plus Addons, ShopLentor, and PowerPack Pro enhance the design and user experience, ensuring a smooth, dynamic, and global-friendly shopping experience."
@@ -43,7 +43,7 @@
     "githubUrl": "",
     "date": "29 Nov 2024",
     "type": "E-commerce",
-    "projectLogo": "/projects/Madina/logo.png",
+    "projectLogo": "/projects/Madina/logo.webp",
     "description": {
       "mainDescription": "Madina is a fully responsive and feature-rich website designed for a traditional Moroccan food restaurant. It provides a seamless online experience where customers can explore the restaurant's diverse menu and order food for pickup or delivery. The website offers an advanced filtering and search system, making it easy to find meals based on preferences. Each dish comes with customizable options, such as serving sizes, additional toppings, and other variations, ensuring customers can tailor their orders to their liking.",
       "secondaryDescription": "One of the standout features of Madina is its table reservation functionality, allowing users to book a table at the restaurant for later dining. Additionally, the website supports user authentication, enabling customers to create accounts and save their information for faster checkout and personalized experiences. Built with usability and performance in mind, the site combines traditional Moroccan aesthetics with modern design principles, reflecting the authenticity and warmth of the restaurant while providing cutting-edge functionality."
@@ -86,7 +86,7 @@
     "githubUrl": "",
     "date": "20 mar 2024",
     "type": "web app",
-    "projectLogo": "/projects/asimmoblier/logo.png",
+    "projectLogo": "/projects/asimmoblier/logo.webp",
     "description": {
       "mainDescription": "a user-friendly website for a Moroccan house renting agency using WordPress and Elementor. The website prioritizes a minimalistic design with elegant colors, creating an inviting atmosphere for users browsing potential rentals. Straightforward calls to action guide users through the rental process effortlessly, whether searching for properties or contacting the agency.",
       "secondaryDescription": "Built from the ground up for ultimate flexibility, I utilized Elementor to construct the website. This ensures a design that perfectly aligns with the agency's brand and target audience. To further enhance the user experience, I implemented several valuable WordPress plugins: Darklup provides a dark mode option, WhatsApp allows for direct communication, a newsletter signup facilitates future marketing, and multilingual translation expands the website's reach. This combination creates a seamless and visually appealing experience for potential renters searching for their perfect Moroccan home."
@@ -120,7 +120,7 @@
     "githubUrl": "https://github.com/zaydinani/E-commerce",
     "date": "27 june 2023",
     "type": "Ecommerce website",
-    "projectLogo": "/projects/grovemade/logo.png",
+    "projectLogo": "/projects/grovemade/logo.webp",
     "description": {
       "mainDescription": " an e-commerce platform that offers a seamless shopping experience. Whether you're a customer looking to purchase products or an admin managing the platform, our website provides a user-friendly interface to meet your needs. You can explore a wide range of products, add them to your cart, and easily manage your purchases. As an admin, you have access to additional features for product and order management, allowing you to efficiently handle the platform's operations.",
       "secondaryDescription": " this website is a clone website inspired by the elegant design of grovemade.com. I was captivated by their design, and I embarked on the challenge of replicating it for my own website. It's important to note that this project is solely for personal development and skill enhancement, and I do not generate any revenue from it. "
@@ -161,7 +161,7 @@
     "githubUrl": "https://github.com/zaydinani/game-track",
     "date": "6 jul 2023",
     "type": "web app",
-    "projectLogo": "/projects/gametrack/logo.png",
+    "projectLogo": "/projects/gametrack/logo.webp",
     "description": {
       "mainDescription": "My project 'Game Track' emerged as a captivating endeavor fueled by my fascination for both gaming and web development. Crafted using the power of Sass, this platform allows users to dive into the vast realm of video games across all platforms. Leveraging the rawg API, users can seamlessly explore an extensive library of games, unveiling crucial details and information about their favorite titles. The ability to search for specific games and discover their intricate details, platform compatibility, system requirements, and captivating screenshots adds an immersive layer to the gaming experience.",
       "secondaryDescription": " What sets 'Game Track' apart is its intelligent feature that lets users meticulously organize their game collection. With options to categorize games as owned, finished, or on the wishlist, users can effortlessly track and manage their gaming journey. Our design approach exudes elegance, enhancing the user interface and guaranteeing an intuitive and visually pleasing experience. Through 'Game Track,' I aimed to bridge my passion for gaming and technical prowess, resulting in a dynamic and stylish platform for fellow gamers to relish."
@@ -196,7 +196,7 @@
     "githubUrl": "https://github.com/zaydinani/TechJoy-BLOGv1.0",
     "date": "27 january 2023",
     "type": "blog website",
-    "projectLogo": "/projects/techjoy/logo.png",
+    "projectLogo": "/projects/techjoy/logo.webp",
     "description": {
       "mainDescription": "During the early stages of my journey into Node.js, I embarked on an exciting collaborative project with my friends – a blog platform that served as a testament to our collective learning and creativity. Our blog was a hub for technology enthusiasts, offering an array of insightful articles for readers to explore. From cutting-edge developments to industry insights, our platform provided a space for users to engage, learn, and share their thoughts through comments.",
       "secondaryDescription": " Notably, we integrated an elegant design to enhance the user experience, ensuring that each visit was visually appealing and intuitive. Moreover, we introduced a comprehensive dashboard for administrators, empowering them to effortlessly edit, delete, and manage both articles and user profiles. This experience not only honed my Node.js skills but also highlighted the power of collaboration and creative problem-solving in the world of web development."

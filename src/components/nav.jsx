@@ -236,10 +236,10 @@ function Nav() {
                   onChange={handleToggleTheme}
                 />
                 <label htmlFor="checkbox" className="label">
-                  <img className="fa-sun" src="/icons/sun-solid.png" alt="" />
+                  <img className="fa-sun" src="/icons/sun-solid.webp" alt="" />
                   <img
                     className="fa-moon"
-                    src="/icons/moon purple.png"
+                    src="/icons/moon purple.webp"
                     alt=""
                   />
                   <div className="ball"></div>
