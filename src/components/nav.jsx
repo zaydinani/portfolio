@@ -57,7 +57,7 @@ function Nav() {
       </button>
       <div className="logo">
         <a href={data["zayd-data"].about.portfolioDomain}>
-          <img src={data["zayd-data"].about.logo} alt="" />
+          <img src={data["zayd-data"].about.logo} alt="" loading="eager" />
         </a>
       </div>
       <ul>
