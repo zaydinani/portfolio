@@ -99,28 +99,32 @@ function Main() {
             </header>
             <div>
               <ul>
-                <Link
-                  className="btn main-btn"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                  offset={0}
-                  onSetActive={() => handleSetActiveSection("contact")}
-                >
-                  contact
-                </Link>
-                <Link
-                  className="btn secondary-btn"
-                  to="projects"
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                  offset={0}
-                  onSetActive={() => handleSetActiveSection("contact")}
-                >
-                  projects
-                </Link>
+                <li>
+                  <Link
+                    className="btn main-btn"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    offset={0}
+                    onSetActive={() => handleSetActiveSection("contact")}
+                  >
+                    contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="btn secondary-btn"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    offset={0}
+                    onSetActive={() => handleSetActiveSection("contact")}
+                  >
+                    projects
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -52,6 +52,7 @@ function Nav() {
       <button
         className={`hamburger ${isMenuActive ? "is-active" : ""}`}
         onClick={toggleMenu}
+        aria-label="Open navigation menu"
       >
         <div className="bar"></div>
       </button>
