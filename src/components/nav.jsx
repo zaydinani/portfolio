@@ -61,7 +61,7 @@ function Nav() {
             rel="preload"
             as="image"
             src={data["zayd-data"].about.logo}
-            alt=""
+            alt="portfolio logo"
             loading="lazy"
             type="image/webp"
           />
@@ -145,8 +145,16 @@ function Nav() {
             onChange={handleToggleTheme}
           />
           <label htmlFor="checkbox" className="label">
-            <img className="fa-sun" src="/icons/sun-solid.png" alt="" />
-            <img className="fa-moon" src="/icons/moon purple.png" alt="" />
+            <img
+              className="fa-sun"
+              src="/icons/sun-solid.webp"
+              alt="sun icon"
+            />
+            <img
+              className="fa-moon"
+              src="/icons/moon purple.webp"
+              alt="moon icon"
+            />
             <div className="ball"></div>
           </label>
         </div>
@@ -243,11 +251,15 @@ function Nav() {
                   onChange={handleToggleTheme}
                 />
                 <label htmlFor="checkbox" className="label">
-                  <img className="fa-sun" src="/icons/sun-solid.webp" alt="" />
+                  <img
+                    className="fa-sun"
+                    src="/icons/sun-solid.webp"
+                    alt="sun icon"
+                  />
                   <img
                     className="fa-moon"
                     src="/icons/moon purple.webp"
-                    alt=""
+                    alt="moon icon"
                   />
                   <div className="ball"></div>
                 </label>
