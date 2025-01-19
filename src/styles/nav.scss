@@ -22,9 +22,10 @@ nav {
     position: absolute;
     left: 25px;
     top: 9px;
-    background: url("/logos/newlogo.webp") no-repeat center center;
-    width: 45px;
-    height: 45px;
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
 
   ul {

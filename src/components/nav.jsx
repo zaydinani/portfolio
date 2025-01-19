@@ -56,7 +56,16 @@ function Nav() {
         <div className="bar"></div>
       </button>
       <div className="logo">
-        <a href={data["zayd-data"].about.portfolioDomain}></a>
+        <a href={data["zayd-data"].about.portfolioDomain}>
+          <img
+            rel="preload"
+            as="image"
+            src={data["zayd-data"].about.logo}
+            alt=""
+            loading="lazy"
+            type="image/webp"
+          />
+        </a>
       </div>
       <ul>
         {location.pathname.startsWith("/project/") ? (
