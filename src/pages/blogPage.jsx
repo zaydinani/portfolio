@@ -180,20 +180,22 @@ function BlogPage() {
 
             <div className="articles_container">
               <h1>All Articles</h1>
-              {articles.map((article, index) => (
-                <Articles
-                  id={article.id}
-                  key={index}
-                  title={article.attributes.article_title}
-                  image={`${BASE_URL}${article.attributes.article_cover_image?.data?.attributes?.url}`}
-                  date={new Date(
-                    article.attributes.createdAt
-                  ).toLocaleDateString()}
-                  description={article.attributes.article_excerpt}
-                  tags={article.attributes.blog_tags?.data}
-                  genres={article.attributes.blog_genres?.data || []} // Pass genres array or empty array if no genres
-                />
-              ))}
+              <div className="article_new">
+                {articles.map((article, index) => (
+                  <Articles
+                    id={article.id}
+                    key={index}
+                    title={article.attributes.article_title}
+                    image={`${BASE_URL}${article.attributes.article_cover_image?.data?.attributes?.url}`}
+                    date={new Date(
+                      article.attributes.createdAt
+                    ).toLocaleDateString()}
+                    description={article.attributes.article_excerpt}
+                    tags={article.attributes.blog_tags?.data}
+                    genres={article.attributes.blog_genres?.data || []} // Pass genres array or empty array if no genres
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </>

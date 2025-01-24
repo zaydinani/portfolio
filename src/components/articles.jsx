@@ -37,6 +37,10 @@ function Articles(props) {
           </div>
         </div>
         <p className="description">{description}</p>
+        <div className="reading_time">
+          <img src="/icons/clock-countdown.svg" alt="" />
+          <p>16 mins reads</p>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ main {
       background-color: $secondary-color-light;
     }
     .hero {
-      width: 75%;
+      width: 1200px;
       margin: 0 auto;
       @include flex(space-between, center, row, _);
       .page_info {
@@ -184,10 +184,10 @@ main {
     }
   }
   .articles_section {
-    width: 100%;
+    width: 1200px;
     margin-top: 2rem;
     .search_section {
-      width: 50%;
+      width: 60%;
       padding: 0 1rem;
       margin: 0 auto;
       text-align: center;
@@ -207,7 +207,7 @@ main {
           margin: 5px 0;
           padding: 10px;
           border-radius: 8px;
-          width: 70%;
+          width: 80%;
           height: 2.5rem;
           outline: none;
           background-color: $search-bar;
@@ -224,7 +224,7 @@ main {
           padding: 8px 20px;
           justify-content: center;
           align-items: center;
-          width: 30%;
+          width: 20%;
           gap: 15px;
           border-radius: 8px;
           background-color: $button-main;
@@ -234,7 +234,6 @@ main {
           cursor: pointer;
           border: none;
           transition: 0.5s ease-in-out;
-          letter-spacing: 3px;
           .light & {
             background-color: $button-main;
           }
@@ -297,7 +296,7 @@ main {
       }
     }
     .articles_container {
-      width: 50%;
+      width: 1200px;
       margin: 0 auto;
       h1 {
         font-size: 32px;
@@ -309,109 +308,62 @@ main {
           color: $font-light;
         }
       }
-      .article {
-        border: 1px solid $borders;
-        height: 13rem;
-        width: 100%;
-        padding: 0.5rem;
-        border-radius: 8px;
-        margin-bottom: 2rem;
-        @include flex(_, _, row, 1rem);
-        background-color: $projects-background-dark;
-        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
-        transition: 0.5s ease-in-out;
-        @include scale-animations(90%, 10%);
-        &:hover {
-          background-color: #000;
-        }
-        .light & {
-          background-color: $projects-background-light;
-          border: 1px solid $borders-light;
-
-          &:hover {
-            background-color: #fff;
-            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
-          }
-        }
-        .img {
-          height: 100%;
-          width: 35%;
+      .article_new {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        //gap: 1rem;
+        .article {
+          border: 1px solid $borders;
+          //height: 13rem;
+          width: 32.5%;
+          height: 28rem;
+          padding: 0.5rem;
           border-radius: 8px;
-          img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            object-fit: cover;
+          margin-bottom: 2rem;
+          @include flex(_, _, column, 1rem);
+          background-color: $projects-background-dark;
+          box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
+          transition: 0.5s ease-in-out;
+          @include scale-animations(90%, 10%);
+          &:hover {
+            background-color: #000;
           }
-        }
-        .article-info {
-          width: 65%;
-          a {
-            font-weight: 500;
-            font-size: 24px;
-            color: $headers-dark;
-            cursor: pointer;
-            transition: 0.5s ease-in-out;
+          .light & {
+            background-color: $projects-background-light;
+            border: 1px solid $borders-light;
+
             &:hover {
-              color: $hover;
+              background-color: #fff;
+              box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
             }
-            .light & {
-              color: $paragraph-font-light;
+          }
+          .img {
+            height: 50%;
+            width: 100%;
+            border-radius: 8px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              object-fit: cover;
+            }
+          }
+          .article-info {
+            width: 100%;
+            a {
+              font-weight: 500;
+              font-size: 24px;
+              color: $headers-dark;
+              cursor: pointer;
+              transition: 0.5s ease-in-out;
               &:hover {
                 color: $hover;
               }
-            }
-          }
-          p {
-            font-weight: 400;
-            font-size: 16px;
-            color: $paragraph-font-dark;
-            .light & {
-              color: $project-font-color-light;
-            }
-            &.description {
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-line-clamp: 3; // Number of lines to display before ellipsis
-              -webkit-box-orient: vertical;
-              text-overflow: ellipsis;
-            }
-          }
-          .metadata {
-            @include flex(flex-start, center, _, 2rem);
-            margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
-
-            .genres {
-              margin: 0px;
-              @include flex(flex-start, flex-start, _, 2rem);
-              .genre {
-                @include flex(space-between, center, _, 0.2rem);
-                border: 1px solid $borders;
-                background-color: $tag-background-dark;
-                border-radius: 50px;
-                transition: 0.3s ease-in-out;
-                font-size: 14px;
-                font-weight: 300;
+              .light & {
+                color: $paragraph-font-light;
                 &:hover {
-                  background-color: $tag-background-dark-hover;
-                }
-                .light & {
-                  color: $paragraph-font-light;
-                  border: 1px solid $borders-light;
-                  background-color: $tag-background-light;
-                  &:hover {
-                    background-color: $tag-background-light-hover;
-                  }
-                }
-                p {
-                  color: $paragraph-font-dark;
-                  .light & {
-                    color: $paragraph-font-light;
-                  }
-                }
-                img {
-                  height: 1rem;
+                  color: $hover;
                 }
               }
             }
@@ -430,6 +382,65 @@ main {
                 text-overflow: ellipsis;
               }
             }
+            .metadata {
+              @include flex(flex-start, center, _, 2rem);
+              margin-bottom: 0.5rem;
+              margin-top: 0.5rem;
+
+              .genres {
+                margin: 0px;
+                @include flex(flex-start, flex-start, _, 2rem);
+                .genre {
+                  @include flex(space-between, center, _, 0.2rem);
+                  border: none;
+                  background-color: transparent;
+                  border-radius: 50px;
+                  transition: 0.3s ease-in-out;
+                  font-size: 14px;
+                  font-weight: 300;
+                  &:hover {
+                    background-color: $tag-background-dark-hover;
+                  }
+                  .light & {
+                    color: $paragraph-font-light;
+                    border: 1px solid $borders-light;
+                    background-color: $tag-background-light;
+                    &:hover {
+                      background-color: $tag-background-light-hover;
+                    }
+                  }
+                  p {
+                    color: $paragraph-font-dark;
+                    .light & {
+                      color: $paragraph-font-light;
+                    }
+                  }
+                  img {
+                    height: 1rem;
+                  }
+                }
+              }
+              p {
+                font-weight: 400;
+                font-size: 16px;
+                color: $paragraph-font-dark;
+                .light & {
+                  color: $project-font-color-light;
+                }
+                &.description {
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3; // Number of lines to display before ellipsis
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+          }
+          .reading_time {
+            margin: 0.7rem 0;
+            display: flex;
+            gap: 0.5rem;
           }
         }
       }
