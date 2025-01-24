@@ -1,27 +1,30 @@
-@import '_variables';
+@import "_variables";
 
-footer{
-    border-top: 1px solid $borders;
-    @include flex(space-around, center, row, _ );
-    .copyright{
-        @include flex(space-between, center, row, _ );
-        img{
-            height: 3rem;
-            margin-right: 0.5rem;
-        }
-        p{
-            color: $headers-dark;
-            font-size: 20px;
-            font-weight: 400;
-            .light & {
-                color: $headers-light ;
-            }
-        }
+footer {
+  border-top: 1px solid $borders;
+  margin-top: 120px;
+  @include flex(space-around, center, row, _);
+  .copyright {
+    @include flex(space-between, center, row, _);
+    img {
+      height: 3rem;
+      margin-right: 0.5rem;
     }
+    p {
+      color: $headers-dark;
+      font-size: 20px;
+      font-weight: 400;
+      .light & {
+        color: $headers-light;
+      }
+    }
+  }
 }
 @media screen and (max-width: 425px) {
-    footer{
-        padding: 1rem;
-        @include flex(space-around, center, column, _ );
-    }
+  footer {
+    padding: 1rem;
+    margin-top: 100px;
+
+    @include flex(space-around, center, column, _);
+  }
 }

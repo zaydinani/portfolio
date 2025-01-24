@@ -322,12 +322,12 @@ main {
           border-radius: 8px;
           margin-bottom: 2rem;
           @include flex(_, _, column, 1rem);
-          background-color: $projects-background-dark;
+          //background-color: $projects-background-dark;
           box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.08);
           transition: 0.5s ease-in-out;
           @include scale-animations(90%, 10%);
           &:hover {
-            background-color: #000;
+            background-color: $projects-background-dark;
           }
           .light & {
             background-color: $projects-background-light;
@@ -455,11 +455,13 @@ main {
       }
     }
     .articles_section {
+      width: 100%;
+
       .search_section {
         width: 65%;
       }
       .articles_container {
-        width: 65%;
+        width: 90%;
       }
     }
   }
@@ -504,6 +506,7 @@ main {
       }
       .articles_container {
         width: 75%;
+
         .article {
           .article-info {
             a {
@@ -578,30 +581,33 @@ main {
         h1 {
           font-size: 28px;
         }
-        .article {
-          .article-info {
-            a {
-              font-size: 18px;
-            }
-            .description {
-              font-size: 14px;
-            }
-            .metadata {
-              margin-top: 0.5rem;
-              margin-bottom: 0.5rem;
-              @include flex(flex-start, flex-start, column, 0.5rem);
-              .date {
-                font-size: 12px;
+        .article_new {
+          .article {
+            width: 100%;
+            .article-info {
+              a {
+                font-size: 18px;
               }
-              .tags {
-                flex-wrap: nowrap;
-                gap: 0.5rem;
-                .tag {
-                  img {
-                    height: 1rem;
-                  }
+              .description {
+                font-size: 14px;
+              }
+              .metadata {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                @include flex(flex-start, flex-start, column, 0.5rem);
+                .date {
+                  font-size: 12px;
+                }
+                .tags {
                   flex-wrap: nowrap;
-                  font-size: 10px;
+                  gap: 0.5rem;
+                  .tag {
+                    img {
+                      height: 1rem;
+                    }
+                    flex-wrap: nowrap;
+                    font-size: 10px;
+                  }
                 }
               }
             }
